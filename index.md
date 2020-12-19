@@ -18,11 +18,19 @@ I am a exploration geophysicist with an interest on seismic wave propagation in 
 ### Research Work
 I have research experience in following fields. 
 1. Ambient noise seismology: 
+   Ambient noise measurement are frequenty used now a days to determine the s-wave structure but for p-wave structure. 
+   Our work is aimed towards overcoming this limitation.   
 2. Exploration Seismics: 
-   Upscaling the elastic medium properties 
+   The real medium is filled with very small scale heterogenieties. 
+   The waves propagating in the medium experieces the combined effect of the background and heterogenities. 
+   The computational cost of the simulation for the heterogeniety is extremely large, therefore, 
+   I have proposed a new mehtod to upscale the medium properties to coarse grids.   
+   This reveals the nature of medium experience by the travelling wave. For example, a medium consist of fine isotropic layers may behave as anisotropic media.
+   Further computational cost is reduced as now the simulation is on coarse grids.    
 3. Numerical methods: 
-   High fideliety derivative operators
-4. Computational methods: 
+   I have used high fideliety implicit derivative operators and employed for numerical simulation of seismic wave. 
+   The numerical derivatives has shown a formal accuracy of 6th order explicit scheme but spectrally equivalent to a 10th order explict scheme.    
+4. Computational methods:    
     A staggered grid is decomposed independent grids to achieve the Vectoriation. 
     This has a significant effect on speed up depending upon dimentionality of model, i.e., speed up 3-4 times (in 2D) to speed up 20 times (in 3D).
     The scheme has been applied to acoustic/elastic/viscoelastic (2D) and anisotropic(3D) model.
