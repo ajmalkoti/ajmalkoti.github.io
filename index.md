@@ -8,7 +8,7 @@ Visiting Researcher
 ### Education
 **Ph.D.** in Physical Sciences from AcSIR at [National Geophysical Research Institute, Hyderabad, India](https://www.ngri.org.in/)       
 **M.Sc.** in Geophysics from [Indian Institute of Technology Kharagpur, WB, India](http://www.iitkgp.ac.in/department/GG)      
-**B.Sc.** in Physical Sciences from [University of Delhi, India](http://www.du.ac.in/du/)  
+**B.Sc.** in Physical Sciences (Electronics) from [University of Delhi, India](http://www.du.ac.in/du/)  
 
 
 ### Research Interests
