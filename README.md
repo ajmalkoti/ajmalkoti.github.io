@@ -1,1 +1,0 @@
-# ajmalkoti.github.io
