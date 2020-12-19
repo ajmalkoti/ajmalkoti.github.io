@@ -1,7 +1,14 @@
-## Ajay Malkoti 
-Visiting Researcher at Tata Institute of Fundamental Research 
+### Ajay Malkoti 
+Visiting Researcher 
+Tata Institute of Fundamental Research, Mumbai, India 
 
-## Research Interests
+### Education
+**Ph.D.** in Physical Sciences from AcSIR at National Geophysical Research Institute, Hyderabad, India
+**M.Sc.** in Geophysics from Indian Institute of Technology Kharagpur, West Bengal, India
+**B.Sc.** in Physical Sciences from University of Delhi, India  
+
+
+### Research Interests
 I am a exploration geophysicist with an interest on seismic wave propagation in earth. I am interested in observing, modeling and explaining the phenonmenons that might be of interest in geophysics. For the reson, I develope my own codes for numerical simulation. The simulation are capable of generating the full seismic wavefiled for a given model yet limited by the governing physics and numerical accuracy. I am equally interested in numerical methods as it serves the immidiate demand in the seismic inversion procedures. 
 
 
