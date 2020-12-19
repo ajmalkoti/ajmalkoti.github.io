@@ -1,10 +1,15 @@
-## Ajay Malkoti Personal Page
+## Ajay Malkoti 
+Visiting Researcher at Tata Institute of Fundamental Research 
+
+## Research Interests
+I am a exploration geophysicist with an interest on seismic wave propagation in earth. I am interested in observing, modeling and explaining the phenonmenons that might be of interest in geophysics. For the reson, I develope my own codes for numerical simulation. The simulation are capable of generating the full seismic wavefiled for a given model yet limited by the governing physics and numerical accuracy. I am equally interested in numerical methods as it serves the immidiate demand in the seismic inversion procedures. 
+
 
 You can use the [editor on GitHub](https://github.com/ajmalkoti/ajmalkoti.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### Education Summary
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
