@@ -1,8 +1,8 @@
 ### Ajay Malkoti 
 (At present)  
-Visiting Researcher 
-[Seismology Group at Department of Astronomy and Astrophysics](https://www.tifr.res.in/~seismo/?page_id=105) 
-[Tata Institute of Fundamental Research, Mumbai, India](https://www.tifr.res.in/)
+Visiting Researcher    
+[Seismology Group](https://www.tifr.res.in/~seismo/?page_id=105) at Department of Astronomy and Astrophysics       
+[Tata Institute of Fundamental Research, Mumbai, India](https://www.tifr.res.in/)     
 [CV](https://link_here)
 
 ### Education
