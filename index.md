@@ -17,13 +17,8 @@ I am a exploration geophysicist with an interest on seismic wave propagation in 
 
 
 ### Research Work
+A Latex bib file containing information about my research. [Link](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/mybib/all.bib)
 
-
-
-
-```markdown
-- Bulleted
-- List
 
 1. Numbered
 2. List
