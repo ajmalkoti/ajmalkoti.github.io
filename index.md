@@ -1,5 +1,5 @@
 ### Ajay Malkoti 
-(At present)  
+(Pesent designation)   
 Visiting Researcher    
 [Seismology Group](https://www.tifr.res.in/~seismo/?page_id=105) at Department of Astronomy and Astrophysics       
 [Tata Institute of Fundamental Research, Mumbai, India](https://www.tifr.res.in/)     
@@ -20,7 +20,7 @@ I am an exploration geophysicist with an interest in seismic wave propagation in
 I have research experience in the following fields.     
 1. _Ambient noise seismology_:       
    Ambient noise measurements are frequently used nowadays to determine the s-wave structure but for the p-wave structure. Our work is aimed at overcoming this limitation.      
-2. _Exploration Seismics_:       
+2. _Exploration seismics_:       
    The real medium is filled with very small scale heterogeneities. 
    The waves propagating in the medium experiences the combined effect of the background and heterogeneities. 
    The computational cost of the simulation for the heterogeneity is extremely large, 
@@ -67,4 +67,6 @@ Room No. A-272,
 Dept. of Astronomy and Astrophysics    
 Tata Institute of Fundamental Research    
 Mumabi-400005
-          
+   
+   
+Page updated on 21.12.2020
