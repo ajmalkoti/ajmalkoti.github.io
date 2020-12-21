@@ -40,8 +40,10 @@ I have research experience in the following fields.
 
 
 
-A Latex bib file containing information about my research.  
-[Link](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/mybib/all.bib)
+A Latex bib file containing information about my research.    
+[PDF Link](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/mybib/main.bib)   
+[BIB Articles Link](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/mybib/zotero_articles.bib)    
+[BIB Presentation Link](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/mybib/zotero_presentation.bib)
 
 Google scholar Link (Yet to get)
 
