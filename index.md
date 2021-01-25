@@ -62,7 +62,8 @@ Malkoti, A., Vedanti, N., & Tiwari, R. K. (2019). A highly efficient implicit fi
 
 ### Contact
 **Email**   :    
-ajmalkoti [at] gmail.com,   ajay [dot] malkoti [at] com
+ajmalkoti [at] gmail [dot] com,   
+ajay [dot] malkoti [at] tifr [dot]  res [dot] com
   
 **Address** :
 Room No. A-272, 
