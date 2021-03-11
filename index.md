@@ -1,5 +1,4 @@
 ### Ajay Malkoti 
-(Pesent designation)   
 Visiting Researcher    
 [Seismology Group](https://www.tifr.res.in/~seismo/?page_id=105) at Department of Astronomy and Astrophysics       
 [Tata Institute of Fundamental Research, Mumbai, India](https://www.tifr.res.in/)     
