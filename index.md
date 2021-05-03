@@ -51,6 +51,8 @@ Google scholar Link (Yet to get)
 Malkoti, A., Datta, A., & Hanasoge, S. M. (2020). Rayleigh wave H/V amplitude ratio measurement using multicomponent ambient noise cross-correlations, and its relationship to Vp/Vs.
 
 **Published**   
+Lei Li, Jingqiang Tan, Dazhou Zhang, Ajay Malkoti, Ivan Abakumov & Yujiang Xie (2021). FDwave3D: a MATLAB solver for the 3D anisotropic wave equation using the finite-difference method. Computational Geosciences, doi.org/10.1007/s10596-021-10060-3 
+    
 Vedanti, N., Malkoti, A., Pandey, O. P., & Shrivastava, J. P. (2018). Ultrasonic P-and S-wave attenuation and petrophysical properties of Deccan Flood Basalts, India, as revealed by Borehole Studies. Pure and Applied Geophysics, 175(8), 2905-2930.
 
 Malkoti, A., Vedanti, N., & Tiwari, R. K. (2018). An algorithm for fast elastic wave simulation using a vectorized finite difference operator. Computers & Geosciences, 116, 23-31.
