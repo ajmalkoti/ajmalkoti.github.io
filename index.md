@@ -12,7 +12,9 @@ Visiting Researcher
 
 
 ### Research Interests
-I am an exploration geophysicist with an interest in seismic wave propagation in the earth. I am interested in observing, modeling, and explaining the phenomenons that might be of interest in geophysics. For this reason, I develop my codes for numerical simulation. The simulation is capable of generating the full seismic wavefield for a given model yet is limited by the governing physics and numerical accuracy. I am equally interested in numerical methods as it serves the immediate demand in the seismic inversion procedures.
+I am an exploration geophysicist with an interest in seismic wave propagation in the earth. I am interested in observing, modeling, and explaining the phenomenons that might be of interest in geophysics. For this reason, I develop my codes for numerical simulation. 
+I make attempt to mimic the real seismic wave propagation in earth with the numerical simulation which can generating the full seismic wavefield, yet it is limited by the governing physics and numerical accuracy. 
+For simulations I develop my own set of codes. I am equally interested in numerical methods as it serves the immediate demand in the seismic inversion procedures.
 
 
 ### Research Work
