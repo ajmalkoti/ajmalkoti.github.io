@@ -1,7 +1,9 @@
 ## AcSIR course at NGRI
+**Instructor: Dr. Ajay Malkoti**
+
 
 ## Geophysical Inverse Theory  
-**Instructor: Dr. Ajay Malkoti**
+
 
 
 In this course we are aiming to understand some of the advanced techniques and study a few applications.
