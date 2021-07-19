@@ -8,13 +8,15 @@ The course structure (not complete yet) is presented below and a subject to chan
 
 **Course Outline**
 1. Introduction to Python programming. 
-2. Introduction to Matrix inversion procedures. 
-3. Introduction basics of inverse theory
+2. Numerical matrix inversion. 
+3. Basics of inverse theory
 4. Subspace in matrix
-5. Baysian Inversion
-6. Global optimization methods
-7. Neural Network
-8. Paper presentation 
+5. Nonlinear inverse method
+6. Gradient based optimization.
+7. Baysian inversion
+8. Global optimization methods
+9. Neural network
+10. Paper presentation 
 
 **Reference Books:**
 
@@ -33,8 +35,8 @@ The course structure (not complete yet) is presented below and a subject to chan
 2. Green function, Reciprocity
 3. Seismic sources representation and related theorems
 4. Energy partitioning 
-5. Seismic sources and Receivers 
-6. 2-D Acquisition Geometry and related parameter
+5. Seismic sources and receivers 
+6. 2-D Acquisition geometry and related parameter
 (rest, yet to include)
 
 **Reference Books:**
