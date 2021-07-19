@@ -4,7 +4,7 @@
 
 ## Geophysical Inverse Theory  
 In this course we are aiming to understand some of the advanced techniques and study a few applications.
-The course structure (not complete yet) is presented below and a subject to change according to the audiance requirement.
+The course structure (not complete yet) is presented below is tentative and can be changed according to the audiance requirement. 
 
 **Course Outline**
 1. Introduction to Python programming. 
@@ -28,7 +28,7 @@ The course structure (not complete yet) is presented below and a subject to chan
 
 ## Advance Exploration Methods  
 In this course we are aiming to understand some of the basic wave propagation theory and its applications.
-The course structure (not complete yet) is presented below and a subject to change according to the audiance requirement.
+The course structure (not complete yet) is presented below is tentative and can be changed according to the audiance requirement. 
 
 **Course Outline**
 1. Seismic wave formulation (acoustic, elastic, etc.) 
