@@ -29,11 +29,12 @@ In this course we are aiming to understand some of the basic wave propagation th
 The course structure (not complete yet) is presented below and a subject to change according to the audiance requirement.
 
 **Course Outline**
-1. Seismic wave formulations 
+1. Seismic wave formulation (acoustic, elastic, etc.) 
 2. Green function, Reciprocity
-3. Seismic sources representation and related theorems 
-4. Seismic sources and Receivers
-5. 2-D Acquisition Geometry and related parameter
+3. Seismic sources representation and related theorems
+4. Energy partitioning 
+5. Seismic sources and Receivers 
+6. 2-D Acquisition Geometry and related parameter
 (rest, yet to include)
 
 **Reference Books:**
