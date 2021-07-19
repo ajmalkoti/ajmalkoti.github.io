@@ -3,7 +3,7 @@
 
 
 ## Geophysical Inverse Theory  
-In this course we are aiming to understand some of the advanced techniques and study a few applications.
+In this course I will discuss some of the practical inversion techniques and study a few applications. 
 The course structure (not complete yet) is presented below is tentative and can be changed according to the audiance requirement. 
 
 **Course Outline**
@@ -27,7 +27,7 @@ The course structure (not complete yet) is presented below is tentative and can 
 
 
 ## Advance Exploration Methods  
-In this course we are aiming to understand some of the basic wave propagation theory and its applications.
+In this course I will present basics theory of seismic wave propagation and some related applications. 
 The course structure (not complete yet) is presented below is tentative and can be changed according to the audiance requirement. 
 
 **Course Outline**
