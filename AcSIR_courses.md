@@ -24,8 +24,6 @@ The course structure (not complete yet) is presented below is tentative and can 
 
 
 
-
-
 ## Advance Exploration Methods  
 In this course I will present basics theory of seismic wave propagation and some related applications. 
 The course structure (not complete yet) is presented below is tentative and can be changed according to the audiance requirement. 
