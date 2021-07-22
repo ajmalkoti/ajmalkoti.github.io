@@ -12,18 +12,21 @@ In this course I will discuss some of the practical inversion techniques and stu
 The course structure (not complete yet) is presented below is tentative and can be changed according to the audiance requirement. 
 
 **Course Outline**
-|S.No.|           Topic                    | Date and Time (2021) |  
-|-----|------------------------------------|----------------------|
-|1.   | Introduction to Python programming.| 22 Jul,  15:00 Hrs|
-|2.   | Numerical matrix inversion.  |	|
-|3.   | Basics of inverse theory		 |	| 
-|4.   | Subspace in matrix					 |	|
-|5.   | Nonlinear inverse method		 |	|
-|6.   | Gradient based optimization. |	|
-|7.   | Baysian inversion					   |	|
-|8.   | Global optimization methods  |	|
-|9.   | Neural network						   |	|
-|10.  | Paper presentation 				   |	|
+|S.No.|           Topic                     | Date and Time (2021) |  Assignment (due on) |
+|-----|-------------------------------------|----------------------|----------------------|
+|1.   | Introduction to Python programming. | 22 Jul,  15:00 Hrs   |  |
+|2.   | Numerical matrix inversion.         |	| |
+|3.   | Basics of inverse theory		          |	| |
+|4.   | Subspace in matrix					             |	| |
+|5.   | Nonlinear inverse method		          |	| |
+|6.   | Gradient based optimization.        |	| |
+|7.   | Baysian inversion					              |	| |
+|8.   | Global optimization methods         |	| |
+|9.   | Neural network						                |	| |
+|10.  | Paper presentation 				             |	| |
+
+**Grading Policy**
+
 
 
 **Venue**  
