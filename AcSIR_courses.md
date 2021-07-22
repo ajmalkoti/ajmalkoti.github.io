@@ -23,12 +23,22 @@ The course structure (not complete yet) is presented below is tentative and can 
 |10.  | Paper presentation 				   |	|
 
 
-**Venue and Date**
+**Venue**
  AcSIR lecture Hall, Ist Floor, 
  Ext Building, CSIR-NGRI. 
-  3pm
+ 
 
 **Reference Books:**
+Hill, Christian. Learning scientific programming with Python. Cambridge University Press, 2020.
+Lutz, Mark. Programming Python: powerful object-oriented programming. " O'Reilly Media, Inc.", 2010.
+
+
+Aster, Richard C., Brian Borchers, and Clifford H. Thurber. Parameter estimation and inverse problems. Elsevier, 2018.
+Dimri, Vijay. Deconvolution and inverse theory: application to geophysical problems. Elsevier, 2013.
+Lecture notes for Inverse problem in geophysics GEOS 563 by M. Richardson
+Menke, William. Geophysical data analysis: Discrete inverse theory. Academic press, 2018.
+Sen, M. K., & Stoffa, P. L. Global optimization methods in geophysical inversion. Cambridge University Press, 2013.
+Tarantola, Albert. Inverse problem theory and methods for model parameter estimation. Society for Industrial and Applied Mathematics, 2005.
 
 **Reference Papers:**
 
