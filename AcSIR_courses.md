@@ -9,9 +9,9 @@ In this course I will discuss some of the practical inversion techniques and stu
 The course structure (not complete yet) is presented below is tentative and can be changed according to the audiance requirement. 
 
 **Course Outline**
-|S.No.|           Topic                    |   Date and Time        |  
-|-----|------------------------------------|------------------------|
-|1.   | Introduction to Python programming.| 22 Jul 2021,  15:00 Hrs|
+|S.No.|           Topic                    | Date and Time (2021) |  
+|-----|------------------------------------|----------------------|
+|1.   | Introduction to Python programming.| 22 Jul,  15:00 Hrs|
 |2.   | Numerical matrix inversion.  |	|
 |3.   | Basics of inverse theory		 |	| 
 |4.   | Subspace in matrix					 |	|
