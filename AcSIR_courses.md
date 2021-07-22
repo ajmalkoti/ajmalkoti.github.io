@@ -1,7 +1,9 @@
 ## AcSIR course at NGRI
 **Instructor**:  
 Dr. Ajay Malkoti,  
-Room No 110, MB, CSIR-NGRI.
+Room No 110, Main Building, 
+CSIR-National Geophysical Research Institute.
+Hyderabad-500007, India.
 
 
 
@@ -41,6 +43,8 @@ Sen, M. K., & Stoffa, P. L. Global optimization methods in geophysical inversion
 Tarantola, Albert. Inverse problem theory and methods for model parameter estimation. Society for Industrial and Applied Mathematics, 2005.  
 
 **Reference Papers:**
+
+
 
 
 
