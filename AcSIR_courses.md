@@ -17,7 +17,7 @@ The course structure (not complete yet) is presented below is tentative and can 
 **Course Outline**
 |S.No.|           Topic                     | Date and Time (2021) |  Assignment (due on) |
 |-----|-------------------------------------|----------------------|----------------------|
-|1.   | Basic programming in Python.        | 22 Jul,  15:00 Hrs   |  |
+|1.   | Basic programming in Python. (I)    | 22,26 Jul,  15:00 Hrs|       |
 |2.   | Numerical matrix inversion.         |	| |
 |3.   | Subspace in matrix					             |	| |
 |4.   | Linear inverse theory		             |	| |
