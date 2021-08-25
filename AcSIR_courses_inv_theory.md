@@ -40,12 +40,13 @@ Late submission will face a penalty of 20% for each delayed week.
 If the assignments are found to be copied (among student/from internet) it will be graded as zero.
 
 
-**Exam on**
-
-
-**Venue**  
+**Lecture Venue**  
  AcSIR lecture Hall, Ist Floor,   
  Ext Building, CSIR-NGRI. 
+ 
+ 
+**Exam Schedule**
+
  
 
 **Reference Books:**    
