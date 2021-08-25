@@ -1,3 +1,11 @@
+## AcSIR course at NGRI
+**Instructor**:  
+Dr. Ajay Malkoti,  
+Room No 110, Main Building, 
+CSIR-National Geophysical Research Institute.
+Hyderabad-500007, India.
+
+
 ## Advance Exploration Methods  
 In this course I will present basics theory of seismic wave propagation and some related applications. 
 The course structure (not complete yet) is presented below is tentative and can be changed according to the audiance requirement. 
