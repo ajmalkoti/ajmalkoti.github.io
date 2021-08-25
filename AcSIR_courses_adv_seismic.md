@@ -5,6 +5,7 @@ Room No 110, Main Building,
 CSIR-National Geophysical Research Institute.
 Hyderabad-500007, India.
 
+**Prerequisite** A background in physics, calculus and mathematical methods, and signal processing
 
 ## Advance Exploration Methods  
 In this course I will present basics theory of seismic wave propagation and some related applications. 
