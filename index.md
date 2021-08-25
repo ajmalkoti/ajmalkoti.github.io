@@ -1,7 +1,7 @@
 ### Ajay Malkoti 
-## [ORCID](https://orcid.org/0000-0002-7436-3627) 
-### Contact
-**Email**   :   ajmalkoti [at] gmail [dot] com,   ajay [dot] malkoti [at] tifr [dot]  res [dot] com  
+**[ORCID](https://orcid.org/0000-0002-7436-3627)**   
+**Google scholar** (Yet to activate)   
+**Email**   :   ajmalkoti [at] gmail [dot] com,       ajay [dot] malkoti [at] ngri [dot]  res [dot] com  
 **Address** :   Room No. A-110, CSIR- National Geophysical Research Institute, Hyderabad-500007, India.  
 **Landline**:   +91-40-2701 2794
 
@@ -36,7 +36,7 @@ A Latex bib file containing information about my research.
 [BIB Articles Link](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/mybib/zotero_articles.bib)    
 [BIB Presentation Link](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/mybib/zotero_presentations.bib)
 
-Google scholar Link (Yet to get)
+
 
 ### Selected Articles 
 
