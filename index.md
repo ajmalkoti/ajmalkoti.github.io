@@ -10,7 +10,8 @@ Visiting Researcher
 **M.Sc.** in Geophysics from [Indian Institute of Technology Kharagpur, WB, India](http://www.iitkgp.ac.in/department/GG)      
 **B.Sc.** in Physical Sciences (Electronics) from [University of Delhi, India](http://www.du.ac.in/du/)  
 
-### Courses Taught at AcSIR-NGRI 
+### Teaching 
+I am teaching following courses at AcSIR-NGRI  
 Jan-Aug 2021, [Geophysical Inverse Theory](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/AcSIR_courses_inv_theory.md)    
 Jan-Aug 2021, [Advance Seismic Methods (Modeling and imaging)](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/AcSIR_courses_adv_seismic.md)
 
