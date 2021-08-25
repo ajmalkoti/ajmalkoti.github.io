@@ -11,7 +11,8 @@ Visiting Researcher
 **B.Sc.** in Physical Sciences (Electronics) from [University of Delhi, India](http://www.du.ac.in/du/)  
 
 ### Courses Taught at AcSIR-NGRI 
-Jan-Aug 2021- [Geophysical Inverse Theory,  Advance Seismic Methods](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/AcSIR_courses.md)
+Jan-Aug 2021, [Geophysical Inverse Theory](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/AcSIR_courses_inv_theory.md)    
+Jan-Aug 2021, [Advance Seismic Methods](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/AcSIR_courses_adv_seismic.md)
 
 ### Research Interests
 I am an exploration geophysicist with an interest in seismic wave propagation in the earth. I am interested in observing, modeling, and explaining the phenomenons that might be of interest in geophysics. For this reason, I develop my codes for numerical simulation. 
