@@ -1,9 +1,10 @@
 ### Ajay Malkoti 
-Visiting Researcher    
-[Seismology Group](https://www.tifr.res.in/~seismo/?page_id=105) at Department of Astronomy and Astrophysics       
-[Tata Institute of Fundamental Research, Mumbai, India](https://www.tifr.res.in/)     
+## [ORCID](https://orcid.org/0000-0002-7436-3627) 
+### Contact
+**Email**   :   ajmalkoti [at] gmail [dot] com,   ajay [dot] malkoti [at] tifr [dot]  res [dot] com  
+**Address** :   Room No. A-110, CSIR- National Geophysical Research Institute, Hyderabad-500007, India.  
+**Landline**:   +91-40-2701 2794
 
-### CV [pdf](https://link_here)
 
 ### Education
 **Ph.D.** in Physical Sciences from AcSIR at [National Geophysical Research Institute, Hyderabad, India](https://www.ngri.org.in/)       
@@ -52,16 +53,6 @@ Malkoti, A., Vedanti, N., & Tiwari, R. K. (2019). A highly efficient implicit fi
 
 
 
-### Contact
-**Email**   :    
-ajmalkoti [at] gmail [dot] com,   
-ajay [dot] malkoti [at] tifr [dot]  res [dot] com
-  
-**Address** :
-Room No. A-272, 
-Dept. of Astronomy and Astrophysics    
-Tata Institute of Fundamental Research    
-Mumabi-400005
    
    
 Page updated on 02 July 2021
