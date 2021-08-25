@@ -5,11 +5,12 @@ Room No 110, Main Building,
 CSIR-National Geophysical Research Institute.
 Hyderabad-500007, India.
 
-**Prerequisite** A background in physics, calculus and mathematical methods, and signal processing
 
 ## Advance Exploration Methods  
 In this course I will present basics theory of seismic wave propagation and some related applications. 
 The course structure (not complete yet) is presented below is tentative and can be changed according to the audiance requirement. 
+
+**Prerequisite** A background in physics, calculus and mathematical methods, and signal processing
 
 **Course Outline**
 1. Preliminary Stress/strain/
@@ -26,6 +27,22 @@ The course structure (not complete yet) is presented below is tentative and can 
 Seismic sources and receivers 
 2-D Acquisition geometry and related parameter
 (rest, yet to include)
+
+
+**Grading Policy** The grades are categorized in three parts
+1. Attendance 10%
+2. Assignment 20%   
+3. Final exam 70% 
+
+All the assignments must to be handed over before the due dates. Late submission will face a penalty of 20% for each delayed week. If the assignments are found to be copied (among student/from internet) it will be graded as zero.
+
+
+**Lecture Venue**  
+AcSIR lecture Hall, Ist Floor,
+Ext Building, CSIR-NGRI.
+
+**Exam schedule**  
+
 
 **Reference Books:**
 Aki and  Richards- Quantitative seismology-University Science Books (2009)  
