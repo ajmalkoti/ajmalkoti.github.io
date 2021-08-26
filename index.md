@@ -1,10 +1,10 @@
 ### Ajay Malkoti 
-**[ORCID](https://orcid.org/0000-0002-7436-3627)**   
-**Google scholar** (Yet to activate)   
+
 **Email**   :   ajmalkoti[at]gmail[dot]com,       ajaymalkoti[at]ngri[dot]res[dot]in  
 **Address** :   Room No. 110, Ist Floor, Main Building, CSIR- National Geophysical Research Institute, Hyderabad-500007, India.  
 **Landline**:   +91-40-2701 2794
 
+<div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-7436-3627" href="https://orcid.org/0000-0002-7436-3627" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0002-7436-3627</a></div>
 
 ### Education
 **Ph.D.** in Physical Sciences from AcSIR at [National Geophysical Research Institute, Hyderabad, India](https://www.ngri.org.in/)       
@@ -24,11 +24,10 @@ For simulations I develop my own set of codes. I am equally interested in numeri
 
 ### Research Work
 I have research experience in the following fields.     
-1. Ambient noise seismology 
-2. Exploration seismics       
-3. Numerical methods
-4. Computational methods
-5. Upscaling wave equation
+1. Exploration seismics- Numerical Simulation and inversion of wavefield data       
+2. Numerical and Computational methods
+3. Upscaling wave equation
+4. Seismology- Ambient noise simulation and interaction with structure
 
 
 A Latex bib file containing information about my research.    
