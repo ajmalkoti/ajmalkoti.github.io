@@ -1,8 +1,8 @@
 ### Ajay Malkoti 
 **[ORCID](https://orcid.org/0000-0002-7436-3627)**   
 **Google scholar** (Yet to activate)   
-**Email**   :   ajmalkoti [at] gmail [dot] com,       ajay [dot] malkoti [at] ngri [dot]  res [dot] com  
-**Address** :   Room No. A-110, CSIR- National Geophysical Research Institute, Hyderabad-500007, India.  
+**Email**   :   ajmalkoti[at]gmail[dot]com,       ajaymalkoti[at]ngri[dot]res[dot]in  
+**Address** :   Room No. 110, Ist Floor, Main Building, CSIR- National Geophysical Research Institute, Hyderabad-500007, India.  
 **Landline**:   +91-40-2701 2794
 
 
