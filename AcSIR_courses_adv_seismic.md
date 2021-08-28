@@ -29,7 +29,8 @@ Seismic sources and receivers charateristics,
 (rest, yet to include)
 
 
-**Grading Policy** The grades are categorized in three parts
+**Grading Policy**   
+The grades are categorized in three parts
 1. Attendance 10%
 2. Assignment 20%   
 3. Final exam 70% 
@@ -37,9 +38,10 @@ Seismic sources and receivers charateristics,
 All the assignments must to be handed over before the due dates. Late submission will face a penalty of 20% for each delayed week. If the assignments are found to be copied (among student/from internet) it will be graded as zero.
 
 
-**Lecture Venue**  
+**Lecture Venue**    
 AcSIR lecture Hall, Ist Floor,
 Ext Building, CSIR-NGRI.
+
 
 **Exam schedule**  
 
@@ -57,6 +59,8 @@ WAPENAAR and BERKHOUT - Elastic Wave Field Extrapolation-Elsevier Science (1989)
 Yilmaz- Seismic data processing  
 Geldart and Sherrif- Exploration Seismology  
 
+
+
 **Extra:**  
 Morse,Ingard- Theoretical acoustics-McGraw-Hill (1968)  
 Menahem, Singh- Seismic Waves and Sources, 1981  
@@ -73,7 +77,9 @@ Landau Lifshitz-TheoryOfElasticity
 Biot-Mechanics of Incremental Deformations (1965)   
 Jensen,Kuperman,-Computatinal Acostics
 
+
 **Reference Papers:**
+
 
 
 <!--- http://web.gps.caltech.edu/classes/ge193.old/ --->
