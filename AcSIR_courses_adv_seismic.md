@@ -1,8 +1,8 @@
 ## AcSIR course at NGRI
 **Instructor**:  
 Dr. Ajay Malkoti,  
-Room No 110, Main Building, 
-CSIR-National Geophysical Research Institute.
+Room No. 110, Main Building,  
+CSIR-National Geophysical Research Institute,    
 Hyderabad-500007, India.
 
 
@@ -10,7 +10,8 @@ Hyderabad-500007, India.
 In this course I will present basics theory of seismic wave propagation and some related applications. 
 The course structure (not complete yet) is presented below is tentative and can be changed according to the audiance requirement. 
 
-**Prerequisite** A background in physics, calculus and mathematical methods, and signal processing
+**Prerequisite**   
+A background in physics, calculus and mathematical methods, and signal processing
 
 **Course Outline**
 1. Acousitc wave equation and its solution (2 Lectures)
@@ -23,8 +24,8 @@ The course structure (not complete yet) is presented below is tentative and can 
 10. Finite difference modeling (2 Lectures)
 
 **Optional**   
-Seismic sources and receivers 
-2-D Acquisition geometry and related parameter
+Seismic sources and receivers charateristics,   
+2D/3D Acquisition,   
 (rest, yet to include)
 
 
