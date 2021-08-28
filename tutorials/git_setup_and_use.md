@@ -1,15 +1,16 @@
-# How to install the github on ubuntu
-The [wiki tutorial](https://wiki.paparazziuav.org/wiki/Github_manual_for_Ubuntu) describes it well but there are a few gliches. 
-Therefore I will try to avoid those. The process to install the GIT is as follows. 
+## How to install the github on ubuntu
+The [wiki tutorial](https://wiki.paparazziuav.org/wiki/Github_manual_for_Ubuntu) describes well about 
+to install the GIT however there are a few gliches. 
+Therefore, I will try to avoid those and it goes as follows. 
 
 1. Open the terminal (or press Alt+Ctrl+T)  
 2. Go to the .ssh folder ( $cd ~/.ssh)   
 3. Generate the SSH key with your email id. It will ask for some passwork  
     $ ssh-keygen -t rsa -C "your_email@youremail.com"      
-4. Make a copy of the generated key   
+4. Make a copy of the generated key and store it in separate directory  
    mkdir github_keys  
    cp id_rsa* github_keys  
-5. Open your Github account setting (online).   
+5. Open your Github account setting (online) and navigate as follows.  
    Your Account (left top corner) --> settings --> SSH and GPG Keys --> Add new SSH key  
    Give a suitable name to this key   
    Now in your computer/desktop github_keys directory open the file "id_rsa.pub".   
@@ -20,10 +21,10 @@ Therefore I will try to avoid those. The process to install the GIT is as follow
 The setup is complete now.
 
 
-# Install the git  
+## Install the git  
   sudo apt-get install git-core git-gui git-doc
 
-# How to create a new repository
+## How to create a new repository
 1. Make a folder in your home directory e.g. mkdir ~/GitHub  
 2. Let us the project name is "test"  
    kdir test  
@@ -36,7 +37,7 @@ The setup is complete now.
 Note: the github and the desktop directory may not have same names. For simplicity we kept both as same.  
 
 
-# how to copy and existing repository
+## How to copy and existing repository
 1. Make a folder in your home directory e.g. mkdir ~/GitHub
 2. change directory, cd GitHub 
 3. clone the project within this directory, where a new directory, with same name as project will be created.  
@@ -46,7 +47,7 @@ Note: the github and the desktop directory may not have same names. For simplici
 
 Now you should be able to download all the documents within the project.
 
-# How to make some changes and update the repository
+## How to make some changes and update the repository
 Let us assume that you made changes in the files present within project directory. 
 1. Now add all files to be updating list individually 
    git add filename    
