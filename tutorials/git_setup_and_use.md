@@ -1,5 +1,6 @@
 # How to install the github on ubuntu
 The [wiki tutorial](https://wiki.paparazziuav.org/wiki/Github_manual_for_Ubuntu) describes it well but there are a few gliches. 
+Therefore I will try to avoid those. The process to install the GIT is as follows. 
 
 1. Open the terminal (or press Alt+Ctrl+T)  
 2. Go to the .ssh folder ( $cd ~/.ssh)   
