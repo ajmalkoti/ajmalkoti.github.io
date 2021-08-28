@@ -43,7 +43,7 @@ Ext Building, CSIR-NGRI.
 **Exam schedule**  
 
 
-**Reference Books:**
+**Reference Books:**  
 Aki and  Richards- Quantitative seismology-University Science Books (2009)  
 BATH,M - Mathematical Aspects of Seismology (1968)  
 BERKHOUT- 14A,B Seismic Migration_ Imaging of Acoustic Energy by Wave Field Extrapolation. Theoretical Aspects (1984)  
