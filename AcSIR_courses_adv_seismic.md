@@ -13,15 +13,14 @@ The course structure (not complete yet) is presented below is tentative and can 
 **Prerequisite** A background in physics, calculus and mathematical methods, and signal processing
 
 **Course Outline**
-1. Preliminary Stress/strain/
-2. Seismic wave formulation (acoustic, elastic) 
-3. Solution to wave equations 
-4. Energy partitioning 
-5. Green function, 
-6. Reciprocity, Lippman-schwinger theorem, Representation theorem 
-7. Seismic sources representation and related theorems 
-8. Concept and mathematical description of Imaging methods- Diffraction summation, Kirchoff method, RTM and FWI
-9. Finite difference modeling 
+1. Acousitc wave equation and its solution (2 Lectures)
+2. Concept of Stress/strain (2 Lectures)  
+3. Elastic wave formulation and its solution (2 Lectures)
+5. Energy partitioning for normal and oblique incidence (1 Lecture)
+6. Green function and related theorems  ( Uniqueness, Representation, Reciprocity, Lippman-schwinger, etc.) (2 Lectures)
+8. Seismic sources representation and related theorems 
+9. Concept and mathematical description of Imaging methods- Diffraction summation, Kirchoff method, RTM and FWI (3 Lectures). 
+10. Finite difference modeling (2 Lectures)
 
 **Optional**   
 Seismic sources and receivers 
