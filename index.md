@@ -1,6 +1,6 @@
 ### Ajay Malkoti 
 
-**Email**   :   ajmalkoti[at]gmail[dot]com,       ajaymalkoti[at]ngri[dot]res[dot]in  
+**Email**   :   ajmalkoti[at]gmail[dot]com,    ajaymalkoti[at]ngri[dot]res.in  
 **Address** :   Room No. 110, Ist Floor, Main Building, CSIR- National Geophysical Research Institute, Hyderabad-500007, India.  
 **Landline**:   +91-40-2701 2794
 
@@ -29,6 +29,20 @@ I have research experience in the following fields.
 3. Upscaling wave equation
 4. Seismology- Ambient noise simulation and interaction with structure
 
+### Codes Developed 
+I have developed a few codes, in differet projects while collaborating with different peoples. 
+I have listed-out the major codes below.
+
+
+|S.No.| Code Name  | Description |
+|-----|------------|--------------|
+|1.| FDWave (MATLAB)   |  Seismic wave simulation in 2D-Acoustic/Elastic/Viscoleastic and 3D-HTI/VTI/fully-anisotropic media.|
+|2.| ANCC_HVR(Python)  | Numerical estimation of H/V ratio of the cross-correlation obtained from ambient noise. |
+|3.| URG_WE (MATLAB)   | Upscaling Acoustic/Elastic wave equation using RG Normalization group theory. |
+|4.| FARMCA (MATLAB)   | Rock permeability estimation using monte carlo method. |
+|5.| GALog (MATLAB)    | Inverting the well log data using GA algorithm for petrophysical parameters.|
+|6.| GASeis (F90)      | Inverting the 1D seismic data uisng GA algorithm.|
+
 
 A Latex bib file containing information about my research.    
 [PDF Link](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/mybib/main.pdf)   
@@ -54,5 +68,9 @@ Malkoti, A., Vedanti, N., & Tiwari, R. K. (2019). A highly efficient implicit fi
 
 ### Resources for students
 1. [How to use git](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/tutorials/git_setup_and_use.md)
-   
+2. [A latex template for AcSIR theisis](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/resources/template_AcSIR_thesis.zip)   
+
+
+
+
 *Page updated on 02 July 2021*
