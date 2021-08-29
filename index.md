@@ -52,6 +52,7 @@ Malkoti, A., Vedanti, N., & Tiwari, R. K. (2019). A highly efficient implicit fi
 
 
 
-   
+### Resources for students
+1. [How to use git](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/tutorials/git_setup_and_use.md)
    
 *Page updated on 02 July 2021*
