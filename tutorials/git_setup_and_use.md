@@ -9,7 +9,7 @@ Therefore, I will try to avoid those and it goes as follows.
     ```$ ssh-keygen -t rsa -C "your_email@youremail.com"```      
    It will ask for a password so enter the desired one.
 4. Make a copy of the generated key and store it in separate directory  
-   mkdir github_keys  
+   ```mkdir github_keys```  
    ```cp id_rsa* github_keys```  
 5. You need to add the same keys you generated on your desktop/compter to your GitHub account (online) 
    So open your Github account setting (online) and navigate as follows.  
@@ -32,14 +32,15 @@ The setup is complete now.
   ```sudo apt-get install git-core git-gui git-doc```
 
 ## How to create a new repository
-1. Make a folder in your home directory e.g. ```mkdir ~/GitHub```  
-2. Assume the project name is "test"  then create a directory with same name. 
-   mkdir test  
+1. Make a folder in your home directory e.g. 
+   ```mkdir ~/GitHub```  
+2. Assume the project name is "test"  then create a directory with same name.   
+   ```mkdir test```  
    ```cd test```  
 3. Initialize the git for the project (note one must be inside the directory)
    git init  
 4. Connect it to remote/GitHub directory "test"  
-   git remote add origin  https://github.com/your_username/test   
+   ```git remote add origin  https://github.com/your_username/test```   
    
 Note: the github and the desktop directory may not have same names. For simplicity we kept both as same.  
 
@@ -51,7 +52,8 @@ Note: the github and the desktop directory may not have same names. For simplici
    git clone git@github.com:username/projectname   
    e.g.   
    ```/Home/User/GitHub>> git clone git@github.com:ajmalkoti/ANCC_MCHVRatio```  
-
+  It may ask for password, that you provided during creation of ssh-keys. 
+  It is not your github password. 
 Now you should be able to download all the documents within the project.
 
 ## How to make some changes and update the repository
