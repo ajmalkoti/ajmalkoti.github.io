@@ -54,5 +54,9 @@ Malkoti, A., Vedanti, N., & Tiwari, R. K. (2019). A highly efficient implicit fi
 
 ### Resources for students
 1. [How to use git](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/tutorials/git_setup_and_use.md)
-   
+2. [A latex template for AcSIR theisis](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/resources/template_AcSIR_thesis.zip)   
+3. 
+
+
+
 *Page updated on 02 July 2021*
