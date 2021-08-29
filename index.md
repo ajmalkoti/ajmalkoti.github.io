@@ -33,12 +33,15 @@ I have research experience in the following fields.
 I have developed a few codes, in differet projects while collaborating with different peoples. 
 I have listed-out the major codes below.
 
-1. FDWave: A MATLAB code for 2D wave simulation in Acoustic/Elastic/Viscoleastic and 3D wave simulation in HTI/VTI/fully-anisotropic media.
-2. ANCC_HVR: A Python-code for H/V ratio estimation of the cross-correlation obtained from ambient noise. 
-3. URG_WE: A MATLAB code for Upscaling Acoustic/Elastic wave equation using RG Normalization group theory. 
-4. FARMCA: A MATLAB code for Permeability estimation using monte carlo method. 
-5. GALog : A MATLAB code for inverting the well log data.
-6. GASeis: A Fortan-90 code for inverting the 1D seismic data. 
+
+|S.No.| Code Name  | Description |
+|-----|------------|--------------|
+|1.| FDWave (MATLAB)   |  Seismic wave simulation in 2D-Acoustic/Elastic/Viscoleastic and 3D-HTI/VTI/fully-anisotropic media.|
+|2.| ANCC_HVR(Python)  | Numerical estimation of H/V ratio of the cross-correlation obtained from ambient noise. |
+|3.| URG_WE (MATLAB)   | Upscaling Acoustic/Elastic wave equation using RG Normalization group theory. |
+|4.| FARMCA (MATLAB)   | Rock permeability estimation using monte carlo method. |
+|5.| GALog (MATLAB)    | Inverting the well log data using GA algorithm for petrophysical parameters.|
+|6.| GASeis (F90)      | Inverting the 1D seismic data uisng GA algorithm.|
 
 
 A Latex bib file containing information about my research.    
