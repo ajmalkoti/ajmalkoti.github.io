@@ -1,6 +1,6 @@
 ### Ajay Malkoti 
 
-**Email**   :   ajmalkoti[at]gmail[dot]com,       ajaymalkoti[at]ngri[dot]res[dot]in  
+**Email**   :   ajmalkoti[at]gmail[dot]com,    ajaymalkoti[at]ngri[dot]res.in  
 **Address** :   Room No. 110, Ist Floor, Main Building, CSIR- National Geophysical Research Institute, Hyderabad-500007, India.  
 **Landline**:   +91-40-2701 2794
 
@@ -28,6 +28,17 @@ I have research experience in the following fields.
 2. Numerical and Computational methods
 3. Upscaling wave equation
 4. Seismology- Ambient noise simulation and interaction with structure
+
+### Codes Developed 
+I have developed a few codes, in differet projects while collaborating with different peoples. 
+I have listed-out the major codes below.
+
+1. FDWave: A MATLAB code for 2D wave simulation in Acoustic/Elastic/Viscoleastic and 3D wave simulation in HTI/VTI/fully-anisotropic media.
+2. ANCC_HVR: A Python-code for H/V ratio estimation of the cross-correlation obtained from ambient noise. 
+3. URG_WE: A MATLAB code for Upscaling Acoustic/Elastic wave equation using RG Normalization group theory. 
+4. FARMCA: A MATLAB code for Permeability estimation using monte carlo method. 
+5. GALog : A MATLAB code for inverting the well log data.
+6. GASeis: A Fortan-90 code for inverting the 1D seismic data. 
 
 
 A Latex bib file containing information about my research.    
