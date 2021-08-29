@@ -1,0 +1,110 @@
+!************************************************************************************************
+!
+!FOLLOWING PROGRAM IS FOR GENERATING THE  "GAUSSIAN RANDOM NO" AND CHECK FOR IF THEY ARE GAUSSIAN DISTRIBUTED
+!	1ST STEP : READ DATA FROM FILE DATA_EXER1_0.TXT AND LOAD THE DATA 
+!	2RD		 : ADD THE 5% NOISE USING THE GAUSSIAN RANDOM NO
+!	3TH		 : CALCULATE THE MEAN,VAR, STANDERED DEVIATION,AND P(Z)
+!	4TH		 : SOTRE THE DATA(Y (with noise)) and P(z) IN FILE DATA
+!	5TH		 : PLOT Y V/s P(z) IN MATLAB
+!
+!************************************************************************************************
+							 
+PROGRAM RANDOM
+IMPLICIT NONE
+
+INTEGER				::	I,N
+INTEGER, PARAMETER	::	N_MAX = 200
+REAL, PARAMETER		::  PI=3.14
+
+REAL							::	MAX_Y, MEAN, STD_DEV, VAR
+REAL,ALLOCATABLE,DIMENSION(:)	::	X, Y, RAND_Y, PROB_Z
+	
+N=DPN(N_MAX)
+ALLOCATE(X(N),Y(N),RAND_Y(N), PROB_Z(N))
+
+OPEN(20, FILE='data_exer1_0.txt')			   !STEP 1
+	DO I=1,N
+	READ(20,*) X(I),Y(I)
+	END DO
+
+!OPEN(30, FILE='OTH_INFO.TXT')
+
+MAX_Y= MAXVAL(Y)
+PRINT *, 'MAX VALUE IS = ', MAX_Y
+!WRITE(30,*) 'MAX VALUE IS = ', MAX_Y
+
+CALL RANDOM_SEED()								! STEP2 : DATA WITH ERROR INCORPORATED
+	DO I=1,N
+	RAND_Y(I)=Y(I) + MAX_Y * 0.05 * (2*RANDOM_GAUSS() - 1)
+	END DO
+
+MEAN=0
+	DO I=1,N									  !STEP3
+	MEAN= MEAN + RAND_Y(I)/N
+	END DO
+
+VAR=0
+	DO I=1,N
+	VAR= VAR + ((RAND_Y(I) - MEAN)**2)/N
+	END DO
+
+STD_DEV = SQRT(VAR)
+		   
+PRINT *, 'THE STANDERED DEV = ', STD_DEV
+PRINT *, 'THE MEAN IS = ', MEAN
+
+!WRITE(30,*) 'THE STANDERED DEV = ', STD_DEV
+!WRITE(30,*) 'THE MEAN IS = ', MEAN
+
+				  
+DO I=1,N
+PROB_Z(I)= EXP( -( ( (RAND_Y(I) - MEAN) / STD_DEV ) **2)/2) / ( SQRT(2*PI)*STD_DEV)
+END DO
+
+OPEN(10, FILE='DATA_GAUSS2.TXT')						!STEP4
+DO I=1,N
+WRITE(10,20) RAND_Y(I),PROB_Z(I)
+END DO
+CLOSE(10)
+20 FORMAT (F10.5, F10.5)
+
+!*******************************************************************
+
+CONTAINS
+	!************************** DATA POINTS *******************************************
+	FUNCTION DPN(N_MAX)
+	IMPLICIT NONE
+		
+	INTEGER		::	I,IO, N_MAX, DPN
+	REAL		::  X(N_MAX),Y(N_MAX)
+	N_MAX=200
+	OPEN(10,FILE='data_exer1_0.txt')
+	READ(10, *, IOSTAT = IO ) ( X(I),Y(I), I = 1, N_MAX )
+		IF (IO < 0) THEN
+			  DPN = I - 1
+		ELSE 
+		DPN = N_MAX	
+		END IF
+	CLOSE(10)
+	PRINT *, 'NO OF THE DATA POINTS ARE = ',DPN
+	!WRITE(30,*) 'NO OF THE DATA POINTS ARE = ',DPN
+	END FUNCTION DPN
+
+	!************************* GAUSSIAN RANDOM NO *********************************
+
+	FUNCTION RANDOM_GAUSS()
+	IMPLICIT NONE	
+	REAL	:: NO1,NO2,PI,STD_DEV,MEAN,RANDOM_GAUSS
+	
+	MEAN = 0
+	STD_DEV= 1
+	PI=4.0D0*ATAN(1.0D0)
+	
+	CALL RANDOM_NUMBER(NO1)
+	CALL RANDOM_NUMBER(NO2)
+	
+	RANDOM_GAUSS=STD_DEV*SQRT(-2*LOG(NO1))*COS(2*PI*NO2)+MEAN
+
+	END FUNCTION RANDOM_GAUSS
+
+END PROGRAM RANDOM

@@ -1,0 +1,134 @@
+!PROGRAM FOR THE SIMULATED ANNEALING
+
+PROGRAM SA
+IMPLICIT NONE
+REAL(SELECTED_REAL_KIND(15,307))	::	T,C,PROB,R
+REAL(SELECTED_REAL_KIND(15,307))	::  P1(2),P0(2),PBEST(2), F1,F0,FBEST, dF
+INTEGER 	:: I,N,K
+PARAMETER (N=20, C=.99)
+T = INI_TEMP()
+P0=NEW_POINT()		!NEW POINT
+F0=F(P0(1),P0(2))
+PBEST=P0			!BEST POINT
+FBEST=F0
+CALL RANDOM_SEED
+K=0    
+!T=100
+PRINT*,'INTITIAL TEMP', T
+DO WHILE(T>.001)
+  PRINT *, "TEMP=",T,'EXPONANT K=',K	
+  DO I=1,N
+    P1=NEW_POINT()			!NEW POINT
+  	F1=F(P1(1),P1(2))
+    PRINT *,'INITIAL MODEL',P0, F0			 
+    dF=F1-F0
+  	IF (dF<=0) THEN
+      P0=P1
+      F0=F1
+      IF (F1<FBEST) THEN 
+        PBEST=P0
+      	FBEST=F0
+      END IF
+  	ELSE						! WHEN dF>0
+      PROB=exp(-dF/T)			!PROBABILITY 
+      R= RANDOM_GAUSS()
+      PRINT *, 'RAND= ',R
+      IF (PROB>R) THEN
+   	    P0=P1
+      	F0=F1
+      END IF
+  	END IF
+    PRINT *,'BEST',PBEST,FBEST			!,'CURR',PCURR,'BEST',PBEST
+  !  PAUSE 'END OF THE ITERATION'
+    
+  END DO
+  K=K+1   
+  T=T*(C**K)
+END DO
+PRINT*,'********************************************************'
+PRINT *,'BEST POINT IS -',PBEST
+PRINT*,'********************************************************'
+!****************************************************
+CONTAINS
+!****************************************************
+FUNCTION F(X,Y)			!FUNCTION DEFINED HERE
+	IMPLICIT NONE
+	REAL(SELECTED_REAL_KIND(15,307))	:: X,Y,F,PI
+	!F=X**2 + Y**2
+	F=100*((Y-X**2)**2) + ((1-X)**2)
+	!PI=4*ATAN(1.)
+	!F=10+(X**2-10*COS(2*PI*X)) + (Y**2 + 10*COS(2*PI*Y))
+
+	END FUNCTION F
+!------------------------------------------------
+
+FUNCTION INI_TEMP()		!FINDS THE INITIAL TEMP
+	IMPLICIT NONE
+	REAL(SELECTED_REAL_KIND(15,307))	:: VAR(2),T0, T1,INI_TEMP
+	INTEGER :: I
+
+	VAR=NEW_POINT()
+	T0 = F(VAR(1),VAR(2))
+            PRINT*,VAR,T0
+	DO I=2,50
+        PRINT *,'INI TEMPRATURE=',T0,I
+  		VAR=NEW_POINT()
+  		T1 = F(VAR(1),VAR(2))
+  		IF(T1>T0) THEN 
+    		T0=T1
+ 		END IF
+	END DO
+!    PAUSE 'END OF INITIAL TEMP FINDING'
+	INI_TEMP=T0
+	END FUNCTION INI_TEMP
+!-----------------------------------------------
+FUNCTION NEW_POINT()		!CREATES A NEW POINT
+	IMPLICIT NONE
+	REAL(SELECTED_REAL_KIND(15,307)) 	::  a,b,c,d,R, NEW_POINT(2)
+	a=-5; b=5; c=-5; d=5
+    
+	R= RANDOM_GAUSS()
+	NEW_POINT(1)=a+ R*(b-a)
+	R= RANDOM_GAUSS()
+	NEW_POINT(2)=c+ R*(d-c)
+	PRINT *, 'NEW POINT= ',NEW_POINT
+	END FUNCTION NEW_POINT
+!-----------------------------------------------
+!FUNCTION V_POINT(X,Y)	!VICINITY POINT
+!IMPLICIT NONE
+!REAL :: X,Y,V_POINT
+!END FUNCTION V_POINT
+!-----------------------------------------------
+FUNCTION RANDOM_GAUSS()
+	IMPLICIT NONE	
+	REAL(SELECTED_REAL_KIND(15,307))	:: NO1,NO2,PI,STD_DEV,MEAN,RANDOM_GAUSS
+	
+	MEAN = 0
+	STD_DEV= 1
+	PI=4.0D0*ATAN(1.0D0)
+	CALL RANDOM_SEED
+	CALL RANDOM_NUMBER(NO1)
+	CALL RANDOM_NUMBER(NO2)
+	
+	RANDOM_GAUSS=STD_DEV*SQRT(-2*LOG(NO1))*COS(2*PI*NO2)+MEAN
+
+	END FUNCTION RANDOM_GAUSS
+
+
+END PROGRAM SA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
