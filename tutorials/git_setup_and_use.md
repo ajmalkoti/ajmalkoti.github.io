@@ -18,7 +18,7 @@ Therefore, I will try to avoid those and it goes as follows.
    3. In the drop down menue, choose "Settings" 
    4. Select SSH and GPG Keys 
    5. Click on- Add new SSH key     
-6. Now itt will ask for name of key, so, give a suitable name to this key so that you can recognize to which system it is connected.  
+6. Now it will ask for name of key, so, give a suitable name to this key so that you can recognize to which system it is connected.  
 7. It will also ask for the value of key. This was generated above and stored in file "id_rsa.pub" in your desktop.  
    You can open the file "id_rsa.pub" present in your desktop, with gedit.
    Copy its content and paste it into your GitHub account.   
@@ -52,8 +52,8 @@ Note: the github and the desktop directory may not have same names. For simplici
    git clone git@github.com:username/projectname   
    e.g.   
    ```/Home/User/GitHub>> git clone git@github.com:ajmalkoti/ANCC_MCHVRatio```  
-  It may ask for password, that you provided during creation of ssh-keys. 
-  It is not your github password. 
+  It may ask for the password that you provided during creation of ssh-keys. It is not your github password.   
+  
 Now you should be able to download all the documents within the project.
 
 ## How to make some changes and update the repository
