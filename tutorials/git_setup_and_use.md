@@ -31,7 +31,7 @@ The setup is complete now.
 ## Install the git  
   ```sudo apt-get install git-core git-gui git-doc```
 
-## How to create a new repository
+## How to create a new repository  
 1. Make a folder in your home directory e.g. 
    ```mkdir ~/GitHub```  
 2. Assume the project name is "test"  then create a directory with same name.   
@@ -42,7 +42,19 @@ The setup is complete now.
 4. Connect it to remote/GitHub directory "test"  
    ```git remote add origin  https://github.com/your_username/test```   
    
-Note: the github and the desktop directory may not have same names. For simplicity we kept both as same.  
+The github and the desktop directory may not have same names. For simplicity we kept both as same.  
+
+Sometime it maynot work. So another way is to create a repository online and then clone/copy it and later update it as described in steps below.
+
+## Creating a repository online 
+1. Go to your home page. 
+2. On left pane, click on "New" button to create a new repository. 
+3. Provide a unique name for the repository.
+4. Select if it is private or public.
+5. Add a ReadMe.md file in which you can provide the description for the repository.
+6. Choose a licence, and file to ignore (gitignore).
+
+
 
 
 ## How to copy and existing repository
