@@ -19,7 +19,7 @@ A background in physics, calculus and mathematical methods, and signal processin
 3. Elastic wave formulation and its solution (2 Lectures)
 5. Energy partitioning for normal and oblique incidence (1 Lecture)
 6. Green function and related theorems  ( Uniqueness, Representation, Reciprocity, Lippman-schwinger, etc.) (2 Lectures)
-8. Seismic sources representation and related theorems 
+8. Seismic sources representation 
 9. Concept and mathematical description of Imaging methods- Diffraction summation, Kirchoff method, RTM and FWI (3 Lectures). 
 10. Finite difference modeling (2 Lectures)
 
