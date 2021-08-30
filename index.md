@@ -34,14 +34,14 @@ I have developed a few codes, in differet projects while collaborating with diff
 I have listed-out the major codes below.
 
 
-|S.No.| Code Name  | Description |
-|-----|------------|--------------|
-|1.| FDWave (MATLAB)   |  Seismic wave simulation in 2D-Acoustic/Elastic/Viscoleastic and 3D-HTI/VTI/fully-anisotropic media.|
-|2.| ANCC_HVR(Python)  | Numerical estimation of H/V ratio of the cross-correlation obtained from ambient noise. |
-|3.| URG_WE (MATLAB)   | Upscaling Acoustic/Elastic wave equation using RG Normalization group theory. |
-|4.| FARMCA (MATLAB)   | Rock permeability estimation using monte carlo method. |
-|5.| GALog (MATLAB)    | Inverting the well log data using GA algorithm for petrophysical parameters.|
-|6.| GASeis (F90)      | Inverting the 1D seismic data uisng GA algorithm.|
+|S.No.| Code Name  | Language| Description |
+|-----|------------|---------|--------------|
+|1.| FDWave        |MATLAB   |  Seismic wave simulation in 2D-Acoustic/Elastic/Viscoleastic and 3D-HTI/VTI/fully-anisotropic media.|
+|2.| ANCC_HVR      |Python 3 | Numerical estimation of H/V ratio of the cross-correlation obtained from ambient noise. |
+|3.| URG_WE        |MATLAB   | Upscaling Acoustic/Elastic wave equation using RG Normalization group theory. |
+|4.| FARMCA        |MATLAB   | Rock permeability estimation using monte carlo method. |
+|5.| GALog         |MATLAB   |  Inverting the well log data using GA algorithm for petrophysical parameters.|
+|6.| GASeis        |Fortran 95 | Inverting the 1D seismic data uisng GA algorithm.|
 
 
 A Latex bib file containing information about my research.    
