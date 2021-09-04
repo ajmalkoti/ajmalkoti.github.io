@@ -6,7 +6,7 @@ CSIR-National Geophysical Research Institute,
 Hyderabad-500007, India.
 
 
-## Advance sesimic methods  
+## Advance Seismic Methods and other geophysical techniques for Energy Resources, PHY-NGRI-3-4004 
 In this course I will present basics theory of seismic wave propagation and some related applications. 
 The course structure (not complete yet) is presented below is tentative and can be changed according to the audiance requirement. 
 
