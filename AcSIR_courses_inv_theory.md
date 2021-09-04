@@ -29,6 +29,8 @@ The course structure (not complete yet) is presented below is tentative and can 
 2. Numerical matrix inversion techniques
 3. Neural network	
 
+**Assignment**
+[See the pdf](./assignments.pdf)
 
 **Grading Policy**
 The grades are categorized in three parts
