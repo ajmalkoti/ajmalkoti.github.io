@@ -7,7 +7,7 @@ Hyderabad-500007, India.
 
 
 
-## Geophysical Inverse Theory  
+## Geophysical Inverse Theory  (PHY-NGRI-3-4003 )
 In this course I will discuss fundamental theory underlying the geophysical inversion. 
 It should help students to develop an understanding for the problem and and itutions for the solution/method. 
 The course structure (not complete yet) is presented below is tentative and can be changed according to the audiance requirement. 
