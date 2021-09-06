@@ -45,17 +45,10 @@ I have listed-out the major codes below.
 |6.| GASeis        |Fortran 95 | Inverting the 1D seismic data uisng GA algorithm.|
 
 
-A Latex bib file containing information about my research.    
-[PDF Link](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/mybib/main.pdf)   
-[BIB Articles Link](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/mybib/zotero_articles.bib)    
-[BIB Presentation Link](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/mybib/zotero_presentations.bib)
-
-
-
 ### Selected Articles 
 
 **Published**   
-Malkoti, A., Datta, A., & Hanasoge, S. M. (2021). Rayleigh wave H/V ratio measurement from ambient noise cross-correlations, and its sensitivity to Vp: a numerical study. Geophysical Journal International.
+Malkoti, A., Datta, A., & Hanasoge, S. M. (2021). Rayleigh wave H/V ratio measurement from ambient noise cross-correlations, and its sensitivity to Vp: a numerical study. Geophysical Journal International. 
 
 Lei Li, Jingqiang Tan, Dazhou Zhang, Ajay Malkoti, Ivan Abakumov & Yujiang Xie (2021). FDwave3D: a MATLAB solver for the 3D anisotropic wave equation using the finite-difference method. Computational Geosciences, doi.org/10.1007/s10596-021-10060-3 
     
@@ -64,6 +57,14 @@ Vedanti, N., Malkoti, A., Pandey, O. P., & Shrivastava, J. P. (2018). Ultrasonic
 Malkoti, A., Vedanti, N., & Tiwari, R. K. (2018). An algorithm for fast elastic wave simulation using a vectorized finite difference operator. Computers & Geosciences, 116, 23-31.
 
 Malkoti, A., Vedanti, N., & Tiwari, R. K. (2019). A highly efficient implicit finite difference scheme for acoustic wave propagation. Journal of Applied Geophysics, 161, 204-215.
+
+
+**Downloaded my published/ArXived from [here](https://github.com/ajmalkoti/ajmalkoti.github.io/tree/main/mybib/published_articles)**. 
+
+A Latex bib file containing information about my research.    
+[PDF Link](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/mybib/main.pdf)   
+[BIB Articles Link](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/mybib/zotero_articles.bib)    
+[BIB Presentation Link](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/mybib/zotero_presentations.bib)
 
 
 
