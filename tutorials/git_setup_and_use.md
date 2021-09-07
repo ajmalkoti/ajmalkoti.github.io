@@ -15,7 +15,7 @@ Therefore, I will try to avoid those and it goes as follows.
 4. Make a copy of the generated key and store it in separate directory  
    ```mkdir github_keys```  
    ```cp id_rsa* github_keys```  
-5. You need to add the same keys you generated on your desktop/compter to your GitHub account (online) 
+5. You need to add the same keys (that you generated on your desktop/compter) to your GitHub account (online) 
    So open your Github account setting (online) and navigate as follows.  
    1. Open your Github account (online)
    2. Click on your account name (left top corner). 
