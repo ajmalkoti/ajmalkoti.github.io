@@ -35,7 +35,7 @@ The setup is complete now.
 ## Install the git  
   ```sudo apt-get install git-core git-gui git-doc```
 
-## How to create a new repository  
+## How to create a new repository  on desktop
 1. Make a folder in your home directory e.g. 
    ```mkdir ~/GitHub```  
 2. Assume the project name is "test"  then create a directory with same name.   
