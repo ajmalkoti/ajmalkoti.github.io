@@ -7,7 +7,11 @@ Therefore, I will try to avoid those and it goes as follows.
 2. Go to the .ssh folder (```$cd ~/.ssh```)   
 3. Generate the SSH key with your email id.  
     ```$ ssh-keygen -t rsa -C "your_email@youremail.com"```      
-   It will ask for a password so enter the desired one.
+   It asks for file name and password.
+   Just press enter if you dont want to give any (altenatively you can provide above information).
+   Now we assume you did not provide any filename or password so it will generate two files
+   id_rsa, and id_rsa.pub
+   
 4. Make a copy of the generated key and store it in separate directory  
    ```mkdir github_keys```  
    ```cp id_rsa* github_keys```  
