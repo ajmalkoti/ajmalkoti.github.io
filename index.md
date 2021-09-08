@@ -59,7 +59,7 @@ Malkoti, A., Vedanti, N., & Tiwari, R. K. (2018). An algorithm for fast elastic 
 Malkoti, A., Vedanti, N., & Tiwari, R. K. (2019). A highly efficient implicit finite difference scheme for acoustic wave propagation. Journal of Applied Geophysics, 161, 204-215.
 
 
-**Downloaded my published/ArXived from [here](https://github.com/ajmalkoti/ajmalkoti.github.io/tree/main/mybib/published_articles)**. 
+**Downloaded my published/ArXived articles from [here](https://github.com/ajmalkoti/ajmalkoti.github.io/tree/main/mybib/published_articles)**. 
 
 A Latex bib file containing information about my research.    
 [PDF Link](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/mybib/main.pdf)   
