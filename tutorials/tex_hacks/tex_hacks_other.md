@@ -1,3 +1,4 @@
+
 ## Controlling breaking   of a word and inline equations.
 
 * For inline equations, place \allowbreak command after the place where you want inline equation to break.
@@ -37,7 +38,7 @@
 {\normalfont\Large\bfseries}{Reviewer~\thesection}{1em}{}
 ```
 
-# Page Style 
+## Page Style 
 ```
 \pagestyle{fancy} %for header to be on each page
 \fancyhead[L]{} %keep left header blank
@@ -60,6 +61,18 @@
 \SetWatermarkText{\color{red}Classified} %add watermark text 
 \SetWatermarkScale{4} %specify the size of the text
 ```
+
+## Changing counters
+First, we reset the section counter value to zero, for the section and equation each (useful in appendxix). 
+Next, we change the default display style to capital alphabetical i.e. A,B,C 
+
+```\setcounter{section}{0}                    
+\renewcommand\thesection{\Alph{section}}       
+\setcounter{equation}{0}
+\renewcommand\theequation{A-\arabic{equation}}```
+
+Decrease the counter value by 1
+```\addtocounter{section}{-1}  ``` 
 
 
 ## Question Answer with section numbering
