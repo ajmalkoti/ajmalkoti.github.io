@@ -66,13 +66,17 @@
 First, we reset the section counter value to zero, for the section and equation each (useful in appendxix). 
 Next, we change the default display style to capital alphabetical i.e. A,B,C 
 
-```\setcounter{section}{0}                    
+```tex 
+\setcounter{section}{0}                    
 \renewcommand\thesection{\Alph{section}}       
 \setcounter{equation}{0}
-\renewcommand\theequation{A-\arabic{equation}}```
+\renewcommand\theequation{A-\arabic{equation}}
+```
 
 Decrease the counter value by 1
-```\addtocounter{section}{-1}  ``` 
+```tex 
+\addtocounter{section}{-1}
+```  
 
 
 ## Question Answer with section numbering
