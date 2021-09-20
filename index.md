@@ -1,31 +1,30 @@
 ### Ajay Malkoti 
 
 **Email**   :   ajmalkoti[@]gmail[.]com,    ajaymalkoti[@]ngri[.]res.in  
-**Address** :   Room No. 110, Ist Floor, Main Building, CSIR- National Geophysical Research Institute, Hyderabad-500007, India.  
+**Address** :   Room No. 110, Ist floor, Main building, CSIR- National Geophysical Research Institute, Hyderabad-500007, India.  
 **Landline**:   +91-40-2701 2794
 
 <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-7436-3627" href="https://orcid.org/0000-0002-7436-3627" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0002-7436-3627</a></div>
 
 ### Education
-**Ph.D.** in Physical Sciences from AcSIR at [National Geophysical Research Institute, Hyderabad, India](https://www.ngri.org.in/)       
+**Ph.D.** in Physical Sciences (Geophysics) from AcSIR at [National Geophysical Research Institute, Hyderabad, India](https://www.ngri.org.in/)       
 **M.Sc.** in Geophysics from [Indian Institute of Technology Kharagpur, WB, India](http://www.iitkgp.ac.in/department/GG)      
 **B.Sc.** in Physical Sciences (Electronics) from [University of Delhi, India](http://www.du.ac.in/du/)  
 
 ### Teaching 
-I am teaching following courses at AcSIR-NGRI  
+Currently I am teaching following courses at AcSIR-NGRI.  
 Jan-Aug 2021, [Geophysical Inverse Theory, PHY-NGRI-3-4003 ](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/AcSIR_courses_inv_theory.md)    
 Jan-Aug 2021, [Advance Seismic Methods, PHY-NGRI-3-4004](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/AcSIR_courses_adv_seismic.md) 
 
 ### Research Interests
-I am an exploration geophysicist with an interest in seismic wave propagation in the earth. 
-I work towards observing, modeling, and explaining the wave phenomenons that might be of interest to geophysicist. 
-I make attempts to mimic the real seismic wave propagation in earth with the numerical simulation which can generating the full seismic wavefield and to overcome its limitations in form of governing physics or numerical accuracy. 
+I am an exploration seismologist and I am interested in understanding seismic wave propagation in the earth. I work towards observing, modeling, and explaining the wave phenomenons that might be of interest to researchers. 
+I carry out the full seismic wavefiled numerical simulations to mimic the real seismic wave propagation in the earth.
 These methods are also applied to the full waveform based imaging methods, e.g., RTM, FWI, etc.
 I develop my codes for numerical simulation and I am equally interested in numerical methods as it serves the immediate demand in large simulation.
 
 I have research experience in the following fields and I explore the related fields. 
-1. Wavefield Simulation and inversion of wavefield data (RTM, FWI) 
-2. Numerical and Computational methods 
+1. Wavefield simulation and inversion using wavefield data (RTM, FWI) 
+2. Numerical and computational methods 
 3. Upscaling wave equation 
 4. Ambient noise simulation 
 
@@ -36,11 +35,11 @@ I have listed-out the major codes below.
 
 |S.No.| Code Name  | Language  | Description    |
 |-----|------------|-----------|----------------|
-|1.| FDWave        |MATLAB     |  Seismic wave simulation in 2D-Acoustic/Elastic/Viscoleastic and 3D-HTI/VTI/fully-anisotropic media.|
+|1.| FDWave        |MATLAB     | Seismic wave simulation in 2D-Acoustic/Elastic/Viscoleastic and 3D-HTI/VTI/fully-anisotropic media.|
 |2.| ANCC_HVR      |Python 3   | Numerical estimation of H/V ratio of the cross-correlation obtained from ambient noise. |
-|3.| URG_WE        |MATLAB     | Upscaling Acoustic/Elastic wave equation using RG Normalization group theory. |
+|3.| URG_WE        |MATLAB     | Upscaling Acoustic/Elastic wave equation using Renormalization group theory. |
 |4.| FARMCA        |MATLAB     | Rock permeability estimation using monte carlo method. |
-|5.| GALog         |MATLAB     |  Inverting the well log data using GA algorithm for petrophysical parameters.|
+|5.| GALog         |MATLAB     | Inverting the well log data using GA algorithm for petrophysical parameters.|
 |6.| GASeis        |Fortran 95 | Inverting the 1D seismic data uisng GA algorithm.|
 
 
