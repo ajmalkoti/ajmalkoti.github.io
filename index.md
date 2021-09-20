@@ -14,8 +14,7 @@
 ### Teaching 
 I am teaching following courses at AcSIR-NGRI  
 Jan-Aug 2021, [Geophysical Inverse Theory, PHY-NGRI-3-4003 ](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/AcSIR_courses_inv_theory.md)    
-Jan-Aug 2021, [Advance Seismic Methods and other geophysical techniques 
-for Energy Resources, PHY-NGRI-3-4004](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/AcSIR_courses_adv_seismic.md) 
+Jan-Aug 2021, [Advance Seismic Methods, PHY-NGRI-3-4004](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/AcSIR_courses_adv_seismic.md) 
 
 ### Research Interests
 I am an exploration geophysicist with an interest in seismic wave propagation in the earth. 
