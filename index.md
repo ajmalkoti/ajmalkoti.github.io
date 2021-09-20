@@ -1,6 +1,6 @@
 ### Ajay Malkoti 
 
-**Email**   :   ajmalkoti[at]gmail[dot]com,    ajaymalkoti[at]ngri[dot]res.in  
+**Email**   :   ajmalkoti[@]gmail[.]com,    ajaymalkoti[@]ngri[.]res.in  
 **Address** :   Room No. 110, Ist Floor, Main Building, CSIR- National Geophysical Research Institute, Hyderabad-500007, India.  
 **Landline**:   +91-40-2701 2794
 
