@@ -18,30 +18,30 @@ Jan-Aug 2021, [Advance Seismic Methods and other geophysical techniques
 for Energy Resources, PHY-NGRI-3-4004](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/AcSIR_courses_adv_seismic.md) 
 
 ### Research Interests
-I am an exploration geophysicist with an interest in seismic wave propagation in the earth. I am interested in observing, modeling, and explaining the phenomenons that might be of interest in geophysics. For this reason, I develop my codes for numerical simulation. 
-I make attempt to mimic the real seismic wave propagation in earth with the numerical simulation which can generating the full seismic wavefield, yet it is limited by the governing physics and numerical accuracy. 
-For simulations I develop my own set of codes. I am equally interested in numerical methods as it serves the immediate demand in the seismic inversion procedures.
+I am an exploration geophysicist with an interest in seismic wave propagation in the earth. 
+I work towards observing, modeling, and explaining the wave phenomenons that might be of interest to geophysicist. 
+I make attempts to mimic the real seismic wave propagation in earth with the numerical simulation which can generating the full seismic wavefield and to overcome its limitations in form of governing physics or numerical accuracy. 
+These methods are also applied to the full waveform based imaging methods, e.g., RTM, FWI, etc.
+I develop my codes for numerical simulation and I am equally interested in numerical methods as it serves the immediate demand in large simulation.
 
+I have research experience in the following fields and I explore the related fields. 
+1. Wavefield Simulation and inversion of wavefield data (RTM, FWI) 
+2. Numerical and Computational methods 
+3. Upscaling wave equation 
+4. Ambient noise simulation 
 
-### Research Work
-I have research experience in the following fields.     
-1. Exploration seismics- Numerical Simulation and inversion of wavefield data       
-2. Numerical and Computational methods
-3. Upscaling wave equation
-4. Seismology- Ambient noise simulation and interaction with structure
 
 ### Codes Developed 
 I have developed a few codes, in differet projects while collaborating with different peoples. 
 I have listed-out the major codes below.
 
-
-|S.No.| Code Name  | Language| Description |
-|-----|------------|---------|--------------|
-|1.| FDWave        |MATLAB   |  Seismic wave simulation in 2D-Acoustic/Elastic/Viscoleastic and 3D-HTI/VTI/fully-anisotropic media.|
-|2.| ANCC_HVR      |Python 3 | Numerical estimation of H/V ratio of the cross-correlation obtained from ambient noise. |
-|3.| URG_WE        |MATLAB   | Upscaling Acoustic/Elastic wave equation using RG Normalization group theory. |
-|4.| FARMCA        |MATLAB   | Rock permeability estimation using monte carlo method. |
-|5.| GALog         |MATLAB   |  Inverting the well log data using GA algorithm for petrophysical parameters.|
+|S.No.| Code Name  | Language  | Description    |
+|-----|------------|-----------|----------------|
+|1.| FDWave        |MATLAB     |  Seismic wave simulation in 2D-Acoustic/Elastic/Viscoleastic and 3D-HTI/VTI/fully-anisotropic media.|
+|2.| ANCC_HVR      |Python 3   | Numerical estimation of H/V ratio of the cross-correlation obtained from ambient noise. |
+|3.| URG_WE        |MATLAB     | Upscaling Acoustic/Elastic wave equation using RG Normalization group theory. |
+|4.| FARMCA        |MATLAB     | Rock permeability estimation using monte carlo method. |
+|5.| GALog         |MATLAB     |  Inverting the well log data using GA algorithm for petrophysical parameters.|
 |6.| GASeis        |Fortran 95 | Inverting the 1D seismic data uisng GA algorithm.|
 
 
