@@ -101,17 +101,25 @@ Stretch the figure along y by 2 times```\begin{tikzpicture}[yscale=2]  --- \end{
 
 
 **Placing the text**
+* If you want to place the text at the given location/coordinate (1cm, -2.5cm) then we can use following  
+  ```tex 
+  \node [rotate=45, align=left] at (1cm, -2.5cm) {Some text}; 
+  ```
+  The text can be aligned left/right/above/below to the given coordinate. 
+  
+* If you want to place the text in middle of a line and in a slanted way then use the position as follows.
 ```tex
-\node [rotate=45, align=left] at (1cm, -2.5cm) {Some text};    
+\draw[->,thick] (0,0) -- (4,2) node[pos=.5,sloped,above] {$x$};
+\draw[->,thick] (0,0) -- (4,-2) node[pos=.5,sloped,below] {$y$};
 ```
-The text can be aligned left/right/above/below to the given coordinate. 
-
 
 
 **Drawing other 2D shapes**
-\draw (2,2) circle (2cm);
+```tex
+\draw (2,2) circle (2cm);     
 \draw (9,2) ellipse (2cm and 1.5cm);
 \draw (15,1.5) arc (0:75:3cm);
 \draw[step=1cm,gray,very thin] (-2.9,-2.9) grid (6.9,6.9);
 \draw (0,0) parabola (3,3);
 \draw (-1,-1) rectangle (4.5,4.5);
+```
