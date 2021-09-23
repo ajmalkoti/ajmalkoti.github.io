@@ -1,4 +1,4 @@
-# Examples for tikz from internet 
+# Tutorials for tikz from internet 
 
 * (Tikz PGF manual)[https://ctan.org/pkg/pgf?lang=en]
 * (Visual tikz)[http://tug.ctan.org/info/visualtikz/VisualTikZ.pdf].               
@@ -8,7 +8,7 @@
 * (Simple tutorials)[http://www.statistiker-wg.de/pgf/tutorials.htm]  
                 
                 
-                
+# Examples for stack Exchange                
 * (Tikz Animiation export to gif)[https://tex.stackexchange.com/questions/435875/draw-an-animated-image-with-tikz]  
 * (Using the style command)[https://tex.stackexchange.com/questions/411150/define-tikzstyle-with-postaction]  
 * (Use of intersection Library)[https://tex.stackexchange.com/questions/147143/whats-the-difference-between-path-and-draw-in-tikz]  
