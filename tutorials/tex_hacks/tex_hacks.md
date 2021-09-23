@@ -2,6 +2,7 @@
 
 * [Hacks for lists](./tex_hacks_lists.md)
 * [Hacks for tables](./tex_hacks_table.md)
+* [Hacks for Tikz/PGF](./tex_tikz_examples.md)
 * [Other Hacks](./tex_hacks_other.md)
 
 
