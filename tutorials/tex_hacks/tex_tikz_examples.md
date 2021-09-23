@@ -13,8 +13,26 @@
 * (Draw cylinders)[https://tex.stackexchange.com/questions/475078/cylindrical-diagram-of-a-water-filter?rq=1]
 * (Water droplets)[https://tex.stackexchange.com/questions/195639/drawing-water-droplets-with-tikz?rq=1]
 
+**A basic Tikz code**
+```tex
+% This is a comment as it has % sign in beginning 
 
-Basic commands in Tikz are
+\documentclass[11pt]{standalone}     %Other document classes (e.g. article, book, etc) can also be used.
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}
+\draw (0,0) -- (2,5) -- (5,0)--cycle;
+\end{tikzpicture}
+\end{document}
+```
+
+As shown the code must include the command ``` \usepackage{tikz}``` in preamble.  
+The code between the ```\begin{tikzpicture}  --- \end{tikzpicture}``` is the code to be drawn.
+The other command are defined in follwoing parts
+
+**Basic commands in Tikz are**
 * \draw  : Used to draw the curves (borders only)
 * \fill  : Used to fill the curves (inside body)
 * \drawfill : Used to draw as well as fill the curves.
@@ -22,12 +40,20 @@ Basic commands in Tikz are
 * \path : Used to define a path. It does not draw unless mentioned explicitly. It can be used to find the intersection points of curves.
 
 
-Coordinates 
+**Defining coordinates**
 * Cartesian coordinates are given in (x,y) form
 * Polar coordinates are given in (r,theta) form
 * Relative coordinates: coordinate position with respect to last point is given by ++(a,b).
 * Adding/subtracting coordinates
 
-Shifting a curve 
-* If using the command \draw, then use  \begin{scope}{xshift=2cm,yshift=1cm}   \draw .... \end{scope} 
+**Shifting a curve**
+* If using the command \draw, then use  \begin{scope}{xshift=2cm,yshift=1cm}   \draw .... \end{scope}  
 * If using the command \draw plot[smooth,tension=1], then use \draw plot[smooth,tension=1, shift={(2,1)}]
+
+
+
+**Defining new variables in the tikz**  
+\def{\varname}{varvalue}  
+\pgfmathset{}
+
+
