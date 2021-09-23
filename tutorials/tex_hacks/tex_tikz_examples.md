@@ -17,6 +17,10 @@
 * (Draw cylinders)[https://tex.stackexchange.com/questions/475078/cylindrical-diagram-of-a-water-filter?rq=1]
 * (Water droplets)[https://tex.stackexchange.com/questions/195639/drawing-water-droplets-with-tikz?rq=1]
 
+
+* (Available libraries)[https://tex.stackexchange.com/questions/42611/list-of-available-tikz-libraries-with-a-short-introduction/42679#42679]
+
+
 **A basic Tikz code**
 ```tex
 % This is a comment as it has % sign in beginning 
@@ -122,4 +126,19 @@ Stretch the figure along y by 2 times```\begin{tikzpicture}[yscale=2]  --- \end{
 \draw[step=1cm,gray,very thin] (-2.9,-2.9) grid (6.9,6.9);
 \draw (0,0) parabola (3,3);
 \draw (-1,-1) rectangle (4.5,4.5);
+```
+
+
+**Finding intersection of curves and drawing through them**
+\usepakcage{through}
+```tex 
+\begin{tikzpicture}[scale=2]
+\coordinate [label=left:$A$] (A) at (0,0);
+\coordinate [label=right:$B$] (B) at (1.25,0.25);
+\draw (A) -- (B);
+\node (D) [draw,circle through=(B),label=left:$D$] at (A) {};
+\node (E) [draw,circle through=(A),label=right:$E$] at (B) {};
+\coordinate[label=above:$C$] (C) at (intersection 2 of D and E);\draw [red] (A) -- (C);
+\draw [red] (B) -- (C);
+\end{tikzpicture}
 ```
