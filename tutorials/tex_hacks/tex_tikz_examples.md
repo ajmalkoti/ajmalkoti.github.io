@@ -3,6 +3,10 @@
 * (Tikz PGF manual)[https://ctan.org/pkg/pgf?lang=en]
 * (Visual tikz)[http://tug.ctan.org/info/visualtikz/VisualTikZ.pdf].               
 * (PPT by Jan-Philipp Kappmeier, How to Tikz)[https://www.coga.tu-berlin.de/fileadmin/i26/download/AG_DiskAlg/FG_KombOptGraphAlg/kappmeier/How_to_TikZ_-_current.pdf]                
+* (An Introduction to TikZ - Dr. N.K. Sudev)[https://mleczko.faculty.wmi.amu.edu.pl/wp-content/uploads/2020/03/AnIntroductiontoTikZ.pdf]
+* (Tikz with maths)[http://www.math.uni-leipzig.de/~hellmund/LaTeX/pgf-tut.pdf]
+* (Simple tutorials)[http://www.statistiker-wg.de/pgf/tutorials.htm]  
+                
                 
                 
 * (Tikz Animiation export to gif)[https://tex.stackexchange.com/questions/435875/draw-an-animated-image-with-tikz]  
@@ -36,6 +40,7 @@ The other command are defined in follwoing parts
 * \draw  : Used to draw the curves (borders only)
 * \fill  : Used to fill the curves (inside body)
 * \drawfill : Used to draw as well as fill the curves.
+* \shade : Use to provide the shading 
 * \coordinate Used to assign a coordinate e.g  \coordinate (Name) at (4,5)
 * \path : Used to define a path. It does not draw unless mentioned explicitly. It can be used to find the intersection points of curves.
 
@@ -57,3 +62,56 @@ The other command are defined in follwoing parts
 \pgfmathset{}
 
 
+
+**Scaling the complete figure**
+Magnify the figure size by 1.5 times```\begin{tikzpicture}[scale=1.5]  --- \end{tikzpicture}```   
+Shrink the figure size by  0.7 times```\begin{tikzpicture}[scale=0.7]  --- \end{tikzpicture}```  
+Stretch the figure along x by 1.5 times```\begin{tikzpicture}[xscale=1.5]  --- \end{tikzpicture}```  
+Stretch the figure along y by 2 times```\begin{tikzpicture}[yscale=2]  --- \end{tikzpicture}```  
+
+**Drawing Line and changing its properties**
+```tex
+% line with default properties
+\draw (0,0) -- (1,1) -- (2,0) ;                                
+\draw (0,0) -- (1,1) -- (2,0) --cycle;
+% line with modified properties
+\draw[thick,dotted, latex-latex,red,rounded corners] (0,0) -- (1,1) -- (2,0) ;  
+```
+
+* Line width: ultra thin, very thin, thin, thick, very thick, ultra thick
+* Line type : dotted, dashed, help lines
+* Line color : red, green, blue, cyan, magenta, yellow, black, gray, darkgray, lightgray, brown, lime, olive, orange, pink, purple, teal, violet and white
+
+```tex
+\draw[very thick] (0,0) to [out=90,in=195] (2,1.5);
+```
+
+```tex
+\draw[green, ultra thick, domain=0:1] plot (\x, {\x*\x*\x+\x-0.025});
+```
+
+```tex
+% change below to coordinate
+\draw[green, ultra thick] plot[smooth, tension=1] coordinate{(0,0) (1,2) (3,1) (5,7) (6,1)};
+```
+
+```tex
+\draw (0,0) .. controls (0,4) and (4,0) .. (4,4);
+```
+
+
+**Placing the text**
+```tex
+\node [rotate=45, align=left] at (1cm, -2.5cm) {Some text};    
+```
+The text can be aligned left/right/above/below to the given coordinate. 
+
+
+
+**Drawing other 2D shapes**
+\draw (2,2) circle (2cm);
+\draw (9,2) ellipse (2cm and 1.5cm);
+\draw (15,1.5) arc (0:75:3cm);
+\draw[step=1cm,gray,very thin] (-2.9,-2.9) grid (6.9,6.9);
+\draw (0,0) parabola (3,3);
+\draw (-1,-1) rectangle (4.5,4.5);
