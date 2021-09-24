@@ -41,7 +41,7 @@ Rest of the commands are defined in following parts
 |(theta:radius) | Polar coordinates e.g., (45:2cm) |
 | ++(a,b) | Position relative to last point, e.g. ```(2,3) -- ++(1,1))```  is equivalent to writing (2,3)--(3,4) |
 
-Adding/subtracting coordinates (yet to write)
+Adding/subtracting coordinates (requires \usetikzlibrary{calc})
 ```tex
 \coordinate (A) at (0,0); 
 \coordinate (B) at ($ (A) + (0,2) $);
