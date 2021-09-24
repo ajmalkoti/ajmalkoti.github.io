@@ -133,7 +133,17 @@ The units can be specified when coordinates are provided, such as (1pt, 3pt)  or
 \node[below of=A]  (B) at (0,1) {some text 2}    % below the point A (different from above) 
 \node[below of=A, xshift=1, yshift=2]  (B) at (0,1) {some text 2}    % below the point A with given shift in x and y 
 ```
-* 
+* Node text in shapes
+```tex 
+\node[circle] at (1,4) {some text}
+\node[rectangle] at (1,4) {some text}
+\node[rectangle,rounded corners] at (1,4) {some text}
+```
+* Multiline text (reqires aligning)
+```tex
+\node[align=center] at (0,0) {some text1// some text 2}
+```
+
 
 ## Drawing other 2D shapes
 ```tex
@@ -165,20 +175,27 @@ The units can be specified when coordinates are provided, such as (1pt, 3pt)  or
 # Some useful tricks
 **Shifting a curve**
 * If using the command \draw, then use  
-```tex 
-\begin{scope}{xshift=2cm,yshift=1cm}     
-\draw ....   
-\end{scope}  
-```
+  ```tex 
+  \begin{scope}{xshift=2cm,yshift=1cm}     
+  \draw ....   
+  \end{scope}  
+  ```
+  Scope accepts following arguments   
+  scale, xscale, yscale  
+  shift, xshift, yshift   
+  rotate 
+  
 * If using the plot command with draw command 
 ```tex 
 \draw plot[smooth,tension=1, shift={(2,1)}]
 ```
 
+
+
 **Defining new variables in the tikz**  
 |Command                   | Example |
 |--------------------------|---------|
-|\def{\varname}{varvalue}  | \def\x{2.5} |
+|\def{\varname}{varvalue}              | \def\x{2.5}               |
 |\pgfmathsetmacro{\varname}{\varvalue} | \pgfmathsetmacro{\X}{2.5} | 
 
 
