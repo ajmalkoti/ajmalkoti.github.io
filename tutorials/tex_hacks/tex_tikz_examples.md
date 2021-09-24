@@ -217,8 +217,15 @@ pgfmath package is inbuilt in tikz
 * Add/subtract points 
 
 
+## Conditions based upon if-else
 
-
+```tex 
+\newif\ifCheckA   %%% Create conditions as following
+\CheckAtrue       %%%% Set the condtion value as true
+\ifCheckA
+place commands to be run/hide according the value of condtion
+\fi
+```
 
 ## Tutorials for tikz from internet 
 
