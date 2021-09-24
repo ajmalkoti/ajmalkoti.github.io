@@ -1,26 +1,3 @@
-# Tutorials for tikz from internet 
-
-* (Tikz PGF manual)[https://ctan.org/pkg/pgf?lang=en]
-* (Visual tikz)[http://tug.ctan.org/info/visualtikz/VisualTikZ.pdf].               
-* (PPT by Jan-Philipp Kappmeier, How to Tikz)[https://www.coga.tu-berlin.de/fileadmin/i26/download/AG_DiskAlg/FG_KombOptGraphAlg/kappmeier/How_to_TikZ_-_current.pdf]                
-* (An Introduction to TikZ - Dr. N.K. Sudev)[https://mleczko.faculty.wmi.amu.edu.pl/wp-content/uploads/2020/03/AnIntroductiontoTikZ.pdf]
-* (Tikz with maths)[http://www.math.uni-leipzig.de/~hellmund/LaTeX/pgf-tut.pdf]
-* (Simple tutorials)[http://www.statistiker-wg.de/pgf/tutorials.htm]  
-                
-                
-# Examples for stack Exchange                
-* (Tikz Animiation export to gif)[https://tex.stackexchange.com/questions/435875/draw-an-animated-image-with-tikz]  
-* (Using the style command)[https://tex.stackexchange.com/questions/411150/define-tikzstyle-with-postaction]  
-* (Use of intersection Library)[https://tex.stackexchange.com/questions/147143/whats-the-difference-between-path-and-draw-in-tikz]  
-* (Draw axis)[https://tex.stackexchange.com/questions/222882/drawing-minimal-xy-axis]
-* (Channels within a plate)[https://tex.stackexchange.com/questions/373616/draw-a-multi-channel-plate?rq=1]
-* (Draw cylinders)[https://tex.stackexchange.com/questions/475078/cylindrical-diagram-of-a-water-filter?rq=1]
-* (Water droplets)[https://tex.stackexchange.com/questions/195639/drawing-water-droplets-with-tikz?rq=1]
-
-
-* (Available libraries)[https://tex.stackexchange.com/questions/42611/list-of-available-tikz-libraries-with-a-short-introduction/42679#42679]
-
-
 **A basic Tikz code**
 ```tex
 % This is a comment as it has % sign in beginning 
@@ -76,8 +53,9 @@ Stretch the figure along y by 2 times```\begin{tikzpicture}[yscale=2]  --- \end{
 **Drawing Line and changing its properties**
 ```tex
 % line with default properties
-\draw (0,0) -- (1,1) -- (2,0) ;                                
-\draw (0,0) -- (1,1) -- (2,0) --cycle;
+\draw (0,0) -- (1,1) -- (2,0) ;                  % joining with straight lines
+\draw (0,0) -- (1,1) -- (2,0) --cycle;           % end points are joined using 'cycle'
+\draw (0,0) |- (1,1) -- (2,0) --cycle;           % The point are joined using the L-path following the grids.
 % line with modified properties
 \draw[thick,dotted, latex-latex,red,rounded corners] (0,0) -- (1,1) -- (2,0) ;  
 ```
@@ -142,3 +120,26 @@ Stretch the figure along y by 2 times```\begin{tikzpicture}[yscale=2]  --- \end{
 \draw [red] (B) -- (C);
 \end{tikzpicture}
 ```
+
+
+## Tutorials for tikz from internet 
+
+* (Tikz PGF manual)[https://ctan.org/pkg/pgf?lang=en]
+* (Visual tikz)[http://tug.ctan.org/info/visualtikz/VisualTikZ.pdf].               
+* (PPT by Jan-Philipp Kappmeier, How to Tikz)[https://www.coga.tu-berlin.de/fileadmin/i26/download/AG_DiskAlg/FG_KombOptGraphAlg/kappmeier/How_to_TikZ_-_current.pdf]                
+* (An Introduction to TikZ - Dr. N.K. Sudev)[https://mleczko.faculty.wmi.amu.edu.pl/wp-content/uploads/2020/03/AnIntroductiontoTikZ.pdf]
+* (Tikz with maths)[http://www.math.uni-leipzig.de/~hellmund/LaTeX/pgf-tut.pdf]
+* (Simple tutorials)[http://www.statistiker-wg.de/pgf/tutorials.htm]  
+                
+                
+## Examples for stack Exchange                
+* (Tikz Animiation export to gif)[https://tex.stackexchange.com/questions/435875/draw-an-animated-image-with-tikz]  
+* (Using the style command)[https://tex.stackexchange.com/questions/411150/define-tikzstyle-with-postaction]  
+* (Use of intersection Library)[https://tex.stackexchange.com/questions/147143/whats-the-difference-between-path-and-draw-in-tikz]  
+* (Draw axis)[https://tex.stackexchange.com/questions/222882/drawing-minimal-xy-axis]
+* (Channels within a plate)[https://tex.stackexchange.com/questions/373616/draw-a-multi-channel-plate?rq=1]
+* (Draw cylinders)[https://tex.stackexchange.com/questions/475078/cylindrical-diagram-of-a-water-filter?rq=1]
+* (Water droplets)[https://tex.stackexchange.com/questions/195639/drawing-water-droplets-with-tikz?rq=1]
+
+
+* (Available libraries)[https://tex.stackexchange.com/questions/42611/list-of-available-tikz-libraries-with-a-short-introduction/42679#42679]
