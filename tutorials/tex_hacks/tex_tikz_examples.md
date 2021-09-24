@@ -89,6 +89,8 @@ The units can be specified when coordinates are provided, such as (1pt, 3pt)  or
 * Line width: ultra thin, very thin, thin, thick, very thick, ultra thick
 * Line type : dotted, dashed, help lines
 * Line color : red, green, blue, cyan, magenta, yellow, black, gray, darkgray, lightgray, brown, lime, olive, orange, pink, purple, teal, violet and white
+* Arrow type at the line ends:  <-, -> , <-> , latex-,  -latex, latex-latex, etc.
+ 
 
 ```tex
 \draw[very thick] (0,0) to [out=90,in=195] (2,1.5);
@@ -108,12 +110,16 @@ The units can be specified when coordinates are provided, such as (1pt, 3pt)  or
 ```
 
 
-## Placing the text
-* If you want to place the text at the given location/coordinate (1cm, -2.5cm) then we can use following  
+## Defining the nodes and text
+* Placing the text at the given location   
   ```tex 
-  \node [rotate=45, align=left] at (1cm, -2.5cm) {Some text}; 
+  \node at (1cm, -2.5cm) {Some text};        % Place the text at the given coordinate
+  \node (A) at (1cm, -2.5cm) {Some text};    % Also define the coordinate by name "A".
   ```
-  The text can be aligned left/right/above/below to the given coordinate. 
+  
+* The text can be rotated (by given angle) and aligned (=left/right/above/below) to the given coordinate. 
+  ``` \node [rotate=45, align=left] at (1cm, -2.5cm) {Some text};  ```
+ 
   
 * If you want to place the text in middle of a line and in a slanted way then use the position as follows.
 ```tex
@@ -121,6 +127,13 @@ The units can be specified when coordinates are provided, such as (1pt, 3pt)  or
 \draw[->,thick] (0,0) -- (4,-2) node[pos=.5,sloped,below] {$y$};
 ```
 
+* place node with repect to given node
+```tex
+\node[below]  (A) at (0,1) {some text 1}         % just below the point A
+\node[below of=A]  (B) at (0,1) {some text 2}    % below the point A (different from above) 
+\node[below of=A, xshift=1, yshift=2]  (B) at (0,1) {some text 2}    % below the point A with given shift in x and y 
+```
+* 
 
 ## Drawing other 2D shapes
 ```tex
