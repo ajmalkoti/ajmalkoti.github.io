@@ -218,12 +218,15 @@ pgfmath package is inbuilt in tikz
 
 
 ## Conditions based upon if-else
+<!--  https://tex.stackexchange.com/questions/167153/dynamically-hide-latex-beamer-frame-based-on-tags -->
 
+In following line we create a condition name- "Show" which if set to true/false, will run/hide the code.
 ```tex 
-\newif\ifCheckA   %%% Create conditions as following
-\CheckAtrue       %%%% Set the condtion value as true
-\ifCheckA
-place commands to be run/hide according the value of condtion
+\newif\ifShow        %%% Create conditions
+\Showtrue            %%%% Set the condtion value as true
+
+\ifShow
+ Place commands to be run/hide according the value of condtion
 \fi
 ```
 
