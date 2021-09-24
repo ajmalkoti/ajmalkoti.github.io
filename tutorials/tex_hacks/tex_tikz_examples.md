@@ -1,5 +1,12 @@
+# Tikz Tutorial 
+
+
 ## Tikz overview 
-**A basic Tikz code**
+**A basic Tikz code**  
+* The preamble part is stanadard. 
+* The latex code must include the command ``` \usepackage{tikz}``` in preamble to enable the commands provided by tikz.  
+* The code between the   ```\begin{tikzpicture}  --- \end{tikzpicture}``` is the code to be drawn.
+
 ```tex
 % This is a comment as it has % sign in beginning 
 
@@ -8,15 +15,12 @@
 \usepackage{tikz}
 
 \begin{document}
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=2]
 \draw (0,0) -- (2,5) -- (5,0)--cycle;
 \end{tikzpicture}
 \end{document}
 ```
-
-As shown the code must include the command ``` \usepackage{tikz}``` in preamble.  
-The code between the ```\begin{tikzpicture}  --- \end{tikzpicture}``` is the code to be drawn.
-The other command are defined in following parts
+Rest of the commands are defined in following parts
 
 
 **Basic commands in Tikz are**
@@ -30,16 +34,7 @@ The other command are defined in following parts
 |\path       | Used to define a path. It does not draw unless mentioned explicitly. It can be used to find the intersection points of curves.|
 
 
-**Units in Tikz**
-| Units   | Description | 
-|---------|-------------|
-| cm      | centimeters |
-| in      | inches   |
-| em      | m width  |
-| pt      | points  |
-
-
-**Defining coordinates**
+**Defining coordinates**    
 | Type    | Description | 
 |---------|-------------|
 |(x,y)    | Cartesian coordinates e.g., (3cm,4.67cm) |
@@ -47,26 +42,20 @@ The other command are defined in following parts
 | ++(a,b) | Position relative to last point, e.g. ```(2,3) -- ++(1,1))```  is equivalent to writing (2,3)--(3,4) |
 
 Adding/subtracting coordinates (yet to write)
-
-
-**Shifting a curve**
-* If using the command \draw, then use  
-```tex 
-\begin{scope}{xshift=2cm,yshift=1cm}     
-\draw ....   
-\end{scope}  
-```
-* If using the plot command with draw command 
-```tex 
-\draw plot[smooth,tension=1, shift={(2,1)}]
+```tex
+\coordinate (A) at (0,0); 
+\coordinate (B) at ($ (A) + (0,2) $);
 ```
 
+**Units in Tikz**  
+The units can be specified when coordinates are provided, such as (1pt, 3pt)  or (3in, 4in) etc.
 
-
-**Defining new variables in the tikz**  
-\def{\varname}{varvalue}  
-\pgfmathset{}
-
+| Units   | Description | 
+|---------|-------------|
+| cm      | centimeters |
+| in      | inches   |
+| em      | m width  |
+| pt      | points  |
 
 
 **Scaling the complete figure**
@@ -81,6 +70,10 @@ Adding/subtracting coordinates (yet to write)
   
 * Stetch the figure along y by 2 times  
   ```\begin{tikzpicture}[yscale=2]  --- \end{tikzpicture}```  
+
+
+
+
 
 ## Drawing Line and changing its properties
 * A straight line (with default properties) by connecting n-coordinates  
@@ -115,7 +108,7 @@ Adding/subtracting coordinates (yet to write)
 ```
 
 
-**Placing the text**
+## Placing the text
 * If you want to place the text at the given location/coordinate (1cm, -2.5cm) then we can use following  
   ```tex 
   \node [rotate=45, align=left] at (1cm, -2.5cm) {Some text}; 
@@ -129,7 +122,7 @@ Adding/subtracting coordinates (yet to write)
 ```
 
 
-**Drawing other 2D shapes**
+## Drawing other 2D shapes
 ```tex
 \draw (2,2) circle (2cm);     
 \draw (9,2) ellipse (2cm and 1.5cm);
@@ -139,8 +132,7 @@ Adding/subtracting coordinates (yet to write)
 \draw (-1,-1) rectangle (4.5,4.5);
 ```
 
-
-**Finding intersection of curves and drawing through them**
+## Finding intersection of curves and drawing through them
 \usepakcage{through}
 ```tex 
 \begin{tikzpicture}[scale=2]
@@ -153,6 +145,49 @@ Adding/subtracting coordinates (yet to write)
 \draw [red] (B) -- (C);
 \end{tikzpicture}
 ```
+
+
+
+
+# Some useful tricks
+**Shifting a curve**
+* If using the command \draw, then use  
+```tex 
+\begin{scope}{xshift=2cm,yshift=1cm}     
+\draw ....   
+\end{scope}  
+```
+* If using the plot command with draw command 
+```tex 
+\draw plot[smooth,tension=1, shift={(2,1)}]
+```
+
+**Defining new variables in the tikz**  
+|Command                   | Example |
+|--------------------------|---------|
+|\def{\varname}{varvalue}  | \def\x{2.5} |
+|\pgfmathsetmacro{\varname}{\varvalue} | \pgfmathsetmacro{\X}{2.5} | 
+
+
+pgfmath package is inbuilt in tikz 
+
+
+## PGFmath Packages
+* Assign a Macro  
+```tex 
+\def\a{0.5}
+\def\b{0.5}
+\def\bAngle {-10}
+\pgfmathsetmacro{\X}{2.5}
+\pgfmathsetmacro {\hyp}{\a*0.5 / cos (84)}
+\pgfmathsetmacro {\len}{sqrt(\hyp*\hyp -0.25*\a*\a)}
+```
+* Caculate a value/point etc.
+
+* Add/subtract points 
+
+
+
 
 
 ## Tutorials for tikz from internet 
