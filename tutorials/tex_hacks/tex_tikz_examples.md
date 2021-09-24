@@ -1,3 +1,4 @@
+## Tikz overview 
 **A basic Tikz code**
 ```tex
 % This is a comment as it has % sign in beginning 
@@ -17,24 +18,48 @@ As shown the code must include the command ``` \usepackage{tikz}``` in preamble.
 The code between the ```\begin{tikzpicture}  --- \end{tikzpicture}``` is the code to be drawn.
 The other command are defined in following parts
 
+
 **Basic commands in Tikz are**
-* \draw  : Used to draw the curves (borders only)
-* \fill  : Used to fill the curves (inside body)
-* \drawfill : Used to draw as well as fill the curves.
-* \shade : Use to provide the shading 
-* \coordinate Used to assign a coordinate e.g  \coordinate (Name) at (4,5)
-* \path : Used to define a path. It does not draw unless mentioned explicitly. It can be used to find the intersection points of curves.
+| Command | Description | 
+|---------|-------------|
+|\draw    | Used to draw the curves (borders only)  |
+|\fill       | Used to fill the curves (inside body) |
+|\drawfill   | Used to draw as well as fill the curves.|
+|\shade      | Use to provide the shading |
+|\coordinate | Used to assign a coordinate e.g  \coordinate (Name) at (4,5)|
+|\path       | Used to define a path. It does not draw unless mentioned explicitly. It can be used to find the intersection points of curves.|
+
+
+**Units in Tikz**
+| Units   | Description | 
+|---------|-------------|
+| cm      | centimeters |
+| in      | inches   |
+| em      | m width  |
+| pt      | points  |
 
 
 **Defining coordinates**
-* Cartesian coordinates are given in (x,y) form
-* Polar coordinates are given in (r,theta) form
-* Relative coordinates: coordinate position with respect to last point is given by ++(a,b).
-* Adding/subtracting coordinates
+| Type    | Description | 
+|---------|-------------|
+|(x,y)    | Cartesian coordinates e.g., (3cm,4.67cm) |
+|(theta:radius) | Polar coordinates e.g., (45:2cm) |
+| ++(a,b) | Position relative to last point, e.g. ```(2,3) -- ++(1,1))```  is equivalent to writing (2,3)--(3,4) |
+
+Adding/subtracting coordinates (yet to write)
+
 
 **Shifting a curve**
-* If using the command \draw, then use  \begin{scope}{xshift=2cm,yshift=1cm}   \draw .... \end{scope}  
-* If using the command \draw plot[smooth,tension=1], then use \draw plot[smooth,tension=1, shift={(2,1)}]
+* If using the command \draw, then use  
+```tex 
+\begin{scope}{xshift=2cm,yshift=1cm}     
+\draw ....   
+\end{scope}  
+```
+* If using the plot command with draw command 
+```tex 
+\draw plot[smooth,tension=1, shift={(2,1)}]
+```
 
 
 
@@ -45,21 +70,29 @@ The other command are defined in following parts
 
 
 **Scaling the complete figure**
-Magnify the figure size by 1.5 times```\begin{tikzpicture}[scale=1.5]  --- \end{tikzpicture}```   
-Shrink the figure size by  0.7 times```\begin{tikzpicture}[scale=0.7]  --- \end{tikzpicture}```  
-Stretch the figure along x by 1.5 times```\begin{tikzpicture}[xscale=1.5]  --- \end{tikzpicture}```  
-Stretch the figure along y by 2 times```\begin{tikzpicture}[yscale=2]  --- \end{tikzpicture}```  
+* Magnify the figure size by 1.5 times   
+  ```\begin{tikzpicture}[scale=1.5]  --- \end{tikzpicture}```  
+  
+* Shrink the figure size by  0.7 times  
+  ```\begin{tikzpicture}[scale=0.7]  --- \end{tikzpicture}```  
+  
+* Stretch the figure along x by 1.5 times   
+  ```\begin{tikzpicture}[xscale=1.5]  --- \end{tikzpicture}```  
+  
+* Stetch the figure along y by 2 times  
+  ```\begin{tikzpicture}[yscale=2]  --- \end{tikzpicture}```  
 
-**Drawing Line and changing its properties**
-```tex
-% line with default properties
-\draw (0,0) -- (1,1) -- (2,0) ;                  % joining with straight lines
-\draw (0,0) -- (1,1) -- (2,0) --cycle;           % end points are joined using 'cycle'
-\draw (0,0) |- (1,1) -- (2,0) --cycle;           % The point are joined using the L-path following the grids.
-% line with modified properties
-\draw[thick,dotted, latex-latex,red,rounded corners] (0,0) -- (1,1) -- (2,0) ;  
-```
+## Drawing Line and changing its properties
+* A straight line (with default properties) by connecting n-coordinates  
+  ```\draw (0,0) -- (1,1) -- (2,0) ;```
+* A straight line with end points joined  
+  ```\draw (0,0) -- (1,1) -- (2,0) --cycle;```
+* Draw a straight line such that the point are joined using the L-path following the grids.
+  ```\draw (0,0) |- (1,1) -- (2,0) --cycle;```
+* Modified properties of the line 
+  ```\draw[thick,dotted, latex-latex,red,rounded corners] (0,0) -- (1,1) -- (2,0) ; ```
 
+**Line properties**
 * Line width: ultra thin, very thin, thin, thick, very thick, ultra thick
 * Line type : dotted, dashed, help lines
 * Line color : red, green, blue, cyan, magenta, yellow, black, gray, darkgray, lightgray, brown, lime, olive, orange, pink, purple, teal, violet and white
