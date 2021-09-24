@@ -38,7 +38,7 @@
 
 As shown the code must include the command ``` \usepackage{tikz}``` in preamble.  
 The code between the ```\begin{tikzpicture}  --- \end{tikzpicture}``` is the code to be drawn.
-The other command are defined in follwoing parts
+The other command are defined in following parts
 
 **Basic commands in Tikz are**
 * \draw  : Used to draw the curves (borders only)
