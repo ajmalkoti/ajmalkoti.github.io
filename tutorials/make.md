@@ -148,8 +148,8 @@ yet to write
 
 
 
-References:
-https://www.gnu.org/software/make/manual/
-https://source.ggy.bris.ac.uk/wiki/Make
-https://aoterodelaroza.github.io/devnotes/modern-fortran-makefiles/
+### References:  
+https://www.gnu.org/software/make/manual/  
+https://source.ggy.bris.ac.uk/wiki/Make  
+https://aoterodelaroza.github.io/devnotes/modern-fortran-makefiles/   
 https://www.gnu.org/software/make/manual/make.pdf   
