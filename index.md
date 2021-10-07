@@ -79,7 +79,7 @@ Malkoti, A., 2014, Inversion of well log data for better determination of petrop
 ### Resources for students
 1. [How to use git](./tutorials/git_setup_and_use.md)
 2. [A latex template for AcSIR thesis](./resources/template_AcSIR_thesis.zip)   
-3. [How to make](./tutorials/make.md)
+3. [How to use MAKE](./tutorials/make.md)
 
 
 ### Codes Developed 
