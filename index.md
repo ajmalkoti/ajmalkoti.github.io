@@ -15,8 +15,8 @@ Scientist C
 
 ### Teaching 
 Currently I am teaching following courses at AcSIR-NGRI.  
-Jan-Aug 2021, [Geophysical Inverse Theory, PHY-NGRI-3-4003 ](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/AcSIR_courses_inv_theory.md)    
-Jan-Aug 2021, [Advance Seismic Methods, PHY-NGRI-3-4004](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/AcSIR_courses_adv_seismic.md) 
+Jan-Aug 2021, [Geophysical Inverse Theory, PHY-NGRI-3-4003 ](AcSIR_courses_inv_theory.md)    
+Jan-Aug 2021, [Advance Seismic Methods, PHY-NGRI-3-4004](AcSIR_courses_adv_seismic.md) 
 
 
 ### Research Interests
@@ -66,9 +66,9 @@ Malkoti, A., 2014, Inversion of well log data for better determination of petrop
 
 
 **Further Information**   
-[PDF for all published/ArXived articles](https://github.com/ajmalkoti/ajmalkoti.github.io/tree/main/mybib/published_articles),   
-[BIB file containing list of published articles](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/mybib/zotero_articles.bib),    
-[BIB file containing list of abstract presented in conferences](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/mybib/zotero_presentations.bib)
+[PDF for all published/ArXived articles](./mybib/published_articles),   
+[BIB file containing list of published articles](./mybib/zotero_articles.bib),    
+[BIB file containing list of abstract presented in conferences](./mybib/zotero_presentations.bib)
 
 
 <!-- [PDF Link](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/mybib/main.pdf)   -->
@@ -77,9 +77,9 @@ Malkoti, A., 2014, Inversion of well log data for better determination of petrop
 
 
 ### Resources for students
-1. [How to use git](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/tutorials/git_setup_and_use.md)
-2. [A latex template for AcSIR thesis](https://github.com/ajmalkoti/ajmalkoti.github.io/blob/main/resources/template_AcSIR_thesis.zip)   
-
+1. [How to use git](./tutorials/git_setup_and_use.md)
+2. [A latex template for AcSIR thesis](./resources/template_AcSIR_thesis.zip)   
+3. [How to make](./tutorials/make.md)
 
 
 ### Codes Developed 
