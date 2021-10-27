@@ -1,0 +1,137 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{acsir}[2017/08/21 Package for AcSIR Thesis]
+
+\RequirePackage{xcolor}
+\RequirePackage{graphicx}
+\graphicspath{{figures/}}
+%\RequirePackage{fancyhdr}
+%\makeatletter
+%\makeatother
+
+
+\newcommand*{\degree}[1]{\gdef\@degree{#1}}%
+\newcommand*{\@degree}{PHYSICAL SCIENCES}
+
+\newcommand*{\regno}[1]{\gdef\@regno{#1}}
+\newcommand*{\@regno}{10PP13JXXXX}
+
+\newcommand*{\labname}[1]{\gdef\@labname{#1}}
+\newcommand*{\@labname}{CSIR-National Geophysical Research Institute}
+
+\newcommand*{\labaddress}[1]{\gdef\@labaddress{#1}}
+\newcommand*{\@labaddress}{Hyderabad-500007, India}
+
+
+\newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}}
+\newcommand*{\@supervisor}{ Prof. XXX}
+
+\newcommand*{\SubmissionDate}[1]{\gdef\@SubmissionDate{#1}}
+\newcommand*{\@SubmissionDate}{ \today}
+
+
+\renewcommand*{\maketitle}{%
+\begin{titlepage}
+	\begin{center}
+		\vspace*{2.5cm}
+		{\Huge  \@title}
+		 \\[2cm]  
+		\Large
+		 A Thesis Submitted to AcSIR for the Award of the Degree of\\[2.5em]
+		 DOCTOR OF PHILOSOPHY\\[2em]
+		 in \@degree \\[2.5em]
+		 %
+		 By\\[2em]		 
+		 \textbf{\@author} \\[1em]
+		 Registration No. \@regno\\[3em]		 
+		 %
+		 under the guidance of \\[2em]
+		 \@supervisor
+		 \vfill
+		 \includegraphics[width=\textwidth]{acsir_logo.png}\\[2em]		 
+		 \@labname \\		 
+		 \@labaddress		 \\[1em]
+		 \@SubmissionDate
+	\end{center}
+\end{titlepage}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand*{\makecertificate}[1]{
+\chapter*{Certificate}
+This is to certify that the work incorporated in this Ph.D. thesis 
+entitled ``\textbf{\@title}''  submitted by \@author \;to 
+Academy of Scientific and Innovative Research (AcSIR) in fulfillment 
+of the requirements for the Degree of \textbf{Doctor of Philosophy in \@degree}, 
+embodies original  research work under our supervision.
+\\[.5cm]
+We further certify that this  work has not been submitted to any other 
+University or Institution in part or full for award of any degree or diploma. 
+Research material obtained from other sources has been duly acknowledged 
+in the thesis. Any text, illustration, table etc. used in the thesis 
+from other sources, have been duly cited and acknowledged.
+%
+\vspace{2cm}\\
+\@author \\
+%
+%
+%
+\vspace{2cm}\\
+\@supervisor
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+%%%%%%%%%%5
+\usepackage[Lenny]{fncychap}  % To set the chapter's title in fancy style
+\usepackage{fancyhdr}  %fancy header and footer package
+	\pagestyle{fancy}
+	\fancyhead{}				% clear headers and set headers following commands
+	\fancyhead[LE]{\leftmark}   %\leftmark gives the chapter name
+	\fancyhead[RO]{\rightmark}	%\rightmark gives the section name
+	%\fancyhead[RE,LO]{\thepage} % \thepage gives the page number
+	\fancyfoot{}
+	\fancyfoot[LE]{\@author}
+	\fancyfoot[RE,LO]{\thepage} % \thepage gives the page number
+	\renewcommand{\headrulewidth}{0.4pt}  % to change the thickness of line in header
+	\renewcommand{\footrulewidth}{0.4pt}	% to change the thickness of line in footer
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand{\cblue}[1]{#1}    
+
+\newcommand{\cblue}[1]{\textcolor{blue}{#1}}
+\newcommand{\cred}[1]{\textcolor{red}{#1}} 
+
+\usepackage{xparse}
+\NewDocumentCommand{\refeq}{ m O{}}{\cblue{\ref{#1}#2}}  	    %e.g. 7
+\NewDocumentCommand{\refeqt}{ m O{}}{\cblue{Eq.\;(\ref{#1}#2)}}	    %e.g. Eq. 7
+\NewDocumentCommand{\refeqp}{ m O{}}{(\cblue{Eq.\;\ref{#1}#2})}	    %e.g. (Eq. 7)
+
+\NewDocumentCommand{\reffig}{ m O{}}{\cblue{\ref{#1}#2}}
+\NewDocumentCommand{\reffigt}{ m O{}}{\cblue{Fig.\;\ref{#1}#2}}
+\NewDocumentCommand{\reffigp}{ m O{}}{\cblue{(Fig.\;\ref{#1}#2})}
+
+\NewDocumentCommand{\reftable}{ m O{}}{\cblue{\ref{#1}#2}}
+\NewDocumentCommand{\reftablet}{ m O{}}{\cblue{Table\;\ref{#1}#2}} 
+\NewDocumentCommand{\reftablep}{ m O{}}{\cblue{(Table\;\ref{#1}#2})}
+
+  
+\NewDocumentCommand{\refapp}{ m O{}}{\cblue{\ref{#1}#2}}
+\NewDocumentCommand{\refappt}{ m O{}}{\cblue{Appendix\;\ref{#1}#2}} 
+\NewDocumentCommand{\refappp}{ m O{}}{\cblue{(Appendix\;\ref{#1}#2})} 
+
+
+
+\newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut\textbf{}
+
+\endinput
