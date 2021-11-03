@@ -44,6 +44,7 @@ blank line otherwise the line number for that paragraph will not appear.
 It can be solved by using following code in preamble. 
 The solution is copied from Tex-Stackexchange. 
 
+```tex
 \newcommand*\patchAmsMathEnvironmentForLineno[1]{
   \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
   \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
@@ -61,3 +62,4 @@ The solution is copied from Tex-Stackexchange.
   \patchBothAmsMathEnvironmentsForLineno{gather}
   \patchBothAmsMathEnvironmentsForLineno{multline}
 }
+```
