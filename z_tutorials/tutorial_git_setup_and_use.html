@@ -1,79 +1,169 @@
-<h2 id="how-to-install-the-github-on-ubuntu">How to install the GitHub on ubuntu</h2>
-<p>The <a href="https://wiki.paparazziuav.org/wiki/Github_manual_for_Ubuntu">wiki tutorial</a> describes well about to install the GIT however there are a few gliches. Therefore, I will try to avoid those and it goes as follows.</p>
-<ol type="1">
-<li><p>Open the terminal (or press Alt+Ctrl+T)<br />
-</p></li>
-<li><p>Go to the .ssh folder (<code>$cd ~/.ssh</code>)<br />
-</p></li>
-<li><p>Generate the SSH key with your email id.<br />
-<code>$ ssh-keygen -t rsa -C "your_email@youremail.com"</code><br />
-It asks for file name and password. Just press enter if you dont want to give any (altenatively you can provide above information). Now we assume you did not provide any filename or password so it will generate two files id_rsa, and id_rsa.pub</p></li>
-<li><p>Make a copy of the generated key and store it in separate directory<br />
-<code>mkdir github_keys</code><br />
-<code>cp id_rsa* github_keys</code><br />
-</p></li>
-<li><p>You need to add the same keys (that you generated on your desktop/compter) to your GitHub account (online) So open your Github account setting (online) and navigate as follows.</p>
-<ol type="1">
-<li>Open your Github account (online)</li>
-<li>Click on your account name (left top corner).</li>
-<li>In the drop down menue, choose “Settings”</li>
-<li>Select SSH and GPG Keys</li>
-<li>Click on- Add new SSH key<br />
-</li>
-</ol></li>
-<li><p>Now it will ask for name of key, so, give a suitable name to this key so that you can recognize to which system it is connected.<br />
-</p></li>
-<li><p>It will also ask for the value of key. This was generated above and stored in file “id_rsa.pub” in your desktop.<br />
-You can open the file “id_rsa.pub” present in your desktop, with gedit. Copy its content and paste it into your GitHub account.<br />
-</p></li>
-<li><p>Now you finally add these keys to known-host list by issuing the following command.<br />
-<code>ssh-add</code></p></li>
-</ol>
-<p>The setup is complete now.</p>
-<h2 id="install-the-git">Install the git</h2>
-<p><code>sudo apt-get install git-core git-gui git-doc</code></p>
-<h2 id="how-to-create-a-new-repository-on-desktop">How to create a new repository on desktop</h2>
-<ol type="1">
-<li>Make a folder in your home directory e.g.  <code>mkdir ~/GitHub</code><br />
-</li>
-<li>Assume the project name is “test” then create a directory with same name.<br />
-<code>mkdir test</code><br />
-<code>cd test</code><br />
-</li>
-<li>Initialize the git for the project (note one must be inside the directory) git init<br />
-</li>
-<li>Connect it to remote/GitHub directory “test”<br />
-<code>git remote add origin  https://github.com/your_username/test</code></li>
-</ol>
-<p>The github and the desktop directory may not have same names. For simplicity we kept both as same.</p>
-<p>Sometime it maynot work. So another way is to create a repository online and then clone/copy it and later update it as described in steps below.</p>
-<h2 id="creating-a-repository-online">Creating a repository online</h2>
-<ol type="1">
-<li>Go to your home page.</li>
-<li>On left pane, click on “New” button to create a new repository.</li>
-<li>Provide a unique name for the repository.</li>
-<li>Select if it is private or public.</li>
-<li>Add a ReadMe.md file in which you can provide the description for the repository.</li>
-<li>Choose a licence, and file to ignore (gitignore).</li>
-</ol>
-<h2 id="how-to-copy-and-existing-repository">How to copy and existing repository</h2>
-<ol type="1">
-<li>Make a folder in your home directory e.g. <code>mkdir ~/GitHub</code>. Ignore if it exists.</li>
-<li>Change directory, <code>cd GitHub</code><br />
-</li>
-<li>Clone the project within this directory, where a new directory, with same name as project will be created.<br />
-git clone git@github.com:username/projectname<br />
-e.g.<br />
-<code>/Home/User/GitHub&gt;&gt; git clone git@github.com:ajmalkoti/ANCC_MCHVRatio</code><br />
-It may ask for the password that you provided during creation of ssh-keys. It is not your github password.</li>
-</ol>
-<p>Now you should be able to download all the documents within the project.</p>
-<h2 id="how-to-make-some-changes-and-update-the-repository">How to make some changes and update the repository</h2>
-<p>Let us assume that you made changes in the files present within project directory. 1. Now add all files to be updating list individually<br />
-<code>git add filename</code><br />
-or or all at once as<br />
-<code>git add .</code><br />
-2. Add some message for the update you are making<br />
-<code>git commit -m "some_meaningful_message"</code><br />
-3. Issue command to update. Until you issue this command the files will not be uploaded/updated to GitHub.<br />
-<code>git push origin master</code></p>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<title>Ajay Malkoti</title>
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen">
+		<link rel="stylesheet" href="academicons/academicons.css"/>
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.css"/>  
+		<meta name="description" content="Ajay Malkoti's personal page.">
+		<meta name="keywords" content="Ajay Malkoti, 					       
+					       CSIR-NGRI, National Geophysical Research Insitiute, 
+					       Fortran, MATLAB, Python,
+					       Geophysicist, Modeling, simulation, finite difference,  
+					       Numerical algorithm">
+		<meta name="author" content="Ajay Malkoti"> 
+	 	<meta name="MobileOptimized" content="HandheldFriendly">  
+	 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" href="style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+	</head>
+
+
+
+
+	<body>
+
+        <h3><a href="http://ajmalkoti.github.io">ajmalkoti.github.io</a></h3>
+
+        <div class="group-icons">
+            <a href="./images/ajmalkoti2020.png"><img id="foto" src="./images/ajmalkoti2020.png?raw=true" alt="foto"></a>
+            <a href="https://github.com/ajmalkoti?tab=repositories"><i class="fa fa-github fa-2x"></i></a>
+            <a href="http://orcid.org/0000-0002-7436-3627"><i class="ai ai-orcid fa-2x"></i></a> 
+            <a href="https://www.researchgate.net/profile/Ajay-Malkoti/"><i class="ai ai-researchgate-square fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/ajay-malkoti-36241b30"><i class="fa fa-linkedin-square fa-2x"></i></a>         
+            <!--
+            <a href="https://twitter.com/ajmalkoti"><i class="fa fa-twitter-square fa-2x"></i></a>  
+            -->
+        </div>
+
+
+
+        <div id="navbar">
+            <a href="aa_aboutme.html"><strong>About me</strong></a> &nbsp; &nbsp; &nbsp; 
+            <a href="ab_research.html"><strong>Research</strong></a> &nbsp; &nbsp; &nbsp;
+            <a href="ac_teaching.html"><strong>Teaching</strong></a> &nbsp; &nbsp; &nbsp;
+            <a href="ad_software.html"><strong>Software</strong></a> &nbsp; &nbsp; &nbsp;
+            <a href="ae_news.html"><strong>News</strong></a> 
+        </div>
+
+
+        <p><br> <br> <br> <br> <br> <br></p>
+
+
+        <div id="contact2">
+            <a href="mailto:ajaymalkoti@ngri.res.in">ajaymalkoti@ngri.res.in</a><br />
+            <a href="http://ajmalkoti.github.io">ajmalkoti.github.io</a> <br /> 
+            <br />          
+        </div>
+
+        <div id="contact1">
+            Ajay Malkoti<br/>
+            <a href="https://www.ngri.res.in/research/seismics.php">Seismic Group</a><br/>
+            <a href="https://www.ngri.res.in/index.php">CSIR-NGRI</a><br />         
+        </div>
+
+        <div id="texto">
+
+
+
+    <h2 id="github-installation-ubuntu">How to install the GitHub on ubuntu</h2>
+        <p>The <a href="https://wiki.paparazziuav.org/wiki/Github_manual_for_Ubuntu">wiki tutorial</a> describes well about to install the GIT however there are a few gliches. Therefore, I will try to avoid those and it goes as follows.</p>
+        
+        <ol type="1">
+        <li><p>Open the terminal (or press Alt+Ctrl+T)<br />
+        </p></li>
+        <li><p>Go to the .ssh folder (<code>$cd ~/.ssh</code>)<br /> </p></li>
+        <li><p>Generate the SSH key with your email id.<br />
+            <code>$ ssh-keygen -t rsa -C "your_email@youremail.com"</code><br />
+            It asks for file name and password. Just press enter if you dont want to give any (altenatively you can provide above information). Now we assume you did not provide any filename or password so it will generate two files id_rsa, and    id_rsa.pub</p></li>
+        <li><p>Make a copy of the generated key and store it in separate directory<br />
+            <code>mkdir github_keys</code><br />
+            <code>cp id_rsa* github_keys</code><br />    </p></li>
+        <li><p>You need to add the same keys (that you generated on your desktop/compter) to your GitHub account (online) So open your Github account setting (online) and navigate as follows.</p>
+        <ol type="1">
+        <li>Open your Github account (online)</li>
+        <li>Click on your account name (left top corner).</li>
+        <li>In the drop down menue, choose “Settings”</li>
+        <li>Select SSH and GPG Keys</li>
+        <li>Click on- Add new SSH key<br />  </li>
+        </ol></li>
+        <li><p>Now it will ask for name of key, so, give a suitable name to this key so that you can recognize to which system it is connected.<br />
+        </p></li>
+        <li> <p>It will also ask for the value of key. This was generated above and stored in file “id_rsa.pub” in your desktop.<br />
+        You can open the file “id_rsa.pub” present in your desktop, with gedit. Copy its content and paste it into your GitHub account.<br />
+        </p></li>
+        <li><p>Now you finally add these keys to known-host list by issuing the following command.<br />
+            <code>ssh-add</code></p></li>
+        </ol>
+        <p>The setup is complete now.</p>
+        
+    <h2 id="install-the-git">Install the git</h2>
+        <p><code>sudo apt-get install git-core git-gui git-doc</code></p>
+        <h2 id="how-to-create-a-new-repository-on-desktop">How to create a new repository on desktop</h2>
+        <ol type="1">
+        <li>Make a folder in your home directory e.g., <code>mkdir ~/GitHub</code><br/></li>
+        <li>Assume the project name is “test” then create a directory with same name.<br />
+            <code>mkdir test</code><br />
+            <code>cd test</code><br />   </li>
+        <li>Initialize the git for the project (note one must be inside the directory) git init<br />   </li>
+        <li>Connect it to remote/GitHub directory “test”<br />
+            <code>git remote add origin  https://github.com/your_username/test</code></li>
+        </ol>
+        
+        <p>The github and the desktop directory may not have same names. For simplicity we kept both as same.</p>
+        <p>Sometime it maynot work. So another way is to create a repository online and then clone/copy it and later update it as described in steps below.</p>
+        
+
+        <h2 id="creating-a-repository-online">Creating a repository online</h2>        
+        <ol type="1">
+        <li>Go to your home page.</li>
+        <li>On left pane, click on “New” button to create a new repository.</li>
+        <li>Provide a unique name for the repository.</li>
+        <li>Select if it is private or public.</li>
+        <li>Add a ReadMe.md file in which you can provide the description for the repository.</li>
+        <li>Choose a licence, and file to ignore (gitignore).</li>
+        </ol>
+        
+
+        <h2 id="how-to-copy-and-existing-repository">How to copy and existing repository</h2>
+        <ol type="1">
+        <li>Make a folder in your home directory e.g. <code>mkdir ~/GitHub</code>. Ignore if it exists.</li>
+        <li>Change directory, <code>cd GitHub</code><br/>
+        </li>
+        <li>Clone the project within this directory, where a new directory, with same name as project will be created.<br/>
+            git clone git@github.com:username/projectname<br/>
+            e.g.<br/>
+            <code>/Home/User/GitHub&gt;&gt; git clone git@github.com:ajmalkoti/ANCC_MCHVRatio</code><br />
+            It may ask for the password that you provided during creation of ssh-keys. It is not your github password.</li>
+        </ol>
+
+
+
+        <p>Now you should be able to download all the documents within the project.</p>
+        <h2 id="how-to-make-some-changes-and-update-the-repository">How to make some changes and update the repository</h2>
+        <p>Let us assume that you made changes in the files present within project directory. 
+
+
+        <ol type="1">
+        <li> Now add all files to be updating list individually<br />
+            <code>git add filename</code><br />
+            or or all at once as<br />
+            <code>git add .</code>        </li>
+
+        <li> Add some message for the update you are making<br />
+            <code>git commit -m "some_meaningful_message"</code> </li>
+        
+        <li> Issue command to update. Until you issue this command the files will not 
+            be uploaded/updated to GitHub.<br />
+            <code>git push origin master</code></p>        </li>
+        </ol>
+
+
+
+
+            </body>
+
+
+</html>
