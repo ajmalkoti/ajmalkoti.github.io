@@ -15,7 +15,7 @@ This list catogorizes the stuff is majorly in following categories
 * [Gravity Magnetic, and other fields](https://github.com/ajmalkoti/awsome-geophysics-list/blob/main/GravMagEtc_codes.md)
 
 **Note** 
-* The list is supposed to provide an beginning to to topic.
+* The list is supposed to provide an beginning to the topic.
 * The list is obviously neither complete nor very exhaustive. 
 * It has a biased toward the seismic as it is my primary area of research. 
 * You are welcome to suggest the missing packages which may help researchers to expedite their research.

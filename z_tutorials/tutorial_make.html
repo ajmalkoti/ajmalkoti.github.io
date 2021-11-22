@@ -1,0 +1,84 @@
+<h3 id="what-is-make-file">What is Make File?</h3>
+<p>It is a file containing the shell commands which are executed based upon the list of rules provided/written in the file.</p>
+<p>These files are particularly useful, when working with a code that is partitioned (in form of functions/modules) to various files and each file may have different dependency. As the project grows the complexity in compilation increases due to dependency as well as the compilation time increases. It can be reduced with the help of make file. A simple example for the Fortran 90 file is described below.</p>
+<h3 id="understanding-the-complexity-in-compilation.">Understanding the complexity in compilation.</h3>
+<p>Assume that we have the main Driver code residing in the file- main.f95, and its subroutines/functions residing in separate files having names- sub1.f95, sub2.f95, sub3.f95.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode f90"><code class="sourceCode fortranfree"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>main.f95</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">|-----</span> sub1.f95</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">|-----</span> sub2.f95</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">|-----</span> sub3.f95</span></code></pre></div>
+<p>Then we can compile above in two steps (compiling and linking) as following:</p>
+<ol type="1">
+<li>Compiling the subroutines separately:</li>
+</ol>
+<pre><code>gfortran -c sub1.f95
+gfortran -c sub2.f95
+gfortran -c sub3.f95 </code></pre>
+<ol start="2" type="1">
+<li>Link object files to main files (produce executable name ‘a.exe’):</li>
+</ol>
+<pre><code>gfortran main.f95 sub1.o sub2.o sub3.o </code></pre>
+<p>or (which produce executable with name ‘main.exe’)</p>
+<pre><code>gfortran main.f95 sub1.o sub2.o sub3.o -o main.exe</code></pre>
+<p>When we are working on a project then we may have to deal with a large number of files. In such case two issues are faced 1) File linking command obviously becomes lengthy and complex. 2) The interdependency of the files has to be taken into account.</p>
+<p>MAKE utility help us to avoid all above problems.</p>
+<h3 id="how-to-use-make">How to use MAKE?</h3>
+<p>First, we need to get all the fortran source files in a folder, let us call it ‘src’. Now we create a MAKE file with some name e.g. ‘abc.mak’. However a default name ‘make.mak’ is a common practice. This file can be run from the terminal by issuing the make command</p>
+<pre><code>make FileName                
+make abc.mak        # running MAKE file with name &#39;abc.mak&#39;
+make                # running MAKE file with default name: &#39;make&#39;.</code></pre>
+<p>What is the general structure of commands in a MAKE file?</p>
+<p>General structure of MAKE file.</p>
+<pre><code>Target :...... Prerequisites.....
+ &lt;TAB&gt;  Command</code></pre>
+<p><strong>Example 1</strong>:</p>
+<p>For the program, discussed in the beginning of this blog, a simple MAKE file can be written as following:</p>
+<pre><code>main: sub1.o sub2.o sub3.o
+    gfortran main.f95  sub1.o sub2.o sub3.o -o main
+
+sub1.o: sub1.f95
+    gfortran -c sub1.f95
+
+sub2.o: sub2.f95
+    gfortran -c sub2.f95
+
+sub3.o: sub3.f95
+    gfortran -c sub3.f95$$$$$</code></pre>
+<p>A better version is given following with details afterward. The advantage of above format is, no matter how many files you have above can be compiled just by changing the files in OBJ list.</p>
+<pre><code>FC= gfortran                          # Fortran compiler used
+OBJ= sub1.o sub2.o sub3.o main.o      # list of all object files
+FFLAGS= -O3                           # type of flag you want to use              $
+
+main: $(OBJ)                                                                      
+
+    $(FC) $(OBJ) -o main 
+%.o: %.f95
+    $(FC) ${OBJ} -c ${FFLAGS} $&lt;
+clean:
+        rm main.exe $(objects)</code></pre>
+<p>Explanation of some of automatic variables 1) Use of $ : It is used to place the value of variable at the place. for example ${FC} = gfortran 2) Use of % : It is used as a wild card character. e.g. (%.o) means all the object files and (%.f95) means all the fortran 95 source code files present in the folder. 3) use of $&lt; : It means the first pre-requisite in the complete list of pre-requisites. some more automatic variables 4) use of $^ : It means all the pre-requisite 5) use of $@ : It means the target We have not discussed the last part i.e. clean command It is very handy to remove all the other mod and executable files so that we can freshly compile and link all files and modules.</p>
+<p>make # for compiling code make clean # to remove everything but source files and starting afresh</p>
+<p><strong>Example 2</strong>:<br />
+Let us take another example and there is a main fortran file (main.f95) which calls the other subroutines residing in separate files (e.g. aaa.f95, bbb.f95, ccc.f95, etc.. ). Let us make its dependency tree as shown following:</p>
+<pre><code>main.f95
+    |----- aaa.f95
+    |              |----- aaa1.f95
+    |              |----- aaa2.f95
+    |              |----- aaa3.f95
+    |----- bbb.f95
+    |              |----- bbb1.f95
+    |              |----- bbb2.f95
+    |              |----- bbb3.f95
+    |----- ccc.f95
+    |              |----- ccc1.f95
+    |              |----- ccc2.f95
+    |              |----- ccc3.f95</code></pre>
+<p>yet to write</p>
+<p><strong>Example 3</strong>: Handling compiler dependency.</p>
+<p>What happens if you are running same code in windows and unix. In this case, it matters how you are compiling codes.</p>
+<p>yet to write</p>
+<h3 id="references">References:</h3>
+<p>https://www.gnu.org/software/make/manual/<br />
+https://source.ggy.bris.ac.uk/wiki/Make<br />
+https://aoterodelaroza.github.io/devnotes/modern-fortran-makefiles/<br />
+https://www.gnu.org/software/make/manual/make.pdf</p>

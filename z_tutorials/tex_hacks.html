@@ -1,0 +1,42 @@
+<h1 id="following-are-some-of-the-shotcut-to-improve-the-tex-documents">Following are some of the shotcut to improve the tex documents</h1>
+<ul>
+<li><a href="./tex_hacks_lists.md">Hacks for lists</a></li>
+<li><a href="./tex_hacks_table.md">Hacks for tables</a></li>
+<li><a href="./tex_tikz_examples.md">Hacks for Tikz/PGF</a></li>
+<li><a href="./tex_hacks_other.md">Other Hacks</a></li>
+</ul>
+<p>Useful pacakges for latex</p>
+<ol type="1">
+<li><p>Convert table from excel to latex- <a href="https://ctan.org/tex-archive/support/excel2latex?lang=en">Excel2LaTeX</a></p></li>
+<li><p>Uploading you tex to ArXiv - <a href="https://pypi.org/project/arxiv-latex-cleaner/">arxiv-latex-cleaner</a> -<br />
+This tool allows you to easily clean the LaTeX code of your paper to submit to arXiv. From a folder containing all your code, e.g. /path/to/latex/, it creates a new folder /path/to/latex_arXiv/, that is ready to ZIP and upload to arXiv.</p></li>
+<li><p>Finding difference between two latex file- difflatex</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>$<span class="op">&gt;</span> <span class="ex">latexdiff</span>  InputTexFile1.tex InputTexFile2.tex <span class="op">&gt;</span> OutputTexDifferece.tex</span></code></pre></div></li>
+<li><p>Indenting the latex code- <a href="https://ctan.math.washington.edu/tex-archive/support/latexindent/documentation/latexindent.pdf">latexindent</a></p></li>
+<li><p>Converting your document to docx - pandoc</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>$<span class="op">&gt;</span> <span class="ex">pandoc</span> InputTexFileName.tex --bibliography=BibliographyFileName.bib -o OutPutFileName.docx</span></code></pre></div></li>
+<li><p>create booklet from pdf- <a href="https://ctan.org/tex-archive/support/pdfbook2">pdfbook</a></p></li>
+<li><p>Crop the pdf - <a href="https://ctan.org/tex-archive/support/pdfcrop">pdfcrop</a></p></li>
+<li><p>Check for non utf8 character in file</p></li>
+</ol>
+<p>The tex supported <a href="https://ctan.org/tex-archive/support">pacakges list</a></p>
+<p>A very good list of packages to be included is in IEEE template for papers see <strong>bare_jrnl_transmag.tex.</strong></p>
+<p>Tex editors <a href="https://ctan.org/tex-archive/support/TeXmacs">TeXmacs</a></p>
+<p>The lineno package has a problem due to which the paragraph next to equation has to be seaprated by a blank line otherwise the line number for that paragraph will not appear. It can be solved by using following code in preamble. The solution is copied from Tex-Stackexchange.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\newcommand*\patchAmsMathEnvironmentForLineno</span>[1]{</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\expandafter\let\csname</span> old#1<span class="fu">\expandafter\endcsname\csname</span> #1<span class="fu">\endcsname</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\expandafter\let\csname</span> oldend#1<span class="fu">\expandafter\endcsname\csname</span> end#1<span class="fu">\endcsname</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\renewenvironment</span>{#1}</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  {<span class="fu">\linenomath\csname</span> old#1<span class="fu">\endcsname</span>}</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  {<span class="fu">\csname</span> oldend#1<span class="fu">\endcsname\endlinenomath</span>}}</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\newcommand*\patchBothAmsMathEnvironmentsForLineno</span>[1]{</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\patchAmsMathEnvironmentForLineno</span>{#1}</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\patchAmsMathEnvironmentForLineno</span>{#1*}}</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\AtBeginDocument</span>{</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\patchBothAmsMathEnvironmentsForLineno</span>{equation}</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\patchBothAmsMathEnvironmentsForLineno</span>{align}</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\patchBothAmsMathEnvironmentsForLineno</span>{flalign}</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\patchBothAmsMathEnvironmentsForLineno</span>{alignat}</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\patchBothAmsMathEnvironmentsForLineno</span>{gather}</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\patchBothAmsMathEnvironmentsForLineno</span>{multline}</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>

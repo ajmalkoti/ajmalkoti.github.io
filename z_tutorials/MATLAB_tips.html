@@ -1,0 +1,75 @@
+<h1 id="here-is-a-list-of-all-the-useful-tips-in-matlab">Here is a list of all the useful tips in matlab</h1>
+<h2 id="definingaccessing-structures">Defining/Accessing structures</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  <span class="co">% simple structure is defined as</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">vector</span>.<span class="va">x</span><span class="op">=</span><span class="fl">12</span><span class="op">;</span>    <span class="va">vector</span>.<span class="va">y</span><span class="op">=</span><span class="fl">23</span><span class="op">;</span>    <span class="va">vector</span>.<span class="va">z</span><span class="op">=</span><span class="fl">56</span><span class="op">;</span>    </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">% accessing values (method 1)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="va">vector</span>.<span class="va">x</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">% accessing values (method 2)</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="va">SelField</span><span class="op">=</span> <span class="va">y</span><span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="va">vector</span>.(<span class="va">SelField</span>) <span class="op">=</span> <span class="fl">12</span></span></code></pre></div>
+<h2 id="useful-functions">Useful functions</h2>
+<ul>
+<li><p><strong>validatestring</strong> It checks if the sting, STR is present in cell of strings, VALIDSTR = validatestring(STR,VALID_STRINGS,FUNC_NAME,VAR_NAME,ARG_INDEX) other are useful for producing error msg, which include the Function name where error occured, the variable name which caused it and its index number. e.g. validatestring(‘C’,{‘A’,‘B’},‘func_name’,‘var_name’,2)</p></li>
+<li><p><strong>validateattributes</strong> it validates that array A belongs to at least one of the specified CLASSES and has all of the specified ATTRIBUTES. If A does not meet the criteria, MATLAB issues a formatted error message. e.g. A = [ 1 2 3; 4 5 6 ]; B = [ 7 8 9; 10 11 12]; C = cat(3,A,B); validateattributes(C,{‘numeric’},{‘2d’},‘my_func’,‘my_var’,2)</p></li>
+</ul>
+<h2 id="classes-and-oop">Classes and OOP</h2>
+<h3 id="a-complex-class-is-defined-as">A complex class is defined as</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>  <span class="va">defclass</span> <span class="va">CLASSNAME</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">properties</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>       <span class="co">% No restriction on following var access/modified  (within/outside class)</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>       <span class="va">a1</span><span class="op">;</span> <span class="va">b1</span><span class="op">;</span>  <span class="va">c1</span> <span class="op">;</span>    </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">properties</span> (<span class="va">setaccess</span><span class="op">=</span><span class="va">private</span><span class="op">,</span><span class="va">getaccess</span><span class="op">=</span><span class="va">public</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>       <span class="co">% These variable&#39;s value can be accessed by anyone but can&#39;t be modified outside the class.</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>       <span class="va">a2</span><span class="op">;</span> <span class="va">b2</span><span class="op">;</span><span class="va">c2</span>       </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">properties</span> (<span class="va">setaccess</span><span class="op">=</span><span class="va">private</span><span class="op">,</span><span class="va">getaccess</span><span class="op">=</span><span class="va">private</span><span class="op">,</span><span class="va">hidden</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>      <span class="co">% These variable&#39;s value can be accessed/modified within the class only</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>      <span class="va">a2</span><span class="op">;</span> <span class="va">b2</span><span class="op">;</span><span class="va">c2</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">properties</span> (<span class="va">dependent</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>       <span class="co">% these variables values is not stored and these are computed only during access, </span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>       <span class="co">% i.e. these depend upon the state of other variables. </span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>       <span class="va">a3</span><span class="op">;</span>   <span class="va">b3</span><span class="op">;</span>   <span class="va">c3</span>    </span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">methods</span>             </span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>          <span class="co">% This function is used for instantiating the class, i.e. when class is called for first time . </span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>          <span class="co">% Its name must be same as the class name. These function are called as  </span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>          <span class="co">% P=CLASSNAME(IPARG1,IPARG2,...)            </span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>          </span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>          <span class="kw">function</span> <span class="va">obj</span> <span class="op">=</span> <span class="va">CLASSNAME</span>(<span class="va">IPARG1</span><span class="op">,</span><span class="va">IPARG2</span><span class="op">,...</span>)                  </span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>              <span class="va">obj</span>.<span class="va">a1</span> <span class="op">=</span> <span class="fl">43</span><span class="op">;</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>              <span class="va">obj</span>.<span class="va">a2</span> <span class="op">=</span> <span class="fl">36</span><span class="op">;</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>              <span class="op">...</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>          <span class="kw">end</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>          </span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>          <span class="co">% Other methods/functions associated with this class can also be defined.</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>          <span class="co">% These function are called as              </span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>          <span class="co">% P=CLASSNAME.CLASSFUN(IPARG1,IPARG2,...)</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>           </span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>          <span class="kw">function</span> <span class="va">obj</span> <span class="op">=</span> <span class="va">CLASSFUN</span>(<span class="va">IPARG1</span><span class="op">,</span><span class="va">IPARG2</span><span class="op">,...</span>)    <span class="co">% used for instantiating the class</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>              <span class="va">obj</span>.<span class="va">a1</span> <span class="op">=</span> <span class="fl">43</span><span class="op">;</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>              <span class="va">obj</span>.<span class="va">a2</span> <span class="op">=</span> <span class="fl">36</span><span class="op">;</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>              <span class="op">...</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>          <span class="kw">end</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    <span class="kw">methods</span> (<span class="va">Static</span>)    </span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>        <span class="co">% Static fun can be called independelty as CLASSNAME.FUNNAME(IPARG1,IPARG2,...)</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>        <span class="co">% Method 1: explicitly define static function</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>        <span class="kw">function</span> <span class="va">OPARG</span> <span class="op">=</span> <span class="va">FUNNAME</span>(<span class="va">IPARG1</span><span class="op">,</span><span class="va">IPARG2</span><span class="op">,...</span>)</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>           <span class="op">...</span>..  </span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>        <span class="kw">end</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>        <span class="co">% Method 2: placing the function in separate file in same class folder i.e. @CLASSNAME</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>        <span class="co">% and defining an interface here</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>        <span class="va">OPARG</span> <span class="op">=</span> <span class="va">FUNNAME5</span>(<span class="va">IPARG1</span><span class="op">,</span><span class="va">IPARG2</span><span class="op">,...</span>)    </span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>  <span class="kw">end</span></span></code></pre></div>

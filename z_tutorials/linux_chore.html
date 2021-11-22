@@ -1,0 +1,68 @@
+<h2 id="changing-linux-prompt">Changing Linux prompt</h2>
+<p>PS1=‘aj@cchpc:$’</p>
+<h2 id="working-with-images">Working with images</h2>
+<ul>
+<li>Crop images
+<ul>
+<li>Using Imagemagick: <code>mogrify -trim *.png</code>. It removes the white space around the image</li>
+<li>Crop based upon pixel <code>convert input.jpg -crop WxH+L+T output.jpg</code> where,<br />
+W, H= width and height of the figure;<br />
+L = Distance between the left edge of the image and left side of cropped area.;<br />
+T = Distance between the top of the image and Top of the cropped area.</li>
+</ul></li>
+<li>change resolution</li>
+</ul>
+<h2 id="working-with-pdf">Working with pdf</h2>
+<ul>
+<li>Extract a single/ set of pages from a pdf
+<ul>
+<li>Using PDFTK : <code>pdftk</code></li>
+</ul></li>
+<li>Cropping PDF
+<ul>
+<li>Using PDFCROP <code>pdfcrop IPFileName.pdf  OPFileName.pdf</code>. Removes white space around the pdf.</li>
+</ul></li>
+<li>Convert the PDF file to jpg or png
+<ul>
+<li>Using PDFtoPPM : <code>pdftoppm -jpeg -r 300 input.pdf output</code></li>
+<li>Using Imagemagik: <code>convert -density 150 input.pdf -quality 90 output.png</code>. Though it may require some explicit permission.</li>
+</ul></li>
+</ul>
+<h2 id="creating-a-soft-link-to-some-executable">Creating a soft link to some executable</h2>
+<p>Several time we have a code and its executables in a directory (lets call it code directory) and we have a working folder in which we will be performing tests aka “working directory”.</p>
+<p>Execution of the code takes following way <code>./a_very_long_path_to_code_dir/exename</code></p>
+<p>Instead of calling code executable each time from the code we can create a soft link in working directory with the following command <code>link -s  path_of executable    path_where_to_create link</code> i.e. <code>link -s  a_very_long_path_to_code_dir/exename  .</code> Note: the dot in command (.) represent the current directory.</p>
+<h2 id="accessing-the-remote-server">Accessing the Remote server</h2>
+<p>Sometime the user require to access the software/applications installed at server. This can be easily achieved in following ways depending upon the platform you are using. Assume 1. Username is ‘HarryPotter’<br />
+2. Server IP address is 192.168.8.5<br />
+STEPS 1. Open the terminal by “ALT + CTRL + T” 2. Use the SSH command as following: <code>$ssh username@IP_Address</code> e.g. <code>$ssh HarryPotter@192.168.8.5</code> 3. After this the server asks for your password. Once you enter the password, you are in. 4. If you want to see the graphics while accessing the remote terminal then you have to use X11 port forwarding. For this you must do following - On the server your /etc/ssh/sshd_config file should have following settings: <code>X11Forwarding yes       X11DisplayOffset 10       X11UseLocalhost no</code> - On the client side your ~/.ssh/config file should have following settings: <code>Host *       ForwardAgent yes       ForwardX11 yes</code> - Now use following command to connect with server with x11 forwarding <code>sh        $ssh -v -C -X user@host</code> where<br />
+-X is for x11<br />
+-C is for compression and<br />
+-v is for verbose to check for warnings.</p>
+<h2 id="transferring-the-files-from-one-system-to-another-system1.">Transferring the files from one system to another system1.</h2>
+<ol type="1">
+<li><p>If sending to remote server from computer<br />
+<code>scp /file/to/send username@remote:/where/to/put</code><br />
+If receiving from remote server to computer<br />
+<code>scp username@remote:/file/to/send /where/to/put</code></p></li>
+<li><p>Between a remote source and remote receiver.<br />
+<code>scp username@source:/location/to/file username@destination:/where/to/put</code></p></li>
+</ol>
+<h2 id="periodic-transfercopy-of-filesfiles-from-server-a-to-b-using-rsync">Periodic transfer/copy of files/files from server A to B using Rsync</h2>
+<p>To sync the files from server A (having original copy) to server B (where data to be copied) 1. Install rsync on both servers. <code>apt-get install rsync</code> 2. Generate SSH key on server B (with defaults). <code>ssh-keygen</code> The keys can be found in folder: /RootOfServerB/.ssh/id_rsa.pub 3. Copy contents of key from B to A 4. Copy contenet in A /RootOfServerA/.ssh/authorized_keys 5. Start sync by running following command at server B <code>sh     rsync -avrt --delete --rsh='ssh -p 22' root@SERVER_A_IP_ADDRESS:/path PathServerB     rsync -rh --delete --progress  root@IP:~/specfem3d-master ~/Documents</code> 6. Setup Cron job (repeated job) ``‘/etc/crontab <em>/3 </em> * * * root rsync -avrt –delete –rsh=’ssh -p 22’ root@SERVER_A_IP_ADDRESS:/path PathServerB/ &gt;/dev/null 2&gt;&amp;1 ```</p>
+<h2 id="installing-blas-lapack-lapacke-etc.">Installing BLAS, LAPACK, LAPACKE, etc.</h2>
+<ul>
+<li><p>LAPACK<br />
+https://www.assistedcoding.eu/2017/11/04/how-to-install-lapacke-ubuntu/</p>
+<pre><code>$ sudo apt install liblapack3
+$ sudo apt install liblapack-dev
+$ sudo apt install libopenblas-base
+$ sudo apt install libopenblas-dev
+$ sudo apt install liblapacke-dev
+$ sudo apt install liblapack-dev
+-lm -lblas -llapack -llapacke</code></pre></li>
+<li><p>OPENBLAS<br />
+<code>$ sudo apt-get install libopenblas-dev</code></p></li>
+<li><p>FFTW<br />
+<code>sudo apt-get install libfftw3-dev libfftw3-doc</code></p></li>
+</ul>
