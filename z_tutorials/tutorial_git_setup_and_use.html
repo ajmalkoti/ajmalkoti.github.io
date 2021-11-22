@@ -8,9 +8,7 @@
 		<meta name="description" content="Ajay Malkoti's personal page.">
 		<meta name="keywords" content="Ajay Malkoti, 					       
 					       CSIR-NGRI, National Geophysical Research Insitiute, 
-					       Fortran, MATLAB, Python,
-					       Geophysicist, Modeling, simulation, finite difference,  
-					       Numerical algorithm">
+					       GIT, GitHub, Tutorial">
 		<meta name="author" content="Ajay Malkoti"> 
 	 	<meta name="MobileOptimized" content="HandheldFriendly">  
 	 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -27,7 +25,7 @@
 
         <h3><a href="http://ajmalkoti.github.io">ajmalkoti.github.io</a></h3>
 
-        <div class="group-icons">
+        <!-- <div class="group-icons">
             <a href="./images/ajmalkoti2020.png"><img id="foto" src="./images/ajmalkoti2020.png?raw=true" alt="foto"></a>
             <a href="https://github.com/ajmalkoti?tab=repositories"><i class="fa fa-github fa-2x"></i></a>
             <a href="http://orcid.org/0000-0002-7436-3627"><i class="ai ai-orcid fa-2x"></i></a> 
@@ -36,17 +34,17 @@
             <!--
             <a href="https://twitter.com/ajmalkoti"><i class="fa fa-twitter-square fa-2x"></i></a>  
             -->
-        </div>
+        </div> -->
 
 
-
+<!-- 
         <div id="navbar">
             <a href="aa_aboutme.html"><strong>About me</strong></a> &nbsp; &nbsp; &nbsp; 
             <a href="ab_research.html"><strong>Research</strong></a> &nbsp; &nbsp; &nbsp;
             <a href="ac_teaching.html"><strong>Teaching</strong></a> &nbsp; &nbsp; &nbsp;
             <a href="ad_software.html"><strong>Software</strong></a> &nbsp; &nbsp; &nbsp;
             <a href="ae_news.html"><strong>News</strong></a> 
-        </div>
+        </div> -->
 
 
         <p><br> <br> <br> <br> <br> <br></p>
@@ -101,7 +99,7 @@
         
     <h2 id="install-the-git">Install the git</h2>
         <p><code>sudo apt-get install git-core git-gui git-doc</code></p>
-        <h2 id="how-to-create-a-new-repository-on-desktop">How to create a new repository on desktop</h2>
+        <h2 id="create-repository-on-desktop">How to create a new repository on desktop</h2>
         <ol type="1">
         <li>Make a folder in your home directory e.g., <code>mkdir ~/GitHub</code><br/></li>
         <li>Assume the project name is “test” then create a directory with same name.<br />
@@ -116,7 +114,7 @@
         <p>Sometime it maynot work. So another way is to create a repository online and then clone/copy it and later update it as described in steps below.</p>
         
 
-        <h2 id="creating-a-repository-online">Creating a repository online</h2>        
+    <h2 id="creating-online-repository">Creating a repository online</h2>        
         <ol type="1">
         <li>Go to your home page.</li>
         <li>On left pane, click on “New” button to create a new repository.</li>
@@ -127,12 +125,13 @@
         </ol>
         
 
-        <h2 id="how-to-copy-and-existing-repository">How to copy and existing repository</h2>
+    <h2 id="copy-existing-repository">How to copy an existing repository</h2>
         <ol type="1">
-        <li>Make a folder in your home directory e.g. <code>mkdir ~/GitHub</code>. Ignore if it exists.</li>
-        <li>Change directory, <code>cd GitHub</code><br/>
-        </li>
-        <li>Clone the project within this directory, where a new directory, with same name as project will be created.<br/>
+        <li>Make a folder in your home directory e.g.,
+            <code>mkdir ~/GitHub</code>. Ignore if it exists.</li>
+        <li>Change directory, <code>cd GitHub</code><br/> </li>
+        <li> Clone the project within this directory, where a new directory, 
+            with same name as project will be created.<br/>
             git clone git@github.com:username/projectname<br/>
             e.g.<br/>
             <code>/Home/User/GitHub&gt;&gt; git clone git@github.com:ajmalkoti/ANCC_MCHVRatio</code><br />
@@ -142,7 +141,7 @@
 
 
         <p>Now you should be able to download all the documents within the project.</p>
-        <h2 id="how-to-make-some-changes-and-update-the-repository">How to make some changes and update the repository</h2>
+        <h2 id="make-changes-and-update-repository">How to make some changes and update the repository</h2>
         <p>Let us assume that you made changes in the files present within project directory. 
 
 
@@ -155,15 +154,16 @@
         <li> Add some message for the update you are making<br />
             <code>git commit -m "some_meaningful_message"</code> </li>
         
-        <li> Issue command to update. Until you issue this command the files will not 
-            be uploaded/updated to GitHub.<br />
-            <code>git push origin master</code></p>        </li>
+        <li> Issue command to update. Until you issue this command the files will 
+            not be uploaded/updated to GitHub.<br />
+            <code>git push origin master</code></p>   </li>
+
         </ol>
 
 
 
 
-            </body>
+</body>
 
 
 </html>
