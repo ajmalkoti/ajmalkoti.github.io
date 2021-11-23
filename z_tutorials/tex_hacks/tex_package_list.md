@@ -68,6 +68,10 @@ A font can  be selected as
 * \usepackage{plex-mono}  use the font for mono font only 
 
 
+\usefont{<encoding>}{<family>}{<series>}{<shape>}
+\usefont{T1}{pcr}{m}{sl}
+   
+   
 ## Code highlighting 
 * lstlisting is used generally
 * mcode can be used only for matlab. It is preset for MATLAB.
