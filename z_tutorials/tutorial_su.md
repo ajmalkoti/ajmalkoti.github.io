@@ -3,11 +3,7 @@
 
 Seismic unix is an open source software package for seismic data processing, which was developed under Unix environment.  
 
-It was developed by Colorado school of mines and several contributors over the time. 
-
-
-
-
+It was developed by Colorado school of mines and there were several contributors over the time. 
 
 [SU Download ](https://github.com/JohnWStockwellJr/SeisUnix)   
 [SU Manual Ver 4, 2008](http://web.mit.edu/cwpsu_v44r1/sumanual_600dpi_letter.pdf)
