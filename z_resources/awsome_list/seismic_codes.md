@@ -1,6 +1,6 @@
 # Seismic codes
 List of free/open source codes pertaining to the modeling, inversion or processing of exploration seismic data. 
-
+* https://ge0mlib.com/software.htm
 
 ## Notes
 * Daniel peter (KAUST): [pdf](https://github.com/danielpeter/teaching-computational-geophysics ), [videos](https://www.youtube.com/watch?v=t_sJcFkU4Nc&list=PL7cRg1PSqkYsqmMVC_6SZjj6Oh9WesDig)
@@ -22,6 +22,8 @@ List of free/open source codes pertaining to the modeling, inversion or processi
 [OPEN SEASEIS](https://github.com/JohnWStockwellJr/OpenSeaSeis),
 [GISMO](https://github.com/geoscience-community-codes/GISMO),
 [OSGPUP](https://github.com/mheriyanto/OSGPUP)
+
+[GSeis](https://github.com/kerim371/G_Seis) or on [Matlab central](https://in.mathworks.com/matlabcentral/mlc-downloads/downloads/f39a635d-d166-4396-9b6a-65bc4b78db4b/a670c38e-2653-4226-aee8-1c3eb4553534/images/screenshot.jpg)
 
 
 
