@@ -2,40 +2,55 @@
  PS1='aj@cchpc:\w$ '
  
 ## Working with images 
-1.**Crop image using Imagemagick**:  It removes the white space around the image.
-```sh
-mogrify -trim *.png 
-```   
-2.**Crop image based upon pixel**
-``` 
-convert input.jpg -crop WxH+L+T output.jpg   
-```
-where,  
-W, H= width and height of the figure;    
-L = Distance between the  left edge of the image and left side of cropped area.;  
-T = Distance between the top of the image and Top of the cropped area.
+1. **Crop image using Imagemagick**:    
+   It removes the white space around the image.    
+   ```sh
+   mogrify -trim *.png 
+    ```   
    
-3.**Changing resolution**
+2. **Crop image based upon pixel**  
+    ```sh 
+    convert input.jpg -crop WxH+L+T output.jpg   
+    ```  
+    where,  
+    W, H= width and height of the figure;    
+    L = Distance between the  left edge of the image and left side of cropped area.;  
+    T = Distance between the top of the image and Top of the cropped area.    
+3. **Changing resolution**
 
 
 ## Working with pdf
-* Extract a single/ set of pages from a pdf 
-  - Using PDFTK : `pdftk`
-* Cropping PDF
-  - Using PDFCROP `pdfcrop IPFileName.pdf  OPFileName.pdf`. Removes white space around the pdf.
-* Convert the PDF file to jpg or png
-  - Using  PDFtoPPM : ```pdftoppm -jpeg -r 300 input.pdf output ```
-  - Using  Imagemagik: ```convert -density 150 input.pdf -quality 90 output.png ```. 
-    Though it may require some explicit permission. 
-    
-    
+1. Extract a single/ set of pages from a pdf  
+   * Using PDFTK :   
+     ```pdftk in.pdf cat 2-2 output singlepage.pdf```
+2. Joining two pdf 
+   * Using PDFTK 
+     ```pdftk in1.pdf in2.pdf cat output joined.pdf```       
+3. Delete a page 
+    * Using PDFTK
+      ```pdftk in.pdf cat 1-12 14-end output out1.pdf```
+4. Cropping PDF
+   * Using PDFCROP   
+     `pdfcrop IPFileName.pdf  OPFileName.pdf`   
+     Removes white space around the pdf.  
+5. Convert the PDF file to jpg or png
+   * Using  PDFtoPPM :   
+     ```pdftoppm -jpeg -r 300 input.pdf output ```
+   * Using  Imagemagik:   
+     ```convert -density 150 input.pdf -quality 90 output.png ```   
+     Though it may require some explicit permission.  
+6. Repair a pdf 
+    ```pdftk broken.pdf output fixed.pdf```
+
+
 ## Creating a soft link to some executable
 Several time we have a code and its executables in a directory (lets call it code directory) and we have a working folder in which we will be performing tests. Lets call it **working directory**.
 
-The executable files are present as folloing
-```./a/very/long/path/to/code/directory/executable_file_name```
-
-Now, instead of calling code executable each time from the code we can create a soft link in working directory with the following command 
+The executable files are present as folloing  
+```
+./a/very/long/path/to/code/directory/executable_file_name
+```
+Now, instead of calling code executable each time from the code we can create a soft link in working directory with the following command   
 ```
 link -s  path_of executable    path_where_to_create link 
 ```
@@ -47,38 +62,41 @@ link -s  a_very_long_path_to_code_dir/exename  .
 
 
 ##  Accessing the Remote server
-Sometime the user require to access the software/applications installed at server. This can be easily achieved in following ways depending upon the platform you are using. Assume 
-1.Username is 'HarryPotter'                 
-2.Server IP address is  192.168.8.5  
+Sometime the user require to access the software/applications installed at server. This can be easily achieved in following ways depending upon the platform you are using. Assume the following:      
+1. Username is 'HarryPotter'                 
+2. Server IP address is  192.168.8.5  
 
-**STEPS**  
-1.Open the terminal by "ALT + CTRL + T"
-2.Use the SSH command as following:      `$ssh username@IP_Address`
-  e.g.      `$ssh HarryPotter@192.168.8.5 `
-3.After this the server asks for your password.  Once you enter the password,  you are in.
-4.If you want to see the graphics while accessing the remote terminal then you have to 
-  use X11 port forwarding. For this you must do following 
-- On the server your /etc/ssh/sshd_config file should have following settings:
-```
-X11Forwarding yes
-X11DisplayOffset 10
-X11UseLocalhost no
-```
-- On the client side your ~/.ssh/config file should have following settings:
-```     
-Host *
-ForwardAgent yes
-ForwardX11 yes
-```
+**STEPS**   
 
-- Now use following command to connect with server with x11 forwarding 
-```sh
-$ssh -v -C -X user@host
-```
-where,   
--X is for x11  
--C is for compression  and  
--v is for verbose to check for warnings.  
+1. Open the terminal by "ALT + CTRL + T".  
+
+2. Use the SSH command as following:   
+   ```$ssh username@IP_Address```  
+  e.g. ```$ssh HarryPotter@192.168.8.5 ```  
+
+3. After this the server asks for your password.  Once you enter the password,  you are in.  
+
+4. If you want to see the graphics while accessing the remote terminal then you have to use X11 port forwarding. For this you must do following.    
+- On the server your /etc/ssh/sshd_config file should have following settings:  
+    ```
+    X11Forwarding yes  
+    X11DisplayOffset 10  
+    X11UseLocalhost no  
+    ```
+- On the client side your ~/.ssh/config file should have following settings:  
+    ```     
+    Host *
+    ForwardAgent yes
+    ForwardX11 yes
+    ```
+- Now use following command to connect with server with x11 forwarding   
+    ```sh
+    $ssh -v -C -X user@host
+    ```
+    where,   
+    -X is for x11  
+    -C is for compression  and  
+    -v is for verbose to check for warnings.  
 
 
 ##  Transferring the files from one system to another system1.
@@ -97,20 +115,21 @@ To sync the files from **server A** (having original copy) to **server B** (wher
 1. Install rsync on both servers.
    `apt-get install rsync`
 2. Generate SSH key on server B (with defaults).
-    `ssh-keygen`
-   The keys can be found in folder:  /RootOfServerB/.ssh/id_rsa.pub 
+    `ssh-keygen`  
+   The keys can be found in folder:  `/RootOfServerB/.ssh/id_rsa.pub`  
 3. Copy contents of key from B to A
-4. Copy contenet in A  /RootOfServerA/.ssh/authorized_keys
+4. Copy contenet in A  `/RootOfServerA/.ssh/authorized_keys`  
+
 5. Start sync by running following command at server B
-```sh
-    rsync -avrt --delete --rsh='ssh -p 22' root@SERVER_A_IP_ADDRESS:/path PathServerB
-    rsync -rh --delete --progress  root@IP:~/specfem3d-master ~/Documents 
-```
+    ```sh
+        rsync -avrt --delete --rsh='ssh -p 22' root@SERVER_A_IP_ADDRESS:/path PathServerB
+        rsync -rh --delete --progress  root@IP:~/specfem3d-master ~/Documents 
+    ```
 6. Setup Cron job (repeated job)
-```
-/etc/crontab
-*/3 * * * * root rsync -avrt --delete --rsh='ssh -p 22' root@SERVER_A_IP_ADDRESS:/path PathServerB/ >/dev/null 2>&1
-```
+    ```
+    /etc/crontab
+    */3 * * * * root rsync -avrt --delete --rsh='ssh -p 22' root@SERVER_A_IP_ADDRESS:/path PathServerB/ >/dev/null 2>&1
+    ```
 
 
 
