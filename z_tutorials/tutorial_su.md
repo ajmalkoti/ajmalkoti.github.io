@@ -80,7 +80,7 @@ make install
 ```
 8. Test the installation
 ``` 
-suplane
+suplane | supswigp > supswigp.eps 
 ```
 
 
@@ -91,6 +91,14 @@ suplane
 4. ```make sfinstall``` - SFIO installation for segdread (the SEGD to SU data reader) 
 
 
+```
+sudo apt-get install libx11-dev libxt-dev 
+make xtinstall  
+```
 
 
+```
+sudo apt-get install freeglut3-dev
+make mglinstall
+```
 
