@@ -27,3 +27,50 @@ Other resources for SU
 
 [CPseis software](https://sourceforge.net/projects/cpseis/) and its [discussion group](http://www.processing-seismic.xyz/css.html)   
 [Free USP download](https://freeusp.org/) 
+
+
+## Installing SU on ubuntu
+
+1. Download the SU latest package from [here]9https://nextcloud.seismic-unix.org/s/LZpzc8jMzbWG9BZ) and unzip the files.
+```
+gunzip cwp_su_all_4XRXX.tgz
+tar -xvf cwp_su_all_4XRXX.tar 
+```
+2. I prefer to install the extra softwares in a directory named opt, within home directory. Therefore we will install the SU in directory  ```~/opt/su/```. 
+Create above directory using as 
+```
+mkdir  ~/opt
+mkdir ~/opt/su
+```
+3. Move the unzip files into this created directory.
+```
+mv ~/Downloads/aa_sesimic_data/cwp_su_all_44R23/src ~/opt/su/
+```
+4. Set the CWPROOT & Path variable to 'bashrc' file.
+```
+cd ~/opt/su
+export CWPROOT="$PWD" 
+export PATH=$PATH:$CWPROOT/bin:
+```
+and apply the changes using
+```
+..bashrc
+```
+5. Check if the changes has taken place
+```
+echo $CWPROOT
+echo $PATH
+```
+6. Making changes to config files. ```Makefile.config_Linux_Ubuntu_20.04``` should be used as main configuration file, i.e. su/src/Makefile.config.
+
+```
+cd ~/opt/su/src/configs/
+gedit Makefile.config_Linux_Ubuntu_20.04
+cp Makefile.config_Linux_Ubuntu_20.04 ../Makefile.config
+```
+7. Install the SU
+```
+make install
+```
+8. 
+
