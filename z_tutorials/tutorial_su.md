@@ -36,26 +36,30 @@ Other resources for SU
 gunzip cwp_su_all_4XRXX.tgz
 tar -xvf cwp_su_all_4XRXX.tar 
 ```
+
 2. I prefer to install the extra softwares in a directory named opt, within home directory. Therefore we will install the SU in directory  ```~/opt/su/```. 
 Create above directory using as 
 ```
 mkdir  ~/opt
 mkdir ~/opt/su
 ```
+
 3. Move the unzip files into this created directory.
 ```
 mv ~/Downloads/aa_sesimic_data/cwp_su_all_44R23/src ~/opt/su/
 ```
+
 4. Set the CWPROOT & Path variable to 'bashrc' file.
 ```
-cd ~/opt/su
+cd ~/opt/su/
 export CWPROOT="$PWD" 
 export PATH=$PATH:$CWPROOT/bin:
 ```
 and apply the changes using
 ```
-..bashrc
+source .bashrc
 ```
+
 5. Check if the changes has taken place
 ```
 echo $CWPROOT
