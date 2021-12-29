@@ -82,7 +82,7 @@ suplane
 ```
 
 
-** Optional Installations  
+**Optional Installations**    
 1. ```make xminstall``` - for FFTLAB, a fun educational app for exploring the Fourier Transform.   
 2. ```make mglinstall``` - Open GL applications, Graphics codes that could be built upon.  
 3. ```make finstall``` - Fortran codes, modeling and anisotropy codes.  
