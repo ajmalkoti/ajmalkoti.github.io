@@ -28,6 +28,8 @@ Other resources for SU
 [CPseis software](https://sourceforge.net/projects/cpseis/) and its [discussion group](http://www.processing-seismic.xyz/css.html)   
 [Free USP download](https://freeusp.org/) 
 
+## [Installing SU on windows](https://www.int.com/blog/tag/seismic-unix/)
+
 
 ## Installing SU on ubuntu
 
