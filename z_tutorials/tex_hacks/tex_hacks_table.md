@@ -97,3 +97,9 @@ It is possible to define a list in a table as following
 
 
 # Changing type of an entire coloumn 
+
+
+
+
+# creating fancy tables
+https://newbedev.com/example-of-fancy-table-using-tikz-package
