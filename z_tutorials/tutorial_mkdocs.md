@@ -37,6 +37,11 @@ theme: readthedocs
 5. You may add the contents to  **docs/index.md** file. Similarly you may create other files such as
 **docs/installation.md**  
 **docs/about.md**
-6.
-7. 
-8. 
+6. Build the 
+```
+mkdocs build
+```
+8. Deploy the site
+```
+mkdocs gh-deploy
+```
