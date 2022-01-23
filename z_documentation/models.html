@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://example.com/models.html">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Models - FDWave</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Models";
+    var mkdocs_page_input_path = "models.md";
+    var mkdocs_page_url = "/models.html";
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> FDWave</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="models.html">Models</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#generating-the-models">Generating the models</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#simple-layered-model">Simple Layered Model</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reading-through-the-segy-file">Reading through the SEGY file</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#building-a-model-by-inserting-arbitrary-shapes">Building a model by inserting arbitrary shapes.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#derived-model">Derived model</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="analysis.html">Analysis</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="sources.html">Source</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="geometries.html">Geometry</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="about.html">About</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">FDWave</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Models</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="models">Models</h1>
+<h2 id="generating-the-models">Generating the models</h2>
+<p>There are various inbuild capabilities to generate the models, viz. </p>
+<ol>
+<li>Simple layerd model</li>
+<li>Reading from segy model</li>
+<li>Drawing an arbitrary model</li>
+<li>Previously saved models</li>
+</ol>
+<p>Note: Different rheologies have different requirements therefore it is mandatory to provide the respective parameters. A concise list is provided following. </p>
+<table>
+<thead>
+<tr>
+<th>Rheology</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scalar</td>
+<td>VP</td>
+</tr>
+<tr>
+<td>acoustic</td>
+<td>VP, RHO</td>
+</tr>
+<tr>
+<td>elastic</td>
+<td>VP, VS, RHO</td>
+</tr>
+<tr>
+<td>viscoacoustic</td>
+<td>VP, RHO, QP</td>
+</tr>
+<tr>
+<td>viscoelastic</td>
+<td>VP, VS, RHO, QP, QS</td>
+</tr>
+</tbody>
+</table>
+<h2 id="simple-layered-model">Simple Layered Model</h2>
+<p>The function "FDWAVE_MODEL_LAYERS" can create a model consisting of 'n' horizontal layers.</p>
+<p>Complete Syntax|
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>FDwave_model_layers(&#39;WFP&#39;,path,&#39;WAVE_TYPE&#39;,options,&#39;DX&#39;,value,&#39;DZ&#39;,value,&#39;THICKNESS&#39;,value,&#39;HV_RATIO&#39;,value,&#39;VP&#39;,value,&#39;VS&#39;,value,&#39;RHO&#39;,value,&#39;QP&#39;,value,&#39;QS&#39;,value,&#39;PlotON&#39;,option )
+</code></pre></div></p>
+<p>Description of parameters|</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WFP</td>
+<td>str</td>
+<td>Path to working folder</td>
+</tr>
+<tr>
+<td>RHEOLOGY/RHEO</td>
+<td>str</td>
+<td>Type of rheology used</td>
+</tr>
+<tr>
+<td>DX, DZ</td>
+<td>num</td>
+<td>Grid size in horizontal and vertical direction in   meters</td>
+</tr>
+<tr>
+<td>HV_RATIO/HVR</td>
+<td>num</td>
+<td>To determine length along horizontal axis, X=HVR*Y.</td>
+</tr>
+<tr>
+<td>THICKNESS</td>
+<td>num,array</td>
+<td>Thickness of each layer in form of vector</td>
+</tr>
+<tr>
+<td>VP, VS</td>
+<td>num,array</td>
+<td>Velocity of P and S wave in form of vector</td>
+</tr>
+<tr>
+<td>RHO</td>
+<td>num,array</td>
+<td>Density of medium in form of vector</td>
+</tr>
+<tr>
+<td>QP, QS</td>
+<td>num,array</td>
+<td>Attenutation of P and S value in form of vector</td>
+</tr>
+<tr>
+<td>PlotON</td>
+<td>str</td>
+<td>'y'/'n' for plotting</td>
+</tr>
+<tr>
+<td>VERBOSE</td>
+<td>str</td>
+<td>'y'/'n' for verbose mode on.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example 1</strong>: Homogenous layer model for different rheologies</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>thick = 500 ;
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>vp = 2500 ;
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>vs = 2000 ;
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>rho= 1900 ;
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>qp =   80 ;
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>qs =   50 ;
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>FDwave_model_layers(&#39;WFP&#39;,wf_path,&#39;Rheo&#39;,&#39;scalar&#39;,&#39;DX&#39;,5,&#39;DZ&#39;,5,&#39;THICKNESS&#39;,thick,...
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>&#39;HV_RATIO&#39;,1,&#39;VP&#39;,vp,&#39;VS&#39;,vs,&#39;RHO&#39;,rho,&#39;PlotON&#39;,&#39;y&#39;);
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>FDwave_model_layers(&#39;WFP&#39;,wf_path,&#39;Rheo&#39;,&#39;acoustic&#39;,&#39;DX&#39;,5,&#39;DZ&#39;,5,&#39;THICKNESS&#39;,thick,...
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>&#39;HV_RATIO&#39;,1,&#39;VP&#39;,vp,&#39;VS&#39;,vs,&#39;RHO&#39;,rho,&#39;PlotON&#39;,&#39;y&#39;);
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>FDwave_model_layers(&#39;WFP&#39;,wf_path,&#39;Rheo&#39;,&#39;Elastic&#39;,&#39;DX&#39;,5,&#39;DZ&#39;,5,&#39;THICKNESS&#39;,thick,...
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>&#39;HV_RATIO&#39;,1,&#39;VP&#39;,vp,&#39;VS&#39;,vs,&#39;RHO&#39;,rho,&#39;PlotON&#39;,&#39;y&#39;);
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>FDwave_model_layers(&#39;WFP&#39;,wf_path,&#39;Rheo&#39;,&#39;ViscoAcoustic&#39;,&#39;DX&#39;,5,&#39;DZ&#39;,5,&#39;THICKNESS&#39;,thick,...
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>&#39;HV_RATIO&#39;,1,&#39;VP&#39;,vp,&#39;RHO&#39;,rho,&#39;Qp&#39;,qp,&#39;PlotON&#39;,&#39;y&#39;);
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>FDwave_model_layers(&#39;WFP&#39;,wf_path,&#39;Rheo&#39;,&#39;ViscoElastic&#39;,&#39;DX&#39;,5,&#39;DZ&#39;,5,&#39;THICKNESS&#39;,thick,...
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>&#39;HV_RATIO&#39;,1,&#39;VP&#39;,vp,&#39;VS&#39;,vs,&#39;RHO&#39;,rho,&#39;Qp&#39;,qp,&#39;Qs&#39;,qs,&#39;PlotON&#39;,&#39;y&#39;);
+</code></pre></div>
+<p><strong>Example 2</strong>:  Layered model for different Rheologies.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>Nlayer=10; 
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>thick = round(100*rand(1,Nlayer),0);
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>vp = 1500 + round(500*rand(1,Nlayer),0);
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>vs = 1300 + round(300*rand(1,Nlayer),0);
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>rho= 1100 + round(100*rand(1,Nlayer),0);
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>qp =   80 + round(20*rand(1,Nlayer),0);
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>qs =   50 + round(20*rand(1,Nlayer),0);
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>FDwave_model_layers(&#39;WFP&#39;,wf_path,&#39;Rheo&#39;,&#39;scalar&#39;,&#39;DX&#39;,5,&#39;DZ&#39;,5,&#39;THICKNESS&#39;,thick,...
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>    &#39;HV_RATIO&#39;,1,&#39;VP&#39;,vp,&#39;VS&#39;,vs,&#39;RHO&#39;,rho,&#39;PlotON&#39;,&#39;y&#39;);
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>FDwave_model_layers(&#39;WFP&#39;,wf_path,&#39;Rheo&#39;,&#39;acoustic&#39;,&#39;DX&#39;,5,&#39;DZ&#39;,5,&#39;THICKNESS&#39;,thick,...
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>    &#39;HV_RATIO&#39;,1,&#39;VP&#39;,vp,&#39;VS&#39;,vs,&#39;RHO&#39;,rho,&#39;PlotON&#39;,&#39;y&#39;);
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>FDwave_model_layers(&#39;WFP&#39;,wf_path,&#39;Rheo&#39;,&#39;Elastic&#39;,&#39;DX&#39;,5,&#39;DZ&#39;,5,&#39;THICKNESS&#39;,thick,...
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>    &#39;HV_RATIO&#39;,1,&#39;VP&#39;,vp,&#39;VS&#39;,vs,&#39;RHO&#39;,rho,&#39;PlotON&#39;,&#39;y&#39;);
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a>FDwave_model_layers(&#39;WFP&#39;,wf_path,&#39;Rheo&#39;,&#39;ViscoAcoustic&#39;,&#39;DX&#39;,5,&#39;DZ&#39;,5,&#39;THICKNESS&#39;,thick,...
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>    &#39;HV_RATIO&#39;,1,&#39;VP&#39;,vp,&#39;RHO&#39;,rho,&#39;Qp&#39;,qp,&#39;PlotON&#39;,&#39;y&#39;);
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a>FDwave_model_layers(&#39;WFP&#39;,wf_path,&#39;Rheo&#39;,&#39;ViscoElastic&#39;,&#39;DX&#39;,5,&#39;DZ&#39;,5,&#39;THICKNESS&#39;,thick,...
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a>    &#39;HV_RATIO&#39;,1,&#39;VP&#39;,vp,&#39;VS&#39;,vs,&#39;RHO&#39;,rho,&#39;Qp&#39;,qp,&#39;Qs&#39;,qs,&#39;PlotON&#39;,&#39;y&#39;);    
+</code></pre></div>
+<p><strong>Example 3</strong>:  Internally saved model (Ref.KLR)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">FDwave_model_killari</span><span class="p">(</span><span class="n">wf_path</span><span class="p">,</span><span class="s">&#39;el&#39;</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h2 id="reading-through-the-segy-file">Reading through the SEGY file</h2>
+<p>The function "FDwave_MODEL_READ_SEGY" is used to load the models provided in segy file format. </p>
+<p>Syntax:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">model_read_segy</span><span class="p">(</span><span class="s">&#39;WFP&#39;</span><span class="p">,</span><span class="nb">path</span><span class="p">,</span><span class="s">&#39;M_NAME&#39;</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="s">&#39;Rheology&#39;</span><span class="p">,</span><span class="n">options</span><span class="p">,</span><span class="s">&#39;CROP&#39;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">   </span><span class="p">[</span><span class="n">X1</span><span class="p">,</span><span class="n">Z1</span><span class="p">,</span><span class="n">X2</span><span class="p">,</span><span class="n">Z2</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;GRID_SIZE_OLD&#39;</span><span class="p">,[</span><span class="n">dx</span><span class="p">,</span><span class="n">dz</span><span class="p">],</span><span class="s">&#39;GRID_SIZE_NEW&#39;</span><span class="p">,[</span><span class="n">dx</span><span class="p">,</span><span class="n">dz</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;PlotON&#39;</span><span class="p">,</span><span class="n">option</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WFP</td>
+<td>str</td>
+<td>Path to working folder</td>
+</tr>
+<tr>
+<td>M_NAME</td>
+<td>str</td>
+<td>Name of the model (string)</td>
+</tr>
+<tr>
+<td>Rheology/Rheo</td>
+<td>str</td>
+<td>Options are- scalar, acoustic, elastic, viscoacoustic, viscoelastic</td>
+</tr>
+<tr>
+<td>CROP</td>
+<td>[float,float,float,float,]</td>
+<td>[X1,Z1, X2,Z2], Select the region using left upper (X1,Z1)  and right lower (X2,Z2) coordinates</td>
+</tr>
+<tr>
+<td>GRID_SIZE_OLD</td>
+<td>[float,float,]</td>
+<td>[dx,dz]</td>
+</tr>
+<tr>
+<td>GRID_SIZE_NEW</td>
+<td>[float,float,]</td>
+<td>[dx,dz]</td>
+</tr>
+<tr>
+<td>PlotON</td>
+<td>str</td>
+<td>'y'/'n'</td>
+</tr>
+</tbody>
+</table>
+<p>Example: Here we have used the Marmousi model which is provided in 
+segyfile format on a fine scaled, i.e., dx=dz=1.5m. This functin also provides
+option to CROP and INTERPOLATE model to a coarse/finer model</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">FDwave_model_readsegy</span><span class="p">(</span><span class="s">&#39;WAVE_TYPE&#39;</span><span class="p">,</span><span class="s">&#39;elastic&#39;</span><span class="p">,</span><span class="s">&#39;CROP_MODEL&#39;</span><span class="p">,[</span><span class="mi">7000</span><span class="p">,</span><span class="mi">600</span><span class="p">,</span><span class="mi">15000</span><span class="p">,</span><span class="mi">4200</span><span class="p">],</span><span class="k">...</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="s">&#39;GRID_SIZE_OLD&#39;</span><span class="p">,[</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">1.5</span><span class="p">],</span><span class="s">&#39;GRID_SIZE_NEW&#39;</span><span class="p">,[</span><span class="mf">12.5</span><span class="p">,</span><span class="mf">12.5</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;PlotON&#39;</span><span class="p">,</span><span class="s">&#39;y&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h2 id="building-a-model-by-inserting-arbitrary-shapes">Building a model by inserting arbitrary shapes.</h2>
+<p>This part is still in developement phase. </p>
+<p>This model primarily uses two commands: first is for initializing the model "FDwave_model_build_init", 
+and the second is to insert the shapes "FDwave_model_build_shape_arbitrary".
+The shapes is defined by the coordinates as following. </p>
+<p>Example 1: A model with corner. 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>FDwave_model_build_init(&#39;rheology&#39;,&#39;Elastic&#39;,&#39;nx&#39;,400,&#39;nz&#39;,200,&#39;dx&#39;,5,&#39;dz&#39;,5)
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>FDwave_model_plot(&#39;wfp&#39;,wfp)
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>CVec={[1,200],[200,200],[200,100],[1,100]};
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>FDwave_model_build_shape_arbitrary(&#39;coordinates&#39;,CVec,&#39;Vp&#39;,2500,&#39;Vs&#39;,2000,&#39;Density&#39;,1600);
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>model_plot(&#39;wfp&#39;,wfp)
+</code></pre></div></p>
+<p>Example 1: A model with dipping layers with a wedge. </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>FDwave_model_build_init(&#39;rheo&#39;,&#39;Elastic&#39;,&#39;nx&#39;,400,&#39;dx&#39;,5,&#39;vp&#39;,2000, &#39;vs&#39;,1800,&#39;Density&#39;,1600)
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>% insert:  a wedge
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>CVec={[200,200],[400,200],[400,300],[300,300],[200,200]};
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>FDwave_model_build_shape_arbitrary(&#39;coordinates&#39;,CVec,&#39;vp&#39;,2800,&#39;vs&#39;,2200,&#39;Density&#39;,2000,&#39;plotON&#39;,&#39;y&#39;);
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>% insert:  a dipping layer
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>CVec={[1,250],[400,300],[400,400],[200,400],[1,300],[1,250]};
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>FDwave_model_build_shape_arbitrary(&#39;coordinates&#39;,CVec,&#39;vp&#39;,2500,&#39;vs&#39;,1900,&#39;Density&#39;,1700,&#39;plotON&#39;,&#39;y&#39;);
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>% insert: fill rest of part, a triangel
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>CVec={[1,300],[200,400],[1,400],[1,300]};
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>FDwave_model_build_shape_arbitrary(&#39;coordinates&#39;,CVec,&#39;vp&#39;,3100,&#39;vs&#39;,2500,&#39;Density&#39;,2100,&#39;plotON&#39;,&#39;y&#39;);
+</code></pre></div>
+<h2 id="derived-model">Derived model</h2>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="analysis.html" class="btn btn-neutral float-right" title="Analysis">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="install.html" class="btn btn-neutral" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="install.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="analysis.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
