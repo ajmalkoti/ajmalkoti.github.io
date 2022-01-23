@@ -53,8 +53,13 @@ mkdocs gh-deploy
 
 
 Note you may need to install following plugins 
-
-1. Highlighting code requires 
+1.  In the case of static links following setting should be inluded
+```
+use_directory_urls: false
+```
+see the [stackoverflow](https://stackoverflow.com/questions/48063231/mkdocs-hyperlink-not-working-in-static-pages)
+  
+2. Highlighting code requires 
 ``` 
 conda install -c conda-forge pymdown-extensions
 ```
@@ -69,7 +74,7 @@ markdown_extensions:
 ```
 
 
-2. For providing each section heading a number install following 
+3. For providing each section heading a number install following 
 ```conda install -c conda-forge mkdocs-markdownextradata-plugin``` 
 and include following lines in the yml file.
 ```
