@@ -37,11 +37,43 @@ theme: readthedocs
 5. You may add the contents to  **docs/index.md** file. Similarly you may create other files such as
 **docs/installation.md**  
 **docs/about.md**
-6. Build the 
+
+6. Server the project which will create a link to see your project in browser.
+```
+mkdocs serve
+```
+7. Build the project
 ```
 mkdocs build
 ```
 8. Deploy the site
 ```
 mkdocs gh-deploy
+```
+
+
+Note you may need to install following plugins 
+
+1. Highlighting code requires 
+``` 
+conda install -c conda-forge pymdown-extensions
+```
+include following in yml file 
+```
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+```
+
+
+2. For providing each section heading a number install following 
+```conda install -c conda-forge mkdocs-markdownextradata-plugin``` 
+and include following lines in the yml file.
+```
+plugins:
+  - search
+  - enumerate-headings 
 ```
