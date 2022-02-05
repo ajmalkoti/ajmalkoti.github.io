@@ -1,98 +1,5 @@
 # Almost essential packages
-
-* graphicx
-* amsmath
-* xcolor
-* tikz
-* pgf
-* pgfplots
-* bm 
-
-# Font Selection
-
-* ComputerModern - cmr - default font, roman-fontfamily
-* Utopia Fourier - put
-* Palatino       - ppl 
-* Fira Sans 
-* plex-sans
-
-
-
-
-Specialized tool box
-
-* xpatch 
-* **xspace**- The xspace package provides a single command that looks at what comes after it in the command stream, and decides whether to insert a space to replace one “eaten” by the TeX command decoder. 
-  Use it as : \newcommand{\test}{Some command or text here \xspace} 
-
-
-## Font selection and setting 
-
-A written text has many aspects for which the type setting can be  chosen as folloing
-
-1. Font Size - \tiny, \scriptsize, \footnotesize, \small, \normalsize, \large, \Large, \LARGE, \huge, \Huge
-2. Font Style (six types)- 
-   1. bold  - \textbf{TEXT HERE}, or \bfseries
-   2. medium - \textmd{TEXT HERE}, or \mdseries 
-   3. italic - \textit{TEXT HERE}, or\itshape
-   4. stanted - \textsl{TEXT HERE}, or \slshape
-   5. small cap - \textsc{TEXT HERE}, or \scshape
-   6. upright - \textup{TEXT HERE}, \upshape   
-3. Font Family (three families)
-   1. Serif (roman)          - \textrm{TEXT HERE}, \rmfamily
-   2. Sans serif             - \textsf{TEXT HERE}, \sffamily
-   3. Typewriter (monotype)  - \texttt{TEXT HERE}, \ttfamily
-4. Font typeface 
-   There are probably hundreds of font families out. They can be classified on many basis
-   first is 
-   1. Computer Modern Fonts (cmr)
-   2. Latin modern Fonts (lmr)
-   3. Post Script Fonts
-   4. TeX Gyre
-
-The default font typeface is selected by command \usepackage{FontName}
-It can be changed at any time in text using the command \fontfamily{FontCode}\selectfont
-
-   Name           - code - remark
-
-   ComputerModern - cmr - default font, roman-fontfamily
-
-   Utopia Fourier - put
-
-   Palatino       - ppl 
-
-   Fira Sans 
-
-   plex-sans
-
-
-A font can  be selected as
-
-* \usepackage{plex-serif}  use the font for serif font only 
-* \usepackage{plex-sans}  use the font for sans font only  
-* \usepackage{plex-mono}  use the font for mono font only 
-
-
-\usefont{<encoding>}{<family>}{<series>}{<shape>}
-\usefont{T1}{pcr}{m}{sl}
-
-
-## Code highlighting 
-
-* lstlisting is used generally
-* mcode can be used only for matlab. It is preset for MATLAB.
-
-
-
-
-## a LIST OF PACKAGES COPIED FROM INTERNET
-
-https://nasa.github.io/nasa-latex-docs/html/misc/quick-start.html#quickstartguide
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Required packages for the LaTeX template
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  graphicx, amsmath,  xcolor, tikz, pgf, pgfplots, bm 
 
 1. **Font and Encoding**   
 
@@ -130,9 +37,13 @@ https://nasa.github.io/nasa-latex-docs/html/misc/quick-start.html#quickstartguid
 
    | Pacakage   | Description                                                  |
    | ---------- | ------------------------------------------------------------ |
+   | amsmaths   | The basic mathematical equation and commands                 |
+   | amssymb    | package used to create math symbols                          |
+   | amsthm     | Provides the theorem like environemtns                       |
+   |  bm        |  bold math letters                                            | 
    | mathtools  | typesetting of multi-line and other mathematical statements - also loads amsmath package |
    | emathtools |                                                              |
-   | amssymb    | package used to create math symbols                          |
+   
 
 6. **Table related** 
 
@@ -147,6 +58,8 @@ https://nasa.github.io/nasa-latex-docs/html/misc/quick-start.html#quickstartguid
 
    | Pacakage | Description                                          |
    | -------- | ---------------------------------------------------- |
+   | lstlisting| Very versstile code highlighting package | 
+   | minted   | |
    | fancyvrb | for custom verbatim code definitions - block of code |
    | newverbs | for custom verbatim code definitions - inline code   |
 
@@ -165,7 +78,8 @@ https://nasa.github.io/nasa-latex-docs/html/misc/quick-start.html#quickstartguid
    | cleveref | for enhanced reference capability must be loaded after amsmath package e.g. \RequirePackage[noabbrev,capitalise]{cleveref} |
    | hyperref | for creating hyperlinks (must come before glossaries), e.g. \RequirePackage[pdfencoding=auto,psdextra,hyperfootnotes=false]{hyperref} |
 
-10.  **Formatting text and appearnace**  
+10.  **Formatting text and appearnace**   
+
    | Pacakage    | Description                                                  |
    | ----------- | ------------------------------------------------------------ |
    | csquotes    | Fixes issue with quotes being backwards e.g. \RequirePackage[autostyle, english = american]{csquotes} |
@@ -186,9 +100,11 @@ https://nasa.github.io/nasa-latex-docs/html/misc/quick-start.html#quickstartguid
    | Pacakage | Description         |
    | -------- | ------------------- |
    | multido  | To create for loops |
-
+   | xpatch   | |
+   | xspace   | It provides a single command that looks at what comes after it in the command stream, and decides whether to insert a space to replace one “eaten” by the TeX command decoder.  Use it as : \newcommand{\test}{Some command or text here \xspace} |
 
 12. **Other**  
+
    | Pacakage | Description                                                  |
    | -------- | ------------------------------------------------------------ |
    | xcolor   | required for color  \RequirePackage[table]{xcolor}           |
@@ -201,18 +117,60 @@ https://nasa.github.io/nasa-latex-docs/html/misc/quick-start.html#quickstartguid
      
 
 
-% To manage arrays in LaTeX
-% IMPORTANT: http://tex.stackexchange.com/questions/65073/latex-doesnt-recognize-endarray
-% Errors occure when 'arrayjob' package and 'amsmath' package are used because of \array
-% Using 'arrayjobx' resolves the issue by defining \arrayx macro instead of conflicting \array
-\RequirePackage{arrayjobx}
-
-% manges hyphenation patterns for a wide range of languages 
-\RequirePackage[english]{babel}
 
 
-% To determine last page of each section
-\RequirePackage{lastpage}
+\RequirePackage{arrayjobx}  -To manage arrays in LaTeX  
+  % IMPORTANT: http://tex.stackexchange.com/questions/65073/latex-doesnt-recognize-endarray
+  % Errors occure when 'arrayjob' package and 'amsmath' package are used because of \array
+  % Using 'arrayjobx' resolves the issue by defining \arrayx macro instead of conflicting \array
+\RequirePackage[english]{babel} % manges hyphenation patterns for a wide range of languages   
+\RequirePackage{lastpage}     To determine last page of each section   
+\RequirePackage{wallpaper}  - For adding cover sheet  
 
-% For adding cover sheet
-\RequirePackage{wallpaper}  
+  
+## a LIST OF PACKAGES COPIED FROM INTERNET
+https://nasa.github.io/nasa-latex-docs/html/misc/quick-start.html#quickstartguide
+  
+
+
+## Font selection and setting 
+  A written text has many aspects for which the type setting can be  chosen as folloing
+
+  1. Font Size - \tiny, \scriptsize, \footnotesize, \small, \normalsize, \large, \Large, \LARGE, \huge, \Huge
+  2. Font Style (six types)- 
+     1. bold  - \textbf{TEXT HERE}, or \bfseries
+     2. medium - \textmd{TEXT HERE}, or \mdseries 
+     3. italic - \textit{TEXT HERE}, or\itshape
+     4. stanted - \textsl{TEXT HERE}, or \slshape
+     5. small cap - \textsc{TEXT HERE}, or \scshape
+     6. upright - \textup{TEXT HERE}, \upshape   
+  3. Font Family (three families)
+     1. Serif (roman)          - \textrm{TEXT HERE}, \rmfamily
+     2. Sans serif             - \textsf{TEXT HERE}, \sffamily
+     3. Typewriter (monotype)  - \texttt{TEXT HERE}, \ttfamily
+  4. Font typeface 
+     There are probably hundreds of font families out. They can be classified on many basis
+     first is 
+     1. Computer Modern Fonts (cmr)
+     2. Latin modern Fonts (lmr)
+     3. Post Script Fonts
+     4. TeX Gyre
+
+  The default font typeface is selected by command \usepackage{FontName}
+  It can be changed at any time in text using the command \fontfamily{FontCode}\selectfont
+
+     |Name           |code| remark |
+     |---------------|---|---------|
+     |ComputerModern | cmr|default font, roman-fontfamily|
+     | Utopia Fourier| put| |
+     | Palatino      | ppl | |
+     | Fira Sans     | |
+     | plex-sans     |  |
+
+  A font can  be selected as
+  * \usepackage{plex-serif}  use the font for serif font only 
+  * \usepackage{plex-sans}  use the font for sans font only  
+  * \usepackage{plex-mono}  use the font for mono font only 
+
+  \usefont{<encoding>}{<family>}{<series>}{<shape>}
+  \usefont{T1}{pcr}{m}{sl}
