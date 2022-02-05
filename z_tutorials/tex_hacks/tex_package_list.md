@@ -1,4 +1,5 @@
 # Almost essential packages
+
 * graphicx
 * amsmath
 * xcolor
@@ -8,24 +9,27 @@
 * bm 
 
 # Font Selection
+
 * ComputerModern - cmr - default font, roman-fontfamily
 * Utopia Fourier - put
 * Palatino       - ppl 
 * Fira Sans 
 * plex-sans
-   
 
 
 
 
 Specialized tool box
+
 * xpatch 
 * **xspace**- The xspace package provides a single command that looks at what comes after it in the command stream, and decides whether to insert a space to replace one “eaten” by the TeX command decoder. 
-Use it as : \newcommand{\test}{Some command or text here \xspace} 
+  Use it as : \newcommand{\test}{Some command or text here \xspace} 
 
 
 ## Font selection and setting 
+
 A written text has many aspects for which the type setting can be  chosen as folloing
+
 1. Font Size - \tiny, \scriptsize, \footnotesize, \small, \normalsize, \large, \Large, \LARGE, \huge, \Huge
 2. Font Style (six types)- 
    1. bold  - \textbf{TEXT HERE}, or \bfseries
@@ -45,24 +49,25 @@ A written text has many aspects for which the type setting can be  chosen as fol
    2. Latin modern Fonts (lmr)
    3. Post Script Fonts
    4. TeX Gyre
-   
+
 The default font typeface is selected by command \usepackage{FontName}
 It can be changed at any time in text using the command \fontfamily{FontCode}\selectfont
-   
+
    Name           - code - remark
-   
+
    ComputerModern - cmr - default font, roman-fontfamily
-   
+
    Utopia Fourier - put
-   
+
    Palatino       - ppl 
-   
+
    Fira Sans 
-   
+
    plex-sans
-   
-   
+
+
 A font can  be selected as
+
 * \usepackage{plex-serif}  use the font for serif font only 
 * \usepackage{plex-sans}  use the font for sans font only  
 * \usepackage{plex-mono}  use the font for mono font only 
@@ -70,9 +75,10 @@ A font can  be selected as
 
 \usefont{<encoding>}{<family>}{<series>}{<shape>}
 \usefont{T1}{pcr}{m}{sl}
-   
-   
+
+
 ## Code highlighting 
+
 * lstlisting is used generally
 * mcode can be used only for matlab. It is preset for MATLAB.
 
@@ -88,126 +94,112 @@ https://nasa.github.io/nasa-latex-docs/html/misc/quick-start.html#quickstartguid
 % Required packages for the LaTeX template
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% for creating hyperlinks (must come before glossaries for proper hyperlinks to work)
-\RequirePackage[pdfencoding=auto,psdextra,hyperfootnotes=false]{hyperref}
+1. **Font and Encoding**   
 
-% to list and index acronyms            
-\RequirePackage[nomain,nowarn,acronym,style=super,xindy, nonumberlist,nopostdot,toc,nogroupskip] {glossaries} 
-% needed for including graphics e.g. EPS, PS, PDF, PNG, JPEG
-\RequirePackage{graphicx}            
+   | Pacakage | Description                                                  |
+   | -------- | ------------------------------------------------------------ |
+   | inputenc | Fixes issue with quotes not rendering e.g. \RequirePackage[utf8]{inputenc} |
+   | textcomp | Resolve font encoding errors for missing commands            |
+   | fontenc  | For porper text encoding (certain characters dont show up in pdf properly) e.g. \RequirePackage[T1]{fontenc} |
 
-% needed for header and footer
-\RequirePackage{fancyhdr}           
+2. **Page geometry**  
 
-% allows control of paper geometry
-\RequirePackage{geometry}
+   | Pacakage | Description                      |
+   | -------- | -------------------------------- |
+   | geometry | allows control of paper geometry |
 
-% required for color            
-\RequirePackage[table]{xcolor}
+3. **Index and table of content**   
 
-% allows detailed control of complex tables      
-\RequirePackage{multirow} 
+   | Pacakage   | Description                                                  |
+   | ---------- | ------------------------------------------------------------ |
+   | glossaries | to list and index acronyms  e.g. \RequirePackage[nomain,nowarn,acronym,style=super,xindy, nonumberlist,nopostdot,toc,nogroupskip] {glossaries} |
+   | titletoc   | for table of contents material                               |
+   | tocloft    | % TOC, LOT, and LOF modification package e.g. \RequirePackage[titles]{tocloft} |
 
-% to thicken table lines           
-\RequirePackage{booktabs}
+4. **Figure**   
 
-% for setting table width sizes             
-\RequirePackage{tabularx}
+   | Pacakage   | Description                                                  |
+   | ---------- | ------------------------------------------------------------ |
+   | graphicx   | needed for including graphics e.g. EPS, PS, PDF, PNG, JPEG   |
+   | caption    | package to toggle figure, table, and equation captions       |
+   | subcaption | package to add figure sub-captions                           |
+   | float      | to help align tables, figures, pages                         |
+   | tikz       | For drawing manual pictures - i.e flowcharts, block diagrams, etc. |
+
+5. **Maths**
+
+   | Pacakage   | Description                                                  |
+   | ---------- | ------------------------------------------------------------ |
+   | mathtools  | typesetting of multi-line and other mathematical statements - also loads amsmath package |
+   | emathtools |                                                              |
+   | amssymb    | package used to create math symbols                          |
+
+6. **Table related** 
+
+   | Pacakage | Description                               |
+   | -------- | ----------------------------------------- |
+   | multirow | allows detailed control of complex tables |
+   | booktabs | to thicken table lines                    |
+   | tabularx | for setting table width sizes             |
+   | array    | More configurable table options           |
+
+7. **Code **  
+
+   | Pacakage | Description                                          |
+   | -------- | ---------------------------------------------------- |
+   | fancyvrb | for custom verbatim code definitions - block of code |
+   | newverbs | for custom verbatim code definitions - inline code   |
+
+8. **Lists**
+
+   | Pacakage | Description                                                  |
+   | -------- | ------------------------------------------------------------ |
+   | enumitem | for creating lists                                           |
+   | listings | to list verbatim source code                                 |
+   | mcode    | to list matlab code - formatted e.g. \RequirePackage[framed,numbered,autolinebreaks]{mcode} |
+
+9. **Refrencing**
+
+   | Pacakage | Description                                                  |
+   | -------- | ------------------------------------------------------------ |
+   | cleveref | for enhanced reference capability must be loaded after amsmath package e.g. \RequirePackage[noabbrev,capitalise]{cleveref} |
+   | hyperref | for creating hyperlinks (must come before glossaries), e.g. \RequirePackage[pdfencoding=auto,psdextra,hyperfootnotes=false]{hyperref} |
+
+10.  **Formatting text and appearnace**  
+   | Pacakage    | Description                                                  |
+   | ----------- | ------------------------------------------------------------ |
+   | csquotes    | Fixes issue with quotes being backwards e.g. \RequirePackage[autostyle, english = american]{csquotes} |
+   | lipsum      | Used to generate dummy text                                  |
+   | setspace    | For creating custom line spacing                             |
+   | indentfirst | To indent first paragraph                                    |
+   | lettrine    | For adding a large letter to beginning of paragraph          |
+   | alphalph    | Additional package that allows for more than 9 symbols for footnotes |
+   | abstract    | For formatted abstract \RequirePackage{abstract}             |
+   | multicol    | To create multiple column documents                          |
+   | appendix    | To add appendices to docuemnt \RequirePackage[toc]{appendix} |
+   | bookmark    | For creating PDF bookmarks in PDF viewer                     |
+   | fancyhdr    | needed for header and footer                                 |
+   | titlesec    | for customizing section titles                               |
+
+11.  **Programming Latex**   
+
+   | Pacakage | Description         |
+   | -------- | ------------------- |
+   | multido  | To create for loops |
+
+
+12. **Other**  
+   | Pacakage | Description                                                  |
+   | -------- | ------------------------------------------------------------ |
+   | xcolor   | required for color  \RequirePackage[table]{xcolor}           |
+   | vhistory | Used for tracking version history of document \RequirePackage[nochapter]{vhistory} |
 
 % Solution for Latex 2018 error due to chngcntr package update
 % https://tex.stackexchange.com/questions/425600/latex-error-command-counterwithout-already-defined?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
 \let\counterwithout\relax
 \let\counterwithin\relax
+     
 
-% to reset counter of figures and tables per section            
-\RequirePackage{chngcntr}       
-
-% for customizing section titles    
-\RequirePackage{titlesec}       
-
-% for table of contents material    
-\RequirePackage{titletoc}   
-
-% package to toggle figure, table, and equation captions        
-\RequirePackage{caption}                
-
-% package to add figure sub-captions        
-\RequirePackage{subcaption}
-
-% to help align tables, figures, pages
-\RequirePackage{float}      
-
-% for custom verbatim code definitions - block of code      
-\RequirePackage{fancyvrb}
-
-% for custom verbatim code definitions - inline code            
-\RequirePackage{newverbs}       
-
-% manges hyphenation patterns for a wide range of languages 
-\RequirePackage[english]{babel}
-
-% for creating lists        
-\RequirePackage{enumitem}   
-
-% typesetting of multi-line and other mathematical statements - also loads amsmath package
-\RequirePackage{mathtools} 
-
-% package used to create math symbols          
-\RequirePackage{amssymb}            
-
-% for enhanced reference capability must be loaded after amsmath package
-\RequirePackage[noabbrev,capitalise]{cleveref}
-
-% Fixes issue with quotes not rendering
-\RequirePackage[utf8]{inputenc}
-
-% Fixes issue with quotes being backwards
-\RequirePackage[autostyle, english = american]{csquotes} 
-
-% TOC, LOT, and LOF modification package
-\RequirePackage[titles]{tocloft} 
-
-% to list verbatim source code   
-\RequirePackage{listings}           
-
-% More configurable table options
-\RequirePackage{array}  
-
-% Used to generate dummy text           
-\RequirePackage{lipsum}             
-
-% Used for tracking version history of document
-\RequirePackage[nochapter]{vhistory}    
-
-% To add appendices to docuemnt
-\RequirePackage[toc]{appendix}
-
-% to list matlab code - formatted
-\RequirePackage[framed,numbered,autolinebreaks]{mcode} 
-
-% For porper text encoding (certain characters dont show up in pdf properly)
-\RequirePackage[T1]{fontenc}
-
-% Resolve font encoding errors for missing commands
-\RequirePackage{textcomp}
-
-% For drawing manual pictures - i.e flowcharts, block diagrams, etc...
-\RequirePackage{tikz}
-
-% For creating PDF bookmarks in PDF viewer
-\RequirePackage{bookmark}
-
-% For creating custom line spacing
-\RequirePackage{setspace}
-
-% For adding a large letter to beginning of paragraph 
-\RequirePackage{lettrine}
-
-% To indent first paragraph
-\RequirePackage{indentfirst}
-
-% To create multiple column documents
-\RequirePackage{multicol}
 
 % To manage arrays in LaTeX
 % IMPORTANT: http://tex.stackexchange.com/questions/65073/latex-doesnt-recognize-endarray
@@ -215,17 +207,9 @@ https://nasa.github.io/nasa-latex-docs/html/misc/quick-start.html#quickstartguid
 % Using 'arrayjobx' resolves the issue by defining \arrayx macro instead of conflicting \array
 \RequirePackage{arrayjobx}
 
-% To create for loops
-\RequirePackage{multido}
+% manges hyphenation patterns for a wide range of languages 
+\RequirePackage[english]{babel}
 
-% Additional package that allows for more than 9 symbols for footnotes
-\RequirePackage{alphalph}
-
-% For saythanks command
-\RequirePackage{abstract}
-
-% For saythanks command
-\RequirePackage{lettrine}
 
 % To determine last page of each section
 \RequirePackage{lastpage}
