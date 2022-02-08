@@ -1,6 +1,18 @@
 ## Changing Linux prompt
  PS1='aj@cchpc:\w$ '
  
+## Transferring bulk of files from linux to windows (or external drive)
+Unix file naming system follows UTF8 while for windows it is different. Therefore one may want to remove the incompatible characters so that files get transferred. For bulk of file it can be done using detox as follows.
+```sh
+detox -r -v /path/to/your/files
+```
+where  
+-r Recurse into subdirectories  
+-v Be verbose about which files are being renamed   
+-n Can be used for a dry run (only show what would be changed)  
+
+
+ 
 ## Working with images 
 1. **Crop image using Imagemagick**:    
    It removes the white space around the image.    
