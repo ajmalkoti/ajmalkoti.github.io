@@ -1,0 +1,89 @@
+## My shortcuts for tex
+
+ 
+### SI unit 
+\usepackage{siunitx}
+\sisetup{inter-unit-product = \ensuremath { { } \cdot { } } }
+
+ 
+### Todo notes
+```
+\usepackage[textwidth=2cm]{todonotes}
+\setlength{\marginparwidth}{2cm}
+\textwidth = 6.2 in
+
+\newcommand{\tododel}[1]{\todo[size=\footnotesize, color=red!60]{#1}}
+\newcommand{\todoins}[1]{\todo[size=\footnotesize, color=blue!50]{#1}}
+\newcommand{\todosug}[1]{\todo[size=\footnotesize]{#1}}
+
+\newcommand{\tododelin}[1]{\todo[inline, color=red!60, size=\footnotesize]{#1}}
+\newcommand{\todosugin}[1]{\todo[inline, size=\footnotesize]{#1}}
+\newcommand{\todoinsin}[1]{\todo[inline, color=blue!50, size=\footnotesize]{#1}}
+```
+
+
+
+### Line no patch for equations 
+```tex
+\usepackage{lineno}
+\newcommand*\patchAmsMathEnvironmentForLineno[1]{
+  \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
+  \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
+  \renewenvironment{#1}
+  {\linenomath\csname old#1\endcsname}
+  {\csname oldend#1\endcsname\endlinenomath}}
+  \newcommand*\patchBothAmsMathEnvironmentsForLineno[1]{
+  \patchAmsMathEnvironmentForLineno{#1}
+  \patchAmsMathEnvironmentForLineno{#1*}}  \AtBeginDocument{
+  \patchBothAmsMathEnvironmentsForLineno{equation}
+  \patchBothAmsMathEnvironmentsForLineno{align}
+  \patchBothAmsMathEnvironmentsForLineno{flalign}
+  \patchBothAmsMathEnvironmentsForLineno{alignat}
+  \patchBothAmsMathEnvironmentsForLineno{gather}~
+  \patchBothAmsMathEnvironmentsForLineno{multline}
+}
+```
+
+
+
+### Coloring text red and blue 
+```
+\usepackage{color}
+% change it to blue or black for highlighting
+%\newcommand{\cblue}[1]{\textcolor{blue}{#1}} 
+%\newcommand{\cred}[1]{{\textcolor{red}{#1}}}    
+%\newcommand{\credso}[1]{{\textcolor{red}{\sout{#1}}}}
+
+\newcommand{\cblue}[1]{#1}   
+\newcommand{\cred}[1]{#1}    
+\newcommand{\credso}[1]{ }
+```
+
+
+### Refer equations 
+```tex
+\usepackage{xparse}
+\NewDocumentCommand{\refeq}{ m O{}}{\cblue{(\ref{#1}#2})}  	    %e.g. 7
+\NewDocumentCommand{\refeqt}{ m O{}}{\cblue{equation \ref{#1}#2}}	    %e.g. Eq. 7
+\NewDocumentCommand{\refeqp}{ m O{}}{(\cblue{equation \ref{#1}#2})}	    %e.g. (Eq. 7)
+\NewDocumentCommand{\refsyst}{ m O{}}{\cblue{system \ref{#1}#2}}
+
+\NewDocumentCommand{\reffig}{ m O{}}{\cblue{\ref{#1}#2}}
+\NewDocumentCommand{\reffigt}{ m O{}}{\cblue{Figure\;\ref{#1}#2}}
+\NewDocumentCommand{\reffigp}{ m O{}}{\cblue{(Figure\;\ref{#1}#2})}
+
+\NewDocumentCommand{\reftable}{ m O{}}{\cblue{\ref{#1}#2}}
+\NewDocumentCommand{\reftablet}{ m O{}}{\cblue{Table\;\ref{#1}#2}} 
+\NewDocumentCommand{\reftablep}{ m O{}}{\cblue{(Table\;\ref{#1}#2})}
+  
+\NewDocumentCommand{\refapp}{ m O{}}{\cblue{\ref{#1}#2}}
+\NewDocumentCommand{\refappt}{ m O{}}{\cblue{Appendix\;\ref{#1}#2}} 
+\NewDocumentCommand{\refappp}{ m O{}}{\cblue{(Appendix\;\ref{#1}#2})}
+```
+
+### Add space before and after each row 
+
+```tex
+\newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut 
+```
