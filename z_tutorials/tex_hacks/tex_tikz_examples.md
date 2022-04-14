@@ -253,3 +253,57 @@ In following line we create a condition name- "Show" which if set to true/false,
 
 
 * (Available libraries)[https://tex.stackexchange.com/questions/42611/list-of-available-tikz-libraries-with-a-short-introduction/42679#42679]
+
+## Examples 
+### How to annotate equations 
+
+### How to annotate matrix 
+
+\newcommand{\tikzmark}[2]{
+	\tikz[overlay,remember picture,baseline] 
+	\node[anchor=base] (#1) {$#2$};
+}
+
+```tex
+\begin{align}
+	\begin{bmatrix}
+	\sigma_{11}\\  \sigma_{22}\\  \sigma_{33}\\  \sigma_{32}\\  \sigma_{31}\\  \sigma_{21}	
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+		\tikzmark{ext1}{c_{11}} & \tikzmark{exex1}{ c_{12}} & \tikzmark{exex3}{c_{13}} & \tikzmark{exsh1}{c_{14}} & c_{15}                   & c_{16}                    \\
+		c_{21}                  & c_{22}                    & \tikzmark{exex2}{c_{23}} & c_{24}                   & c_{25}                   & c_{26}                    \\
+		c_{31}                  & c_{32}                    & \tikzmark{ext2}{c_{33}}  & c_{34}                   & c_{35}                   & \tikzmark{exsh2}{c_{36}} \\
+		c_{41}                  & c_{42}                    & c_{43}                   & \tikzmark{she1}{c_{44}}  & \tikzmark{shsh1}{c_{45}} & \tikzmark{shsh3}{c_{46}}  \\
+		c_{51}                  & c_{52}                    & c_{53}                   & c_{54}                   & c_{55}                   & \tikzmark{shsh2}{c_{56}}  \\
+		c_{61}                  & c_{62}                    & c_{63}                   & c_{64}                   & c_{65}                   & \tikzmark{she2}{c_{66} }
+	\end{bmatrix}
+	%
+	\begin{bmatrix}
+	\varepsilon_{11}\\  \varepsilon_{22}\\  \varepsilon_{33}\\  \varepsilon_{32}\\  \varepsilon_{31}\\  \varepsilon_{21}	
+	\end{bmatrix}
+\end{align}
+
+% coordinate specifications
+% a.east, a.west, a.north, a.south 
+% a.135, a.-45
+
+\begin{tikzpicture}[overlay,remember picture]
+% pure extension
+\draw[opacity=.4,line width=4mm,line cap=round] (ext1.center) -- (ext2.center) ;
+\draw[thick,-stealth] (ext1.north)--++(0,.4cm)node[shift={(0,.2cm)}]{Extension};
+% pure shear
+\draw[opacity=.4,line width=4mm,line cap=round] (she1.center) -- (she2.center);
+\draw[thick,-stealth] (she2.south)|-++(-.5,-.3cm)node[left]{Shear};
+%%% extension-shear
+\draw[red!30,fill=red!30,opacity=.4,line width=.5mm] (exex1.145)--(exex2.-45)--(exex3.45)--cycle;
+\draw[thick,-stealth] (exex1.north)++(.4,0) |-++(.5cm,.9cm)node[right]{Extension-Extension coupling};
+%% shear-shear 
+\fill[opacity=.4,line width=3mm,line cap=round,color=green!30] (exsh1.135) rectangle (exsh2.-45);
+\draw[thick,-stealth] (exsh1.north)++(.8,0)|- ++(0.5,.4cm)node[right]{Shear-Extension coupling};
+%% shear extension
+\draw[red!30,fill=red!30,opacity=.4,line width=.5mm] (shsh1.145)--(shsh2.-45)--(shsh3.45)--cycle;
+\draw[thick,-stealth] (shsh2.east)--++(.2,0)-- ++(0,-1.5)--++(-.5,0)node[left]{Shear-shear coupling};
+\end{tikzpicture}
+
+```
