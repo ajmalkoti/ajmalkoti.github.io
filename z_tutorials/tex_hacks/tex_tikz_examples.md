@@ -40,6 +40,8 @@ Rest of the commands are defined in following parts
 |(x,y)    | Cartesian coordinates e.g., (3cm,4.67cm) |
 |(theta:radius) | Polar coordinates e.g., (45:2cm) |
 | ++(a,b) | Position relative to last point, e.g. ```(2,3) -- ++(1,1))```  is equivalent to writing (2,3)--(3,4) |
+|(x,y).north| Anchor on north of the given coordinate. Options: east,west,north,south. Example: (2,3).north-- (5,5)  |
+|(x,y).angle | Anchor at given angle on the given coordinate. Example- (2,3).-45 -- (5,5)  |
 
 Adding/subtracting coordinates (requires \usetikzlibrary{calc})
 ```tex
@@ -90,7 +92,7 @@ The units can be specified when coordinates are provided, such as (1pt, 3pt)  or
 * Line type : dotted, dashed, help lines
 * Line color : red, green, blue, cyan, magenta, yellow, black, gray, darkgray, lightgray, brown, lime, olive, orange, pink, purple, teal, violet and white
 * Arrow type at the line ends:  <-, -> , <-> , latex-,  -latex, latex-latex, etc.
- 
+* Line cap : round,  
 
 ```tex
 \draw[very thick] (0,0) to [out=90,in=195] (2,1.5);
