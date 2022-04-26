@@ -7,8 +7,30 @@ Summary of the work
 
 
 
+In this package the directory structure is following 
+\begin{description}
+\item[chapters]: contains all the chapters, appendix etc material in the directory]
+\item[fig]: Contains all the figures. 
+           For clarity the figure name have chapter name as prefix e.g 
+           "\verb|intro_widessxp.jpg|" is some figure pertaining to introduction chapter
+           The rule is not necessary, but useful to sort figures when there are many (say >100).
+\item[references]: Contains all the references in the bibtex format. 
+             Add all the required references to the file- "mybibfile.bib".
+				Note 
+      		1) Make sure there is no duplicate entry in the bibliography file.
+             2) Building all reference requires special processing sequence 
+  			Pdflatex--> biblatex --> Pdflatex --> Pdflatex --> ViewPdf
+
+ Adding table and figures and citing them
+  		Some example has been added to 
+
+ Adding more chapters 
+ 			step 1: Create a tex file (e.g FileName.tex) in the directory "chapters" 
+ 			step 2: Add here command "\include{chapters/FileName}". 
+
+\end{description}
 
 
 
-
-
+\section{Some Random Text Here After}
+\lipsum[1-5]

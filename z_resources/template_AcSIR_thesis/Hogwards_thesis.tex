@@ -1,0 +1,62 @@
+%%% This thesis template was created by Dr. A. Malkoti (CSIR-NGRI).  
+%%% Date: 15 Mar 2018
+%%% The template can be used/distributed/modified freely. 
+%%% This comes without any gurantee/warantee.
+%%% It shouldn't be considered at official format for AcSIR thesis. 
+
+%%%%%%%%% Hogwarts Thesis %%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt,a4paper]{book}
+\usepackage{acsir}
+
+
+\title{Why I Want To Learn Witch-Craft For Next 5 year- A detailed study!}
+\docType{Dissertation}  								% default: Thesis
+\UnivName{Hogwarts School of Witchcraft and Wizardry} 	% default: AcSIR
+\degreeName{Master in witchcraft}						% default: Doctor of Philosophy
+\degreeStream{Dark Arts}    	  						% default: Physical Sciences
+%\degreeMajor{(Geology)}				  				% default: Geophysics
+%%%
+\author{Dr. Harry Potter}								% default: blank
+\enrolmentNumber{ID: The boy with scar}					% default: blank
+\supervisor{Prof. Albus Percival Wulfric Brian Dumbledore}				
+\labName{Gyffindor}										% default: CSIR-NGRI
+\labAddress{The cupboard under the Stairs, 4, Privet Drive, Little Whinging, Surrey}													% default: Hyderabad-500007, India
+\theDate{15 Mar 2022}									% default: compiling date 
+\instLogo{logo_hogwarts.jpg}               				% default: logo_acsir.png
+
+
+\begin{document}
+	\frontmatter 
+	\pagestyle{empty}
+	
+	\maketitle
+	\makecertificate{}
+	%\makeDedication{This is optional. }
+	%\makeAcknowledgement{This is optional}
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	
+	
+	\input{frontmatter/summary}					% require editing
+	\mainmatter 
+	\pagestyle{fancy} 
+	%
+	\include{chapters/introduction}				% require editing
+	\include{chapters/theory}					% require editing
+	\include{chapters/results}					% require editing
+	\include{chapters/discussion}				% require editing
+	\include{chapters/conclusions}				% require editing
+	
+	%% Adding more chapters 
+	%% step 1: Create a tex file (e.g FileName.tex) in the directory "chapters" 
+	%% step 2: Add here command "\include{chapters/FileName}". 
+	
+	\appendix
+	\include{chapters/appendixA}				% require editing
+	\include{chapters/appendixB}				% require editing
+	
+	This file contains all your references in bibtex form.
+	\bibliography{references/mybibfile}					
+	
+\end{document}

@@ -1,56 +1,117 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This pakage is written by Dr. A.Malkoti, for his Ph.D. thesis at 
+% AcSIR-National Geophysical Research Institute, Hyderabad, India.  
+% 
+% 
+% Dr. Ajay Malkoti
+% CSIR-National Geophysical Research Institute,
+% Hyderabad- 500007, India
+%
+%
+% Disclaimer
+% ============================
+% This comes without any gurantee/warantee.
+%
+%
+% Download 
+% ============================
+% This package is freely availabe at author's Github repository
+% https://ajmalkoti.github.io/z_resources/template_AcSIR_thesis.zip
+%
+%
+% Distribution
+% ============================
+% The template can be used/distributed/modified freely. 
+% 
+% 
+% Version History
+% ============================
+% Version 1.0: July 2018
+%    Version ready for AcSIR thesis format
+%
+% Version 2.0: Jan 2022  
+%    Removed problem of "command eating white space characters".
+%    Changed option to make it more generalized. 
+%    Now it got options for- 
+%    Front page formatting with more options. 
+%    Adapted for AcSIR as well as NGRI and other universities template.
+%    Rewritten many of the commands for better formatting. 
+%    Using the latest packages e.g. siunitx, cleveref.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{acsir}[2017/08/21 Package for AcSIR Thesis]
 
+\RequirePackage{xspace}
 \RequirePackage{xcolor}
 \RequirePackage{graphicx}
-\graphicspath{{figures/}}
-%\RequirePackage{fancyhdr}
+\graphicspath{{figs/}}
 %\makeatletter
 %\makeatother
 
 
-\newcommand*{\degree}[1]{\gdef\@degree{#1}}%
-\newcommand*{\@degree}{PHYSICAL SCIENCES}
+\newcommand*{\docType}[1]{\gdef\@docType{#1}}%
+\newcommand*{\@docType}{Thesis}
 
-\newcommand*{\regno}[1]{\gdef\@regno{#1}}
-\newcommand*{\@regno}{10PP13JXXXX}
+\newcommand*{\UnivName}[1]{\gdef\@UnivName{#1}}%
+\newcommand*{\@UnivName}{Academy of Scientific and Innovative Research }
 
-\newcommand*{\labname}[1]{\gdef\@labname{#1}}
-\newcommand*{\@labname}{CSIR-National Geophysical Research Institute}
+\newcommand*{\degreeName}[1]{\gdef\@degreeName{#1}}%
+\newcommand*{\@degreeName}{DOCTOR OF PHILOSOPHY }
 
-\newcommand*{\labaddress}[1]{\gdef\@labaddress{#1}}
-\newcommand*{\@labaddress}{Hyderabad-500007, India}
+\newcommand*{\degreeStream}[1]{\gdef\@degreeStream{#1}}%
+\newcommand*{\@degreeStream}{PHYSICAL SCIENCES }
+
+\newcommand*{\degreeMajor}[1]{\gdef\@degreeMajor{#1}}%
+\newcommand*{\@degreeMajor}{ (Geophysics) }
+
+\newcommand*{\enrolmentNumber}[1]{\gdef\@enrolmentNumber{#1}}
+\newcommand*{\@enrolmentNumber}{ \phantom{text} }
+
+\newcommand*{\labName}[1]{\gdef\@labName{#1}}
+\newcommand*{\@labName}{CSIR-National Geophysical Research Institute }
+
+\newcommand*{\labNameAcro}[1]{\gdef\@labNameAcro{#1}}
+\newcommand*{\@labNameAcro}{CSIR-National Geophysical Research Institute }
+
+\newcommand*{\labAddress}[1]{\gdef\@labAddress{#1}}
+\newcommand*{\@labAddress}{Hyderabad-500007, India }
 
 
 \newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}}
-\newcommand*{\@supervisor}{ Prof. XXX}
+\newcommand*{\@supervisor}{ Dr. Ajay Malokti }
 
-\newcommand*{\SubmissionDate}[1]{\gdef\@SubmissionDate{#1}}
-\newcommand*{\@SubmissionDate}{ \today}
+\newcommand*{\theDate}[1]{\gdef\@theDate{#1}}
+\newcommand*{\@theDate}{ \today}
 
+
+\newcommand*{\instLogo}[1]{\gdef\@instLogo{#1}}
+\newcommand*{\@instLogo}{logo_acsir.png}
 
 \renewcommand*{\maketitle}{%
 \begin{titlepage}
 	\begin{center}
-		\vspace*{2.5cm}
-		{\Huge  \@title}
-		 \\[2cm]  
+		\vspace*{1em}		
+		{\Huge  \@title } \\[2cm]  
 		\Large
-		 A Thesis Submitted to AcSIR for the Award of the Degree of\\[2.5em]
-		 DOCTOR OF PHILOSOPHY\\[2em]
-		 in \@degree \\[2.5em]
-		 %
-		 By\\[2em]		 
-		 \textbf{\@author} \\[1em]
-		 Registration No. \@regno\\[3em]		 
-		 %
-		 under the guidance of \\[2em]
-		 \@supervisor
-		 \vfill
-		 \includegraphics[width=\textwidth]{acsir_logo.png}\\[2em]		 
-		 \@labname \\		 
-		 \@labaddress		 \\[1em]
-		 \@SubmissionDate
+		A \@docType\xspace  Submitted to 
+		\@UnivName\xspace for the Award of the Degree of\\[2.5em]
+		\@degreeName\xspace \\[1.em]
+		in \@degreeStream\xspace  
+		\@degreeMajor\xspace\\[2.5em]
+		By\\[2.5em]		 
+		\textbf{\@author}\xspace \\[1em]
+		\@enrolmentNumber\xspace\\[3em]		 
+		%  
+		under the guidance of \\[2.5em]
+		\@supervisor\xspace    \\[1em]		 
+		\@labName\xspace       \\[1em]		 
+		\@labAddress\xspace	 \\[2em]	 
+		\vfill		 
+		\includegraphics[width=\textwidth]{\@instLogo}  
+		\\[1em]	 		 		 
+		\@theDate\xspace\\[3em]
+
 	\end{center}
 \end{titlepage}
 }
@@ -61,16 +122,16 @@
 \newcommand*{\makecertificate}[1]{
 \chapter*{Certificate}
 This is to certify that the work incorporated in this Ph.D. thesis 
-entitled ``\textbf{\@title}''  submitted by \@author \;to 
-Academy of Scientific and Innovative Research (AcSIR) in fulfillment 
-of the requirements for the Degree of \textbf{Doctor of Philosophy in \@degree}, 
+ entitled ``\textbf{\@title}''  submitted by 
+ \@author\xspace to 
+ \@UnivName\xspace in fulfillment 
+of the requirements for the Degree of 
+\textbf{\@degreeName\xspace} in \textbf{\@degreeStream \xspace}, 
 embodies original  research work under our supervision.
 \\[.5cm]
-We further certify that this  work has not been submitted to any other 
-University or Institution in part or full for award of any degree or diploma. 
-Research material obtained from other sources has been duly acknowledged 
-in the thesis. Any text, illustration, table etc. used in the thesis 
-from other sources, have been duly cited and acknowledged.
+We further certify that this  work has not been submitted to any other university or institution in part or full for award of any degree or diploma. 
+Research material obtained from other sources has been duly acknowledged in the thesis. 
+Any text, illustration, table, etc. used in the thesis from other sources have been duly cited and acknowledged.
 %
 \vspace{2cm}\\
 \@author \\
@@ -81,6 +142,35 @@ from other sources, have been duly cited and acknowledged.
 \@supervisor
 }
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand*{\makeDedication}[1]{
+\chapter*{Dedication}
+\noindent
+{#1}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand*{\makeAcknowledgement}[1]{
+\chapter*{Acknowledgements}
+\noindent 
+{#1}
+% Here is an example. \\
+% I would like to thank my guides, 
+% \textit{Dr. XXX}  and 
+% \textit{Dr. YYY} 
+% for sharing their expertise with me and their support throughout my Ph.D. duration. It was a great privilege to work with them. \\[1em] 
+}
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -88,10 +178,25 @@ from other sources, have been duly cited and acknowledged.
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{derivative}
+\usepackage{bm}
+
+\usepackage{natbib}
+\bibliographystyle{apalike}
+
 \usepackage{graphicx}
+\usepackage{cleveref}
+
+\usepackage{siunitx}
+\sisetup{inter-unit-product = \ensuremath { { } \cdot { } } }
+
+\usepackage{lipsum}
+
 \usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
-%%%%%%%%%%5
+
+%%%%%%%%%%%  
 \usepackage[Lenny]{fncychap}  % To set the chapter's title in fancy style
+%%%%%%%%%%%
 \usepackage{fancyhdr}  %fancy header and footer package
 	\pagestyle{fancy}
 	\fancyhead{}				% clear headers and set headers following commands
@@ -106,8 +211,9 @@ from other sources, have been duly cited and acknowledged.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\newcommand{\cblue}[1]{#1}    
+%%%%% Following should be replaced by \cref command 
 
+%%% \newcommand{\cblue}[1]{#1}    
 \newcommand{\cblue}[1]{\textcolor{blue}{#1}}
 \newcommand{\cred}[1]{\textcolor{red}{#1}} 
 
@@ -130,7 +236,7 @@ from other sources, have been duly cited and acknowledged.
 \NewDocumentCommand{\refappp}{ m O{}}{\cblue{(Appendix\;\ref{#1}#2})} 
 
 
-
+%%%%%%%%%%%%%% For table rows   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
 \newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut\textbf{}
 
