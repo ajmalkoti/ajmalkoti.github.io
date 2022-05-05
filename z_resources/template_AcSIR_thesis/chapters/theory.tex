@@ -1,43 +1,111 @@
 \chapter{Theory}
 
-Let us show an example of figure insertion here
-\begin{figure}
-	\center
-	\includegraphics[width=.6\textwidth]{theory_vectorize_operator.png}
-	\caption{The figure is taken from  \cite{malkoti_algorithm_2018} 
-	to show how to include a figure. 
-	A uniquie lable  is attached to this figure so that it can be 
-	referred anywhere in the thesis.}
-	\label{fig:theory_vectorize}
-\end{figure}
+\section{Background}
+When you are preparing the theory part various elements are used for that. A few are discussed in following text. 
+
+
+\subsection{Equations}
+	A simple equation can be written as 
+	\begin{align}
+		a^2 = b^2 +c ^2     \label{eq:theory_pythagorus}
+	\end{align}
+	%
+	To write above equation the code is 
+	\begin{verbatim}
+	\begin{align}
+	a^2 = b^2 +c ^2     \label{eq:theory_pythagorus}
+	\end{align}
+	\end{verbatim}
+	%	
+	This equation can be referred anywhere in the text as following \cref{eq:theory_pythagorus} for which the command is  \verb|\cref{eq:theory_pythagorus}|.
+
+
+	Very complex equations can also be written using latex easily. 
+	Following is an example
+	
+	\begin{align}
+		\nabla \times F = \int_{-\infty}^{t} \lambda K(x) \pdv{s}{x} dx
+	\end{align}
+	
+
+
+\subsection{Figures}
+	Let us show an example of figure insertion here
+	\begin{figure}[!h]
+		\center
+		\includegraphics[width=.32\textwidth]{theory_vectorize_operator.png}
+		\caption{The figure is taken from  \cite{malkoti_algorithm_2018} 
+			to show how to include a figure. 
+			A uniquie lable  is attached to this figure so that it can be 
+			referred anywhere in the thesis.}
+		\label{fig:theory_vectorize}
+	\end{figure}
+
+	The code used for inserting the figure is 
+	\begin{verbatim}	
+	\begin{figure}[!h]
+		\center
+		\includegraphics[width=.32\textwidth]{theory_vectorize_operator.png}
+		\caption{The figure is taken from  \cite{malkoti_algorithm_2018} to show how 
+		to include a figure. A uniquie lable  is attached to this figure so that it 
+		can be referred anywhere in the thesis.}
+		\label{fig:theory_vectorize}
+	\end{figure}
+	\end{verbatim}
+	
+	The figure can be cited anywhere in the text as \cref{fig:theory_vectorize} using the command \verb|\cref{fig:theory_vectorize}|.
 
 
 
+\subsection{Tables}
+	Now we demonstrate a table which is showing a list of different ways to cite a figure and table.
 
-The figure can be cited anywhere in the text using the ref command 
-for example  Figure \ref{fig:theory_vectorize}
-
-However a better choice in some cases might be the new command provided by the package 
-see \reftablet{tab:list_ref_cmd}.  
-
-%
-\begin{table}
+\begin{table}[!h]
 \caption{ List of new commands provided by this package}
 \label{tab:list_ref_cmd}
 \center
 \begin{tabular}{cc}
 	\hline
-	\verb|reffig{fig:theory_vectorize} |		&	\reffig{fig:theory_vectorize} 	\\
-	\verb|reffigt{fig:theory_vectorize}|		&	\reffigt{fig:theory_vectorize}	\\
-	\verb|reffigp{fig:theory_vectorize}|		& 	\reffigp{fig:theory_vectorize}	\\
-	\verb|reftable{tab:citation_style} |		&	\reftable{tab:citation_style} \\
-	\verb|reftablet{tab:citation_style}|		&	\reftablet{tab:citation_style}	\\
-	\verb|reftablep{tab:citation_style}|		&  	\reftablep{tab:citation_style} \\
+	\verb|\cref{fig:theory_vectorize} |		&	\cref{fig:theory_vectorize}\\
+	\verb|\Cref{fig:theory_vectorize}|		&	\Cref{fig:theory_vectorize}\\
+	\verb|\cref{tab:citation_style} |		&	\cref{tab:citation_style}\\
+	\verb|\Cref{tab:citation_style}|		&	\Cref{tab:citation_style}\\
 	\hline
 \end{tabular}
 \end{table} 
 
-\section{Some Random Text Here After}
-\lipsum[1-20]
+
+The above table was created using following code
+\begin{verbatim}
+	\begin{table}[!h]
+	\caption{ List of new commands provided by this package}
+	\label{tab:list_ref_cmd}
+	\center
+	\begin{tabular}{cc}
+	\hline
+	\verb|\cref{fig:theory_vectorize} |		&	\cref{fig:theory_vectorize}\\
+	\verb|\Cref{fig:theory_vectorize}|		&	\Cref{fig:theory_vectorize}\\
+	\verb|\cref{tab:citation_style} |		&	\cref{tab:citation_style}\\
+	\verb|\Cref{tab:citation_style}|		&	\Cref{tab:citation_style}\\
+	\hline
+	\end{tabular}
+	\end{table} 
+\end{verbatim}
+
+
+
+\subsection{Units}
+The units can be correctly formatted as following\\
+\begin{tabular}{cc}
+	\hline
+	                     Command                      &                   Effect                 \\
+	                    \hline
+	       \verb|1500 \si{\meter\per\second}|         &        1500 \si{\meter\per\second}        \\
+	\verb|$ \SI{3.456}{\Newton \per \meter\squared}$| & $ \SI{3.456}{\newton \per \meter\squared}$\\
+	\hline
+\end{tabular} 
+
+%\section{Some Random Text Here After}
+%\lipsum[1-20]
 
   

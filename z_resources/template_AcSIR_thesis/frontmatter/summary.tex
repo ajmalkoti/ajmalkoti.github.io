@@ -2,35 +2,28 @@
 \vspace*{-3em}
 
 
-
-Summary of the work 
-
-
-
-In this package the directory structure is following 
+Ideally here should come the summary of the work. I take the liberty of explaining the structure of this package 
 \begin{description}
-\item[chapters]: contains all the chapters, appendix etc material in the directory]
-\item[fig]: Contains all the figures. 
-           For clarity the figure name have chapter name as prefix e.g 
-           "\verb|intro_widessxp.jpg|" is some figure pertaining to introduction chapter
-           The rule is not necessary, but useful to sort figures when there are many (say >100).
-\item[references]: Contains all the references in the bibtex format. 
-             Add all the required references to the file- "mybibfile.bib".
-				Note 
-      		1) Make sure there is no duplicate entry in the bibliography file.
-             2) Building all reference requires special processing sequence 
-  			Pdflatex--> biblatex --> Pdflatex --> Pdflatex --> ViewPdf
+\item[chapters]: This directory contains all the chapters, appendix, etc. 
+	You may like to name the chapters as \verb|ch1_Intro|, \verb|ch2_Theory|,..., etc.\\ \textbf{Adding more chapters }. \\
+	Step 1: Create a tex file (e.g FileName.tex) in the directory "chapters" \\
+	Step 2: Add here command \verb|\include{chapters/FileName}|. 
 
- Adding table and figures and citing them
-  		Some example has been added to 
+\item[figs]: This directory contains all the figures. 
+           You may like to name the figures with the chapter name before them, e.g.   
+           \verb|intro_anomaly_map.jpg|, or  \verb|theory_gravity_response.jpg|.  
+           The rule is not necessary, but useful to sort figures when there are many figures, e.g., $>100$.
+\item[references]: 
+	This directory contains all the references in bibtex format in the file \verb|references/mybibfile.bib|.\\
+	Note :  		\\
+	1) Make sure there is no duplicate entry in the bibliography file.\\
+    2) Building all reference requires special processing sequence which is available in your GUI editor's preferences. Make sure you select-\\
+  			Pdflatex---$>$ biblatex ---$>$ Pdflatex ---$>$ Pdflatex ---$>$ ViewPdf
 
- Adding more chapters 
- 			step 1: Create a tex file (e.g FileName.tex) in the directory "chapters" 
- 			step 2: Add here command "\include{chapters/FileName}". 
+
+
+
+\item[Other] : Elements viz. mathematical equations, figure/table insertion and their referencing, units, etc. are explained in the subsequent chapters. 
 
 \end{description}
 
-
-
-\section{Some Random Text Here After}
-\lipsum[1-5]

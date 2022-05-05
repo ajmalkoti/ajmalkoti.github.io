@@ -1,18 +1,62 @@
 \chapter{Introduction}
+This would be the best place to introduce your problem and what are the background work has been done other and what is the missing gap you are trying to address. In the process you will need to refer several type of documents research articles, reports, thesis, books, etc. You may want to refer other resources as well i.e., data repositories and websites. This can be done easily as following. 
+
+\begin{enumerate}[leftmargin=*,label={Step \arabic*:}]
+\item 	Search for the document you want to cite and find its bib file. 
+		It is available easily through 
+		\begin{itemize}	
+		\item 	\textbf{Through publisher}: For example I went to this url\\
+				\verb|https://www.sciencedirect.com/science/article/pii/S0098300417306039|. At this page under the CITE option you should choose ``export citation to BibTex". 
+				
+		\item 	\textbf{Through Google scholar}: Download a google scholar extention to your internet explorer.
+		\end{itemize}
+		%
+		The content of the bibfile looks something like this
+		\begin{verbatim}
+		@article{malkoti2018algorithm,
+		title={An algorithm for fast elastic wave simulation using a vectorized finite 
+		difference operator},
+		author={Malkoti, Ajay and Vedanti, Nimisha and Tiwari, Ram Krishna},
+		journal={Computers \& Geosciences},
+		volume={116},
+		pages={23--31},
+		year={2018},
+		publisher={Elsevier}
+		}		
+		\end{verbatim}
+		 
+ 		Copy/append the content of above downloaded file to \verb|references/mybibfile.bib|.
+ 		%
+ 		For every reference it is known as bibliography entry or bib-entry. 
+ 		
+\item  	Wherever you want to cite this reference you can add the command with its key word \\ 
+		\verb|\cite{malkoti2018algorithm}| or \verb|\citep{malkoti2018algorithm}|.  
+		Note that the first line in the bib-entry contains the keyword.
+
+\item 	At the end of document make sure you have following command 		
+		\begin{verbatim}
+			\bibliography{references/mybibfile}
+		\end{verbatim}
+		It will read all the keywords  used in the document and prepare a bibliography at the end (or place where the command is placed).
+
+\end{enumerate}	
+Note :  		\\
+1) Make sure there is no duplicate entry in the bibliography file.\\
+2) Building all reference requires special processing sequence which is available in your GUI editor's preferences. Make sure you select-\\
+Pdflatex---$>$ biblatex ---$>$ Pdflatex ---$>$ Pdflatex ---$>$ ViewPdf
+
 
 Here first we will show some example for citing the litrature. 
 All information is contained in the \textit{mybibfile.bib} file stored in the 
 directory \textbf{bibliography}. 
 
 
-There are two modes for referencing in-text and panrantheis. 
-Here is how to reference to in-text  \cite{malkoti_algorithm_2018} or in this way 
-in paranthesis \citep{li_matlab_2020}.   
-%
-You may have it in different modes, which is presented in a form of table as follows
+There are different modes for referencing in-text and panrantheis. 
+To mostly used one are in-text  \verb|\cite{malkoti_algorithm_2018}|  or in paranthesis \verb|\citep{li_matlab_2020}|.   
+Some other ways are presented in following table.
 
 
-\begin{table}
+\begin{table}[!h]
 \caption{Table showing different citation styles}
 \label{tab:citation_style}
 \begin{tabular}{ll}	
