@@ -1,0 +1,15 @@
+\begin{thebibliography}{}
+
+\bibitem[Li et~al., 2020]{li_matlab_2020}
+Li, L., Zhou, J., Malkoti, A., and al., e. (2020).
+\newblock A {MATLAB} solver for the {3D} anisotropic wave equation using the
+  finite-difference method.
+\newblock {\em (Computational Geosciences) Under submission}.
+
+\bibitem[Malkoti et~al., 2018]{malkoti_algorithm_2018}
+Malkoti, A., Vedanti, N., and Tiwari, R.~K. (2018).
+\newblock An algorithm for fast elastic wave simulation using a vectorized
+  finite difference operator.
+\newblock {\em Computers \& Geosciences}, 116:23--31.
+
+\end{thebibliography}
