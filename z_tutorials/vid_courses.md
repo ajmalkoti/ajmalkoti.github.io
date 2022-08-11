@@ -3,7 +3,7 @@
 1. [Imaging other Earths by Dr. David Spergel, Princeton Univ.](https://www.coursera.org/learn/life-on-other-planets#faq) on coursera
 2. [Planet Earth...and You! by Dr. Stephen Marshak, U of Illinois](https://www.coursera.org/learn/planet-earth)
 3. [Sedimentology lectures by Matthew E. Clapham](https://www.youtube.com/c/MatthewEClapham)
-
+4. [IRIS youtube channel](https://www.youtube.com/c/IRISEarthquakeScience)
 
 ## English writing
 1. [Writing in sciences by Dr. Kristin Sainani, Stanford](https://www.coursera.org/learn/sciwrite)
@@ -37,6 +37,8 @@
 13. [Prof. Wen shen](https://www.youtube.com/user/wenshenpsu)
 14. [Advance mathematics1, Hochschule Ravensburg-Weingarten University](https://www.youtube.com/watch?v=6fK2NdKAkyI&list=PL94E33CB3CA221C15)
 15. [Advance mathematics 2, Hochschule Ravensburg-Weingarten University](https://www.youtube.com/watch?v=aM_LXwQZy1E&list=PL9831E8690563FB76)
+16. [Intro to inverse problems by Prof. Hansen](https://www.youtube.com/playlist?list=PLMn2aW3wpAtMnYBVsPHF5n1Z0uMBvrVt8)
+
 
 
 ## Electormagnaitc
