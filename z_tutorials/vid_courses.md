@@ -10,15 +10,15 @@
 2. [Notes, etc](https://www.youtube.com/c/MichelleKrummel)
 
 ## Seismic and Seismology
-1. 
+1. [Cider lectures](https://www.youtube.com/channel/UCumfXuOk4FP7phVNtUhpPDA)
 2. [Seismology to earthquake engineering](https://www.coursera.org/learn/seismology-to-earthquakes#syllabus)  on coursera 
 3. [Fundamentals of waves and vibrations by Emmanuel de Langre, Okivier Doare, Jean Francois Semblat, Institute Polytechnique De Paris](https://www.coursera.org/learn/fundamentals-waves-vibrations#instructors)
-5. [Introductin to engineering seismology by Prof. Anbazhagan P, IISc Bangalore](https://onlinecourses.nptel.ac.in/noc22_ce64/preview)
-6. [Computers, Waves, Simulations: A Practical Introduction to Numerical Methods using Python](https://www.coursera.org/learn/computers-waves-simulations)
-7. [ICTP Wave Physics](https://www.youtube.com/watch?v=DsO_oqMuTIU&list=PLp0hSY2uBeP-VyqwaICS3KJgoy5EM1tl_)
-8. [ICTP Theoretical seismology](https://www.youtube.com/watch?v=TZ2QsheUi7Q&list=PLp0hSY2uBeP9wfQJIrq78ZiaqOprl4kPA)
-9. [ICTP Mechanics of earthquake and techtonophysics](https://www.youtube.com/watch?v=rsBPN3LWYSE&list=PLp0hSY2uBeP9jZDEsiJ8DrIID265gzKDL)
-10. [Cider lectures](https://www.youtube.com/channel/UCumfXuOk4FP7phVNtUhpPDA)
+4. [Introductin to engineering seismology by Prof. Anbazhagan P, IISc Bangalore](https://onlinecourses.nptel.ac.in/noc22_ce64/preview)
+5. [Computers, Waves, Simulations: A Practical Introduction to Numerical Methods using Python](https://www.coursera.org/learn/computers-waves-simulations)
+6. [ICTP Wave Physics](https://www.youtube.com/watch?v=DsO_oqMuTIU&list=PLp0hSY2uBeP-VyqwaICS3KJgoy5EM1tl_)
+7. [ICTP Theoretical seismology](https://www.youtube.com/watch?v=TZ2QsheUi7Q&list=PLp0hSY2uBeP9wfQJIrq78ZiaqOprl4kPA)
+8. [ICTP Mechanics of earthquake and techtonophysics](https://www.youtube.com/watch?v=rsBPN3LWYSE&list=PLp0hSY2uBeP9jZDEsiJ8DrIID265gzKDL)
+
 
 
 ## Invere problems and Numerical methods
