@@ -2,10 +2,12 @@
 ## General
 1. [Imaging other Earths by Dr. David Spergel, Princeton Univ.](https://www.coursera.org/learn/life-on-other-planets#faq) on coursera
 2. [Planet Earth...and You! by Dr. Stephen Marshak, U of Illinois](https://www.coursera.org/learn/planet-earth)
+3. [Sedimentology lectures by Matthew E. Clapham](https://www.youtube.com/c/MatthewEClapham)
 
 
 ## English writing
 1. [Writing in sciences by Dr. Kristin Sainani, Stanford](https://www.coursera.org/learn/sciwrite)
+2. [Notes, etc](https://www.youtube.com/c/MichelleKrummel)
 
 ## Seismic and Seismology
 1. 
@@ -31,6 +33,15 @@
 9. [IMPA-Reconstruction method for sparse-data X-ray tomography](https://www.youtube.com/playlist?list=PLo4jXE-LdDTQmU66tIMLtjdIKjwV_XjiT)
 10. [IMPA-Approximate Baysian computation](https://www.youtube.com/playlist?list=PLo4jXE-LdDTQDyz2aK0awJwreyZlvWvNw)
 11. [IMPA-Intro to Quantum computing](https://www.youtube.com/playlist?list=PLo4jXE-LdDTTlm38I2oAZIkL4xV_LIZiV)
+12. [Prof. QiQi Wang, MIT](https://www.youtube.com/c/QiqiWangGG) on Yoututbe
+13. [Prof. Wen shen](https://www.youtube.com/user/wenshenpsu)
+14. [Advance mathematics1, Hochschule Ravensburg-Weingarten University](https://www.youtube.com/watch?v=6fK2NdKAkyI&list=PL94E33CB3CA221C15)
+15. [Advance mathematics 2, Hochschule Ravensburg-Weingarten University](https://www.youtube.com/watch?v=aM_LXwQZy1E&list=PL9831E8690563FB76)
 
 
+## Electormagnaitc
+[EM possible](https://www.youtube.com/channel/UCPC6uCfBVSK71MnPPcp8AGA)
 
+## Programming
+1. [OPENMP and MPI by PPCES](https://www.youtube.com/channel/UCtdrEoe46tD2IvJJRs_JH1A)
+2. [Fluidic colors](https://www.youtube.com/channel/UCUJFj-PXuWLRfFFHA44ZGYw)
