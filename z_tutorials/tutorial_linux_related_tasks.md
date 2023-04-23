@@ -30,14 +30,44 @@
 |Play on linux                 | Running few windows application on linux |
 
 
+### Some add-on
+ 1. Installing Complete Multimedia Support:  
+In order to play media files like MP#, MPEG4, AVI etc, you’ll need to install media codecs. Ubuntu has them in their repository but doesn’t install it by default because of copyright issues in various countries.
+```sh 
+sudo apt install ubuntu-restricted-extras
+```
+
+2. Improve Battery by installing TLP for Linux
+```sh
+sudo apt-get install tlp tlp-rdw
+sudo tlp start
+```
+3. Enable GNOME Shell Extension to add extensions to OS and browser (e.g. GS connect)
+4. Changing desktop environment
+```sh 
+sudo apt install gnome-tweak-tool -y
+```
+5. Installing flatpack for more options
 
 ### List of some trivial issues
- 1. Getting preview of files as thumbnail.
+1. Getting preview of files as thumbnail.
 ```sh 
 sudo apt install gstreamer1.0-libav 
 sudo apt install ffmpegthumbnailer
 ```  
-2. 
+
+2. Cleaning the unused package
+```sh 
+sudo apt-get autoclean
+sudo apt-get clean
+sudo apt-get autoremove
+```
+3. Setting Night-mode on for ease of eyes at night 
+```Settings > Devices > Screen Display >Night Light```
+4. Setting minimization on click for the Ubuntu dock
+```sh
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+```
 
 
 # Using linux
