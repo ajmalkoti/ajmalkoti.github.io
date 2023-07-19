@@ -190,3 +190,14 @@ To sync the files from **server A** (having original copy) to **server B** (wher
 *  FFTW  
    `sudo apt-get install libfftw3-dev libfftw3-doc `
    
+### Mounting ntfs on Redhat
+Copied from : https://superuser.com/questions/251663/unable-to-mount-ntfs-drive-with-rhel-6
+1. Install dkms and ntfs-3g from EPEL:  
+    For i386:  
+   ```  rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-7.noarch.rpm ```
+
+    For x86_64:  
+    ```rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-7.noarch.rpm```
+2. Install the ntfs-3g as   
+  ```yum install dkms ntfs-3g```
+
