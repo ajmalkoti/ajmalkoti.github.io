@@ -21,7 +21,7 @@
 
 
 
-## Invere problems and Numerical methods
+## Inverse problems and Numerical methods
 1. [NPTEL-Dynamic data assimilation](https://www.youtube.com/watch?v=ZUUNn22LfjM&list=PLbMVogVj5nJSlrH7FECej1_aS2RXj_9S3)
 2. [ICTS-Data Assimilation Research Program](https://www.youtube.com/watch?v=ar4pgb8GcnY&list=PL04QVxpjcnjhnCxoHVt6qVs7EY3RMaRR5)
 3. [ICTP-IUGG workshop on Data assimilation and inverse problems in geophysical Sciences](https://www.youtube.com/watch?v=N-Y0TqjHh0w&list=PLos1JqOLJm3tWHdL6BG4RQiROg4IjiMia)
