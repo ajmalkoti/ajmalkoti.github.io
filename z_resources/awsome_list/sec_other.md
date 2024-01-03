@@ -1,5 +1,12 @@
+# Basic of Earth science
+
+1. Earth science - Tarbuck, Lutgens, Tasa 
+2. 
+
+
 
 ## Gravity
+
 * [MH2DGRAV](https://github.com/mheriyanto/MH2DGRAV) Invert gravity data
 * [a MATLAB-based program for inverting gravity anomalies over sedimentary basins](https://github.com/cageo/Oksum_2018)
 
