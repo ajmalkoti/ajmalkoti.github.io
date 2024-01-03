@@ -1,54 +1,31 @@
-# Awsome-geophysics-list
+# Awesome geophysics list
 
-This list intend to contain list of useful tutorial, codes, etc. which might be helpful in geophysics research as well as in teaching. 
-At this stage the project includes majorly the codes and a small bit of research material. 
-However with time it is inteded to include teaching material as well. 
+This list contains geophysics related stuff (tutorial, codes, etc.) which might be helpful for the researchers in this domain. The stuff is categorised in following categories : [Seismic](https://github.com/ajmalkoti/seismic-packages-list/blob/main/seismic_codes.md), [Seismology](https://github.com/ajmalkoti/seismic-packages-list/blob/main/seismology_codes.md),  [Inversion](https://github.com/ajmalkoti/awsome-geophysics-list/blob/main/inversion_codes.md), 
 
+[Borehole/Well-log/Petrophysics](./sec_borehole.md), 
 
+Programming, [Other fields](https://github.com/ajmalkoti/awsome-geophysics-list/blob/main/other.md).
 
-## Categories 
-This list catogorizes the stuff is majorly in following categories
-* [Seismic realted stuff](https://github.com/ajmalkoti/seismic-packages-list/blob/main/seismic_codes.md)
-* [Seismology realted stuff](https://github.com/ajmalkoti/seismic-packages-list/blob/main/seismology_codes.md)
-* [Inversion related stuff](https://github.com/ajmalkoti/awsome-geophysics-list/blob/main/inversion_codes.md)
-* [Borehole/Well-log related stuff](https://github.com/ajmalkoti/awsome-geophysics-list/blob/main/borehole_codes.md)
-* [Gravity Magnetic, and other fields](https://github.com/ajmalkoti/awsome-geophysics-list/blob/main/GravMagEtc_codes.md)
-
-**Note** 
-* The list is supposed to provide an beginning to the topic.
-* The list is obviously neither complete nor very exhaustive. 
-* It has a biased toward the seismic as it is my primary area of research. 
-* You are welcome to suggest the missing packages which may help researchers to expedite their research.
-* You are also welcome to suggest a package developed by you (giving more visibility to your work). 
-
-Ajay Malkoti
-ajmalkoti@gmail.com 
+**Note** :  The list is obviously neither complete nor very exhaustive. It is just meant to provide a cue to your research. Obviously, it is biased toward the seismic which is the primary area of research of the author.  Apart from that, you are welcome to suggest  the missing packages  by mailing at ajmalkoti@gmail.com. 
 
 
 
-## Code repositories 
-Some of the common source of the codes are the computational journal repositories and Github like code platforms 
+### Code repositories 
+Some of journals publish the codes  which are 
 
-**List of journals**
-* [Software-X](https://github.com/ElsevierSoftwareX), 
-* Compters and Geosciences, 
-* [TLE tutorials](https://github.com/seg/),  
-* [Sofware-X](https://github.com/ElsevierSoftwareX/SOFTX_2018_172), 
-* [Geodynamics](https://github.com/geodynamics),  
-* [Geophysics](https://software.seg.org/GEO.html) 
-* [Agile-geoscience](https://github.com/agile-geoscience)
+[Geophysics](https://software.seg.org/GEO.html),  [Software-X](https://github.com/ElsevierSoftwareX),  Computers and Geosciences, [TLE tutorials](https://github.com/seg/),  [Sofware-X](https://github.com/ElsevierSoftwareX/SOFTX_2018_172), [Geodynamics](https://github.com/geodynamics),  [Agile-geoscience](https://github.com/agile-geoscience), 
 
-**Thesis/Report Databases**
-* [AcSIR Thesis]()
+### Thesis/Report Databases
+* [AcSIR Thesis] ,
 * [CREWS Reports](https://www.crewes.org/Documents/ResearchReports/index.php) and [Theses](https://www.crewes.org/Documents/GraduateTheses/index.php)
 * [MIT Theses](https://dspace.mit.edu/handle/1721.1/7582) 
-* [Stannford Theses](https://searchworks.stanford.edu/catalog?f%5Bgenre_ssim%5D%5B%5D=Thesis%2FDissertation)
+* [Stanford Theses](https://searchworks.stanford.edu/catalog?f%5Bgenre_ssim%5D%5B%5D=Thesis%2FDissertation)
 
-**Geophysics Blogs**
+### Geophysics Blogs
 * [MYCARTA](https://mycarta.wordpress.com/)
 
 
-**Repository list**
+**Git Hub Repository list**
 * https://github.com/geobook2015
 * https://github.com/jedfang
 * https://github.com/LongyanU?tab=repositories  **
@@ -59,7 +36,7 @@ Some of the common source of the codes are the computational journal repositorie
 * https://github.com/happyhousehold?tab=repositories
 * https://github.com/ThomasMGeo?tab=repositories
 * https://github.com/EvanBianco?tab=repositories
- 
+
 
 
 ## Python listing
