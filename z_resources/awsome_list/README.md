@@ -1,10 +1,6 @@
 # Awesome geophysics list
 
-This list contains geophysics related stuff (tutorial, codes, etc.) which might be helpful for the researchers in this domain. The stuff is categorised in following categories : [Seismic](https://github.com/ajmalkoti/seismic-packages-list/blob/main/seismic_codes.md), [Seismology](https://github.com/ajmalkoti/seismic-packages-list/blob/main/seismology_codes.md),  [Inversion](https://github.com/ajmalkoti/awsome-geophysics-list/blob/main/inversion_codes.md), 
-
-[Borehole/Well-log/Petrophysics](./sec_borehole.md), 
-
-Programming, [Other fields](https://github.com/ajmalkoti/awsome-geophysics-list/blob/main/other.md).
+This list contains geophysics related stuff (tutorial, codes, etc.) which might be helpful for the researchers in this domain. The stuff is categorised in following categories : [Seismic](./sec_seismic.md), [Seismology](./sec_seismology.md),  [Inversion](sec_inversion.md), [Borehole/Well-log/Petrophysics](./sec_borehole.md), Programming, [Other fields](./sec_other.md).
 
 **Note** :  The list is obviously neither complete nor very exhaustive. It is just meant to provide a cue to your research. Obviously, it is biased toward the seismic which is the primary area of research of the author.  Apart from that, you are welcome to suggest  the missing packages  by mailing at ajmalkoti@gmail.com. 
 
@@ -16,16 +12,13 @@ Some of journals publish the codes  which are
 [Geophysics](https://software.seg.org/GEO.html),  [Software-X](https://github.com/ElsevierSoftwareX),  Computers and Geosciences, [TLE tutorials](https://github.com/seg/),  [Sofware-X](https://github.com/ElsevierSoftwareX/SOFTX_2018_172), [Geodynamics](https://github.com/geodynamics),  [Agile-geoscience](https://github.com/agile-geoscience), 
 
 ### Thesis/Report Databases
-* [AcSIR Thesis] ,
-* [CREWS Reports](https://www.crewes.org/Documents/ResearchReports/index.php) and [Theses](https://www.crewes.org/Documents/GraduateTheses/index.php)
-* [MIT Theses](https://dspace.mit.edu/handle/1721.1/7582) 
-* [Stanford Theses](https://searchworks.stanford.edu/catalog?f%5Bgenre_ssim%5D%5B%5D=Thesis%2FDissertation)
+[AcSIR Thesis] , [CREWS Reports](https://www.crewes.org/Documents/ResearchReports/index.php) and [Theses](https://www.crewes.org/Documents/GraduateTheses/index.php),  [MIT Theses](https://dspace.mit.edu/handle/1721.1/7582) , [Stanford Theses](https://searchworks.stanford.edu/catalog?f%5Bgenre_ssim%5D%5B%5D=Thesis%2FDissertation)
 
 ### Geophysics Blogs
 * [MYCARTA](https://mycarta.wordpress.com/)
 
-
 **Git Hub Repository list**
+
 * https://github.com/geobook2015
 * https://github.com/jedfang
 * https://github.com/LongyanU?tab=repositories  **
@@ -38,17 +31,3 @@ Some of journals publish the codes  which are
 * https://github.com/EvanBianco?tab=repositories
 
 
-
-## Python listing
-* https://github.com/vinta/awesome-python
-* https://learnxinyminutes.com/docs/python/
-
-
-
-# sections to be included 
-## Petrophysics 
-* [Differential Effective medium](https://github.com/whamlyn/PyDEM)
-* [AuraLib- simple function used in geophysics, rock physics, petrophysics](https://github.com/whamlyn/auralib)
-
-* [Gather-View-SEGY data visualization](https://github.com/whamlyn/gatherview)
-* [OpenSeis-visualize seismic data in python](https://github.com/whamlyn/openseis)
