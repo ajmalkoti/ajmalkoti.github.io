@@ -7,8 +7,7 @@ This list contains geophysics related stuff (tutorial, codes, etc.) which might 
 
 
 ### Code repositories 
-Some of journals publish the codes  which are 
-
+Some journals publish the geophysics codes  
 [Geophysics](https://software.seg.org/GEO.html),  [Software-X](https://github.com/ElsevierSoftwareX),  Computers and Geosciences, [TLE tutorials](https://github.com/seg/),  [Sofware-X](https://github.com/ElsevierSoftwareX/SOFTX_2018_172), [Geodynamics](https://github.com/geodynamics),  [Agile-geoscience](https://github.com/agile-geoscience), 
 
 ### Thesis/Report Databases
