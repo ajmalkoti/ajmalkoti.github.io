@@ -29,9 +29,20 @@
 
 # Research 
 
-#### Open seismic data 
+#### Seismic Data 
 
-[GFZ](https://dataservices.gfz-potsdam.de/portal/) (seismic and other geophysical data), [USGS](https://www.usgs.gov/programs/cmhrp), [Canada](http://gdr.agg.nrcan.gc.ca/gdrdap/dap/search-eng.php), [SEG](https://wiki.seg.org/wiki/Open_data), [OPEN-Data](https://data.world/datasets/open-data)
+General websites: [GFZ](https://dataservices.gfz-potsdam.de/portal/) (seismic and other geophysical data), [USGS](https://www.usgs.gov/programs/cmhrp), [Canada](http://gdr.agg.nrcan.gc.ca/gdrdap/dap/search-eng.php), [SEG](https://wiki.seg.org/wiki/Open_data), [OPEN-Data](https://data.world/datasets/open-data)
+
+General data hosting website: https://zenodo.org/
+
+Benchmark data sets: 
+[Equinor datasets](https://data.equinor.com/) : Sleipner Northern lights, Volve 
+
+[Adele 3D seismic survey](https://zenodo.org/records/4299758),  [F3 Dataset](https://terranubis.com/datainfo/F3-Demo-2020), [Posidon Dataset (many 100 GB)](https://drive.google.com/drive/folders/0B7brcf-eGK8Cbk9ueHA0QUU4Zjg?resourcekey=0-njGYrj9ZlE751Oi1-89sOg)
+
+Dataset for ML: [Penobscot Interpretation Dataset](https://zenodo.org/records/3924682)
+
+USGS: 
 
 
 
