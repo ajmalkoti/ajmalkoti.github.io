@@ -1,4 +1,23 @@
 Here I give a compilation of commands I used for tweaking the beamer class.
+
+### Fonts
+```tex
+%\usepackage{beton}
+%\usepackage{euler}   % mathfont
+%%\usepackage[OT1]{fontenc}
+%\usepackage{libertine}
+%%\usepackage[T1]{fontenc}				%% good one
+%%\usepackage{newtxtext,newtxmath}        % mathfont
+
+\usepackage[p,osf]{scholax}						%% good
+%% T1 and textcomp are loaded by package. Change that here, if you want
+%% load sans and typewriter packages here, if needed
+%\usepackage{amsmath,amsthm}% must be loaded before newtxmath
+%% amssymb should not be loaded
+%\usepackage[scaled=1.075,ncf,vvarbb]{newtxmath}% need to scale up math package
+%% vvarbb selects the STIX version of blackboard bold.
+```
+
 ### Logo on title page 
 ```tex
 \usepackage{tikz}
