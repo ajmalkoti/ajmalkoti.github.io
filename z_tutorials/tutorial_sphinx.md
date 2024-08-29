@@ -3,24 +3,18 @@
 Assume that we have a package- waves, with following structure.
 
 ```
-waves
-|-- src
-    |-- bc
-        |-- raynold.py
-        |-- mur.py
-        |-- abc.py
-    |-- calc
-        |-- calcA.py
-        |-- calcB.py
-|-- test
-    |-- test1.py
-    |-- test2.py    
+seisimage-master
+    |-----seisimage
+    |       |---boreholes
+    |       |---seismics
+    |       |---horizons
+    |       |---test
+    |       |--- ...etc...
+    |
+    |-----docs   
 ```
 
-
-
-#### Installation of required packages 
-
+#### Prepartion 
 1. Install  the Sphinx package using either 
      * $ sudo apt-get install python3-sphinx  
      * $ python -m pip install sphinx  
@@ -32,114 +26,135 @@ waves
 
      * alabaster theme:: already installed 
      * FURO theme:: pip install furo
-     * RDT theme:: pip install sphinx_rdt_theme
+     * RDT theme:: pip install sphinx_rdt_theme   OR   conda install conda-forge::sphinx_rtd_theme
+     * Numpy theme:: pydata_sphinx_theme
 
-3. Create document layout  
+
+#### Steps to generate documentation 
+1. Create document layout  
 
      ```shell
-     $ cd waves
-     waves$ mkdir docs
-     $ cd docs
-     waves/docs$ sphinx-quickstart
+     seisimage-master$ cd docs
+     seisimage-master$ mkdir docs
+     seisimage-master$ cd docs
+     seisimage-master/docs$ sphinx-quickstart
      ```
 
-     or the following command will automatically create folder and place all relevant files in that.
+     Alternatively, following command will automatically create folder
+     and place all relevant files in that.
 
      ```shell
      $ cd waves
      waves$ sphinx-quickstart docs
      ```
 
-4. It will ask for following questions 
+2. It will ask for following questions 
      ```
      Separate source and build directories (y/n) [n]: n
-     Project name: waves
+     Project name: seisimage
      Author name(s): XYZ.
      Project release []: 0.0.1
      Project language [en]: <Press Enter>   
      ```
 
-5. Customization of theme
+3. Configuring sphinx using conf.py  
+   The sphinx configuration is in **docs/conf.py**"  you should change
+   following
+    * correcting the path
+      ```
+      import os
+      import sys
+      sys.path.insert(0, os.path.abspath('../seisimage/'))
+      ```
+      
+    * Include teh extensions
+      ```
+      extensions = ['sphinx.ext.autodoc',
+                    'sphinx.ext.viewcode',
+                    'sphinx.ext.napoleon'
+                   ]
+      ``` 
+      
+    * By default the sphinx doesn't include the classes, so include following code.  
+      special-members : this function is always included  
+      exclude-members : these functins are excluded, 
+                       __wekref__ implies intrinsic function will be excluded  
+      ```
+      autodoc_default_options = {
+              'members': True,
+              'member-order': 'bysource',
+              'special-members': '__init__',
+              'undoc-members': True,
+              'exclude-members': '__weakref__'
+              }
+       ```
+       
 
-     * Find **docs/conf.py**"  and then change the theme to your wish.
-
+    * One may wish to choose a better theme over default (named 'alabastor')
+      e.g. classic, furo, sphinx_rdt_theme,
+       
        ```python
        html_theme = 'albastor'
-       html_theme = 'furo'
-       html_theme = 'sphinx_rdt_theme'
        ```
 
-6. Now we can generate a very naive docs without much information. 
+4.  Generate the rst files for the **seisimage** package 
+    and place them in **docs** directory
+    ```shell
+    seisimage-master/docs$ cd ..
+    seisimage-master$ sphinx-apidoc -o docs seisimage
+    ```
+    
+    This will generate follwoing file in docs folder
+    * index.rst file
+    * modules.rs file 
+    * .rst file for each module. 
+
+     
+5. Modify **docs/index.rst** file.  Add following text at bottom of the file.
+
+   ``` rst
+   .. include:: modules.rst
+   ```
+
+
+6.  Now we can generate a very naive docs without much information. 
 
      ```  shell
      waves$ cd docs
      waves/docs$ make html
      ```
 
-     The documentation can be generated as 
-
+     The other documentation formats can also be generated as 
+     
      * HTML :  make html
-
      * EPUB :  make epub
-
      * etc.
      
        
 
-#### API Documentation for Python 
+### References:
+1.  Ref: https://www.youtube.com/watch?v=5s3JvVqwESA
+2.  List of sphinx themes ::  https://sphinx-themes.org/#themes
+3.  RTD theme 
+    - Example:: https://sphinx-themes.org/sample-sites/sphinx-rtd-theme/  
+                https://sphinx-rtd-tutorial.readthedocs.io/en/latest/sphinx-config.html
+                https://docs.readthedocs.io/en/stable/examples.html
+                
+    - configuration:: https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html
+ 
+4.  Sphinx Documentation examples
+    - https://github.com/readthedocs-examples/example-sphinx-basic/tree/main
+    - https://github.com/readthedocs/sphinx_rtd_theme/blob/master/docs/index.rst?plain=1
+5.  Example of a sphinx config file::   https://github.com/frannerin/AlloViz/blob/main/docs/source/conf.py
+6. How to chage default setting of autodoc:: 
+    - https://stackoverflow.com/questions/75880273/sphinx-autodoc-ignores-default-settings-in-conf-py 
+    - "autodoc_default_options" : https://smobsc.readthedocs.io/en/stable/usage/extensions/autodoc.html 
+7. Stack overflow questions.
+    - How to include classes in Sphinx doc.:: https://stackoverflow.com/questions/31479835/sphinx-doesnt-process-python-classes?rq=4
+    - Cant find my python module:: https://stackoverflow.com/questions/53668052/sphinx-cannot-find-my-python-files-says-no-module-named
+    - How to autodoc class init method :: https://stackoverflow.com/questions/5599254/how-to-use-sphinxs-autodoc-to-document-a-classs-init-self-method
 
-Ref: https://www.youtube.com/watch?v=5s3JvVqwESA
 
-STEP 1. **Modify  docs/config.py** as following 
-
-* Uncomment lines containing following text (line no 13,14,15) in **docs/conf.py** .
-
-    ```python
-    import os
-    import sys
-    sys.path.insert(0, os.path.abspath('.'')) 
-    ```
-
-    
-
-* Change the path in **docs/conf.py** 
-
-​	``` sys.path.insert(0, os.path.abspath('..'))```
-
-* Add following extensions to **docs/conf.py** as shown below
-
-  ```python
-  extensions = [
-  'sphinx.ext.autodoc',
-  'sphinx.ext.viewcode',
-  'sphinx.ext.napoleon']
-  ```
-  
-  
-
-SETP 2. **Generate the api docs**
-
-* The following command tells sphinx to generate the **api-docs** for the **waves** package and place them in **docs** directory
-
-  ```shell
-  cd ..
-  waves$ sphinx-apidoc -o docs src
-  ```
-  
-  This step generates many "rst" format files which are stored in the directory **docs/**. which also includes the **modules.rst** file.
-
-STEP 3. Modify **docs/index.rst** file. 
-
-   ``` rst
-   .. include:: modules.rst
-   ```
-
-STEP4. Now you can run the documentation for the code
-
-```shell
-cd docs
-waves/docs$ make html
-```
 
 
 
@@ -175,8 +190,6 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 html_theme = "default"
 ```
 
-
-
 STEP 2: Change **docs/index.rst** file by Insert the following piece of code.
 
 ```rst
@@ -195,8 +208,6 @@ functions
 
 ```
 
-
-
 STEP 3: Make the file
 
 ```shell
@@ -204,3 +215,7 @@ waves$ cd docs
 waves/docs$ make html
 ```
 
+
+
+ 
+  
