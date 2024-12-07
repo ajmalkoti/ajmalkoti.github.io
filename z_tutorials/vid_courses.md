@@ -19,6 +19,13 @@
 7. [ICTP Theoretical seismology](https://www.youtube.com/watch?v=TZ2QsheUi7Q&list=PLp0hSY2uBeP9wfQJIrq78ZiaqOprl4kPA)
 8. [ICTP Mechanics of earthquake and techtonophysics](https://www.youtube.com/watch?v=rsBPN3LWYSE&list=PLp0hSY2uBeP9jZDEsiJ8DrIID265gzKDL)
 
+## Exploration seismic
+1. [SEG(Honorary/etc Lecturers)](https://knowledgette.teachable.com/p/all-courses))
+2. [SEAM Advance modeling](https://www.youtube.com/watch?v=akH9Xdm3k4o&list=PLEIS8l89JCa3aBx8YfdXJ_wiyJBN9SZz_)
+3. [EAGE Lectures](https://www.youtube.com/watch?v=EklyGsiZI6c&list=PL5WVjEM5-IVnB2Nx6xLtBHxAYLRrfiS08)
+4. [IRIS Geology and Geophysics in the Petroleum Industry](https://www.youtube.com/watch?v=5eaJ5jCeZdM&list=PLsPOwoKvRLPUJY6nzzWfVBwVNUsixA7AN)
+5. [NPTEL Petroleum reservoir engineering](https://www.youtube.com/watch?v=m8qCtIwquDc&list=PLwdnzlV3ogoXaR022q94pSCRVCOOqkciO)
+6. [NPTEL Petroleum formation Evaluation (Borehole Geophysics)](https://www.youtube.com/watch?v=3zYawurlQak&list=PLbRMhDVUMngc4fQExdfZbx_dmjnP2Xxhw)
 
 
 ## Inverse problems and Numerical methods
@@ -41,9 +48,10 @@
 
 
 
-## Electormagnaitc
-[EM possible](https://www.youtube.com/channel/UCPC6uCfBVSK71MnPPcp8AGA)
-
 ## Programming
 1. [OPENMP and MPI by PPCES](https://www.youtube.com/channel/UCtdrEoe46tD2IvJJRs_JH1A)
 2. [Fluidic colors](https://www.youtube.com/channel/UCUJFj-PXuWLRfFFHA44ZGYw)
+
+
+## Electormagnaitc
+[EM possible](https://www.youtube.com/channel/UCPC6uCfBVSK71MnPPcp8AGA)
