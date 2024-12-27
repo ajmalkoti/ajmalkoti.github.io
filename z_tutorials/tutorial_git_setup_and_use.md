@@ -81,4 +81,25 @@ Let us assume that you made changes in the files present within project director
 2. Add some message for the update you are making   
    ```git commit -m "some_meaningful_message"```   
 3. Issue command to update. Until you issue this command the files will not be uploaded/updated to GitHub.  
-   ```git push origin master```  
+   ```git push origin master```
+
+
+## Some special situations while pulling or pushing the respository
+1. Ignore local changes and pull the version online
+```
+git reset --hard
+git pull
+```
+2. Error while you added tried to push large (>100 MB) files.  
+   The solution proposed here (taken from internet) will remove the file so one should find all such files first and back them up.
+    Step 1. Find all files size>100 MB and if take backup of all such files. On ubuntu you may use following command
+    ```
+    find ./Github/ -type f -size +100M
+    ```
+    Step 2. Use git filter  command to remove all such files. This operation will DELETE the file.!!!
+    ```
+    git filter-branch --index-filter 'git rm --cached --ignore-unmatch FILENAME'
+    ```
+    Step 3. Apply the git push.
+
+4. 
