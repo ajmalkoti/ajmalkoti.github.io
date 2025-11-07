@@ -1,0 +1,34 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fourier}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Ajay Malkoti}
+%\usepackage[backend=biber,style=authoryear, url = false,sort=ydnt]{biblatex}
+\usepackage[backend=biber,style=authoryear, sorting=ydnt, url= false]{biblatex}
+% \addbibresource{myarticles.bib}
+% \addbibresource{myconferences.bib}
+
+\addbibresource{allworks.bib}
+
+\defbibenvironment{bibliography}
+{\begin{enumerate}}
+{\end{enumerate}}
+{\item}
+
+
+
+
+\begin{document}
+%\citeall
+\nocite{*}
+
+%\printbibliography
+\printbibheading
+\printbibliography[type=article,heading=subbibliography,title={Articles}]
+\printbibliography[nottype=article,heading=subbibliography,title={Conferences}]
+
+\end{document}
+
