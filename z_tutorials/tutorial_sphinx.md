@@ -73,12 +73,10 @@ seisimage-master
                     'sphinx.ext.viewcode',
                     'sphinx.ext.napoleon'
                    ]
-      ``` 
+      ```
       
     * By default the sphinx doesn't include the classes, so include following code.  
-      special-members : this function is always included  
-      exclude-members : these functins are excluded, 
-                       __wekref__ implies intrinsic function will be excluded  
+      
       ```
       autodoc_default_options = {
               'members': True,
@@ -87,18 +85,23 @@ seisimage-master
               'undoc-members': True,
               'exclude-members': '__weakref__'
               }
-       ```
-       
-
-    * One may wish to choose a better theme over default (named 'alabastor')
-      e.g. classic, furo, sphinx_rdt_theme,
-       
+      - special-members: this function is always included  
+      - exclude-members: these functins are excluded, __wekref__ implies intrinsic function will be excluded  
+      ```
+      
+    * One may wish to choose a better theme over default (named 'alabastor'),  e.g. 
+      
+      1. `classic`,    
+      2. `furo`,      
+      3. `sphinx_rdt_theme`:      `conda install conda-forge::sphinx_rtd_theme`
+      
        ```python
        html_theme = 'albastor'
        ```
-
+   
 4.  Generate the rst files for the **seisimage** package 
     and place them in **docs** directory
+    
     ```shell
     seisimage-master/docs$ cd ..
     seisimage-master$ sphinx-apidoc -o docs seisimage
@@ -108,8 +111,7 @@ seisimage-master
     * index.rst file
     * modules.rs file 
     * .rst file for each module. 
-
-     
+    
 5. Modify **docs/index.rst** file.  Add following text at bottom of the file.
 
    ``` rst
@@ -125,11 +127,11 @@ seisimage-master
      ```
 
      The other documentation formats can also be generated as 
-     
+    
      * HTML :  make html
      * EPUB :  make epub
      * etc.
-     
+    
        
 
 ### References:
@@ -139,9 +141,9 @@ seisimage-master
     - Example:: https://sphinx-themes.org/sample-sites/sphinx-rtd-theme/  
                 https://sphinx-rtd-tutorial.readthedocs.io/en/latest/sphinx-config.html
                 https://docs.readthedocs.io/en/stable/examples.html
-                
+            
     - configuration:: https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html
- 
+
 4.  Sphinx Documentation examples
     - https://github.com/readthedocs-examples/example-sphinx-basic/tree/main
     - https://github.com/readthedocs/sphinx_rtd_theme/blob/master/docs/index.rst?plain=1
@@ -218,4 +220,4 @@ waves/docs$ make html
 
 
  
-  
+
